@@ -1,0 +1,20 @@
+#
+# Build of StructManufacturing Application Rule Services projects.
+#
+
+LOG=Services_Build.html
+
+#
+# Annotation Services.
+#
++M:\SharedContent\Src\StructManufacturing\Rules\Services\AnnotationControl\AnnotationControl.vbp
++M:\SharedContent\Src\StructManufacturing\Rules\Services\AnnotationSymbols\AnnotationSymbols.vbp
+
+#
+# Customization
+#
++M:\SharedContent\Src\StructManufacturing\Rules\Services\BevelGrindRules\StrMfgBevelGrindRules.vbp
++M:\SharedContent\Src\StructManufacturing\Rules\Services\OutputIsIdenticalRule\GSCADSTRMFGIsIdentialRule.vbp
++M:\SharedContent\Src\StructManufacturing\Rules\Services\PartMonitorCustomization\StrMfgPartMonitorInfo.vbp
++M:\SharedContent\Src\StructManufacturing\Rules\Services\PMSortGroups\PMSortGroups.vbp
++M:\SharedContent\Src\StructManufacturing\Rules\Services\PartEditorValidation\CustomValidation.vbp

@@ -1,0 +1,111 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "..\include\L10NResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "S:\\MoldedForms\\Client\\Controls\\mfCustomBracketGUI\\L10N\\include\\L10NResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_INTL_NO             ICON                    "Icons\\International_NO.ico"
+IDI_FLIP                ICON                    "Icons\\Flip.ico"
+IDI_CUSTOM_GUI          ICON                    "Icons\\CustomGUI.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OVERRIDE_INVALID    "Override Parameter data is invalid"
+    IDS_NO_PART_FROM_PALETTE "No part returned from Palette"
+    IDS_NO_INFO_FROM_PALETTE "Nothing returned from Palette for selected catalog item"
+    IDS_BY_RULE              "By Rule"
+    IDS_OVERRIDE_UV          "Override UV Points"
+    IDS_TOGGLE_DIR           "Toggle Dir"
+    IDS_SUPPORT_LENGTH       "Support Length"
+    IDS_SUPPORT_1            "Support 1"
+    IDS_SUPPORT_2            "Support 2"
+    IDS_SYMBOL               "Symbol"
+    IDS_FLANGE               "Flange"
+    IDS_BK_STIFF             "BkStiff"
+    IDS_OK                   "OK"
+    IDS_CLOSE                "Close"
+    IDS_APPLY                "Apply"
+    IDS_OK_TIP               "Apply Changes and Close"
+    IDS_CLOSE_TIP            "Skip Changes and Close"
+    IDS_APPLY_TIP            "Apply Changes"
+    IDS_FORM_TITLE_BPS       "Define Bracket Plate System Properties"
+    IDS_RULE_TIP             "Check for rule based bracket selection"
+    IDS_FINISH               "Finish"
+	IDS_FINISH_TIP			 "Finish Changes and Commit to Database"
+	IDS_OFFSETS				 "Offsets"
+	IDS_VECTOR_LENGTH		 "Vector Length"
+	IDS_PREVIEW				 "Preview"
+	IDS_RULE_SETTINGS		 "Rule Settings"
+	IDS_BRACKET_PROPERTIES	 "Bracket Properties"
+	IDS_PARAMETERS			 "Parameters"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

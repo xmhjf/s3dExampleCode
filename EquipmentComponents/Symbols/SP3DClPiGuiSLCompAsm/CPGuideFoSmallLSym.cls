@@ -1,0 +1,176 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "CPGuideFoSmallLSym"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Attribute VB_Ext_KEY = "SP3DEqpUSSClassType" ,"SYM"
+Attribute VB_Ext_KEY = "SP3DV6UpgradeSO" ,"Upgraded by Eqp SO Upgrade Wizard at 11/29/2004-5:08:41 AM"
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'
+'   Copyright (c) 2006, Intergraph Corporation. All rights reserved.
+'
+'   CPGuideFoSmallLSym.cls
+'   ProgID:         SP3DClPiGuiSLCompAsm.CPGuideFoSmallLSym
+'   Author:         svsmylav
+'   Creation Date:  Tuesday, May 13, 2003
+'
+'   This is a Clamped Trunnion Pipe Guide for small Lines through 6 inch pipe.
+'   This symbol consists of 4 inputs and 21 outputs,It has two aspects one is Simple Physical
+'   another is ReferenceGeometry.There are 15 Physical and 5 Reference Outputs..
+'   This is a Dow symbol Equipment
+'
+'
+'   Change History:
+'   dd.mmm.yyyy     who                     change description
+'   -----------     ---                     ------------------
+'   1.Aug.2006      svsmylav                CR-89878 Removed reference to Dow Emetl Standards (replaced existing symbol).
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Option Explicit
+
+Private Const MODULE = "CPGuideFoSmallLSym:"  'Used for error messages
+
+Private m_oSymbolHelper As IJSymbolHelper
+    
+' Declaration of the User Symbol Services interface
+Implements IJDUserSymbolServices
+
+
+Private Sub Class_Initialize()
+    
+    Const METHOD = "Class_Initialize:"
+    On Error GoTo ErrorHandler
+    
+    Set m_oSymbolHelper = New SymbolServices
+    m_oSymbolHelper.ProjectName = "SP3DClPiGuiSLCompAsm"
+    m_oSymbolHelper.ClassName = "CPGuideFoSmallLSym"
+    
+' Inputs
+    m_oSymbolHelper.NumInputs = 4
+    m_oSymbolHelper.AddInputDef 1, "VesselDiameter", "Tower Diameter", igValue
+    m_oSymbolHelper.AddInputDef 2, "PipeCLtoTowerCL", "Pipe CenterLine to Tower CenterLine-Y", igValue
+    m_oSymbolHelper.AddInputDef 3, "TowertoGuideBase", "Tower Outer shell to Guide Base-K", igValue
+    m_oSymbolHelper.AddInputDef 4, "PipeOD", "Pipe Outer Diameter", igValue
+
+' Outputs
+    m_oSymbolHelper.NumOutputs = 21
+    m_oSymbolHelper.AddOutputDef 1, "Saddle1", "Saddle1 Body", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 2, "Saddle2", "Saddle2 Body", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 3, "SaddleSupport1", "Top Trapizoidal Saddle Support", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 4, "SaddleSupport2", "Bottom Trapizoidal Saddle Support", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 5, "SaddleSupport3", "Box Type portion fits in Clamps", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 6, "SupportCenterPlate1", "Guide saddle support CenterPlate", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 7, "GuideSupport1", "Tower circular support", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 8, "GuideSupport2", "Top guide plate", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 9, "GuideSupport3", "Guide Clamp Plate", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 10, "SupportCenterPlate2", "Guide support CenterPlate", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 11, "ZClamp1A", "Left Z-Clamp Inner Box", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 12, "ZClamp1B", "Left Z-Clamp Outer Box", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 13, "ZClamp2A", "Right Z-Clamp Inner Box", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 14, "ZClamp2B", "Right Z-Clamp Outer Box", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 15, "Bolt1", "Left Bolt", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 16, "Bolt2", "Right Bolt", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 17, "Defaultsurface", "Default Surface Reference plane on Tower", ReferenceGeometry
+    m_oSymbolHelper.AddOutputDef 18, "PipeAxisLine", "Line on the Pipe axis", ReferenceGeometry
+    m_oSymbolHelper.AddOutputDef 19, "VesselAxisLine", "Line on the Vessel axis", ReferenceGeometry
+    m_oSymbolHelper.AddOutputDef 20, "VesselAxisPoint", "Point on the Vessel axis", ReferenceGeometry
+    m_oSymbolHelper.AddOutputDef 21, "PipeAxisPoint", "Point on the Pipe axis", ReferenceGeometry
+    
+
+' Aspects
+    m_oSymbolHelper.NumAspects = 2
+    m_oSymbolHelper.AddAspectDef 1, "SimplePhysical", "Physical", SimplePhysical
+    m_oSymbolHelper.AddAspectDef 2, "ReferenceGeometry", "ReferenceGeometry", ReferenceGeometry
+    
+    Exit Sub
+    
+ErrorHandler:
+   Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+
+End Sub
+
+Private Sub Class_Terminate()
+    Set m_oSymbolHelper = Nothing
+End Sub
+
+' note that the rest of the code is generated by the Symbol Wizard and should not need to be modified
+Public Function IJDUserSymbolServices_InstanciateDefinition( _
+                ByVal CodeBase As String, _
+                ByVal defParameters As Variant, _
+                ByVal ActiveConnection As Object) As Object
+    ' call symbol services default implementation of this method
+    Const METHOD = "IJDUserSymbolServices_InstanciateDefinition:"
+On Error GoTo Errx
+    Set IJDUserSymbolServices_InstanciateDefinition = m_oSymbolHelper.InstanciateDefinition(CodeBase, defParameters, ActiveConnection)
+    
+    Exit Function
+
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Function
+
+Public Function IJDUserSymbolServices_GetDefinitionName(ByVal definitionParameters As Variant) As String
+Const METHOD = "IJDUserSymbolServices_GetDefinitionName:"
+  On Error GoTo Errx
+      IJDUserSymbolServices_GetDefinitionName = m_oSymbolHelper.ProjectName + "." + m_oSymbolHelper.ClassName
+    
+    Exit Function
+
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Function
+
+Public Sub IJDUserSymbolServices_InitializeSymbolDefinition(ByRef pSymbolDefinition As IJDSymbolDefinition)
+Const METHOD = "IJDUserSymbolServices_InitializeSymbolDefinition:"
+On Error GoTo Errx
+    m_oSymbolHelper.InitializeSymbolDefinition pSymbolDefinition
+Exit Sub
+
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+      
+End Sub
+
+Public Sub IJDUserSymbolServices_InvokeRepresentation(ByVal sblOcc As Object, _
+                    ByVal repName As String, _
+                    ByVal outputcoll As Object, _
+                    ByRef arrayOfInputs())
+Const METHOD = "IJDUserSymbolServices_InvokeRepresentation:"
+On Error GoTo Errx
+    m_oSymbolHelper.InvokeRepresentation sblOcc, repName, outputcoll, arrayOfInputs
+        
+Exit Sub
+
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+            Err.HelpFile, Err.HelpContext
+End Sub
+
+Public Function IJDUserSymbolServices_EditOccurence(ByRef pSymbolOccurence As Object, ByVal transactionMgr As Object) As Boolean
+Const METHOD = "IJDUserSymbolServices_EditOccurence:"
+On Error GoTo Errx
+    ' The definition uses the generic EditOccurrence command
+    IJDUserSymbolServices_EditOccurence = False
+        Exit Function
+
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+            Err.HelpFile, Err.HelpContext
+
+End Function
+
+
+
+

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67F7E54A-D41F-4739-A7BE-E917E9E95B7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Symbols</RootNamespace>
+    <AssemblyName>SmartSteel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.CommonToolkit.Middle, Version=1.0.0.209, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <HintPath>X:\Container\Bin\SxS\Intergraph\Intergraph.CommonToolkit.Middle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartPlantStructureMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\SmartPlantStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HgrBeam.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceIdentifiers.cs" />
+    <Compile Include="SmartSteelLocalizer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SmartSteel.en-US.Resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

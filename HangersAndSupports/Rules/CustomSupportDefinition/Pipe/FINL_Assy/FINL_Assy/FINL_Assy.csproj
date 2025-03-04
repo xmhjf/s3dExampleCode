@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BE09B3F-813A-4B54-A374-73BBC7D7D830}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Rules</RootNamespace>
+    <AssemblyName>FINL_Assy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>M:\SharedContent\Bin\HangersAndSupports\Rules\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>M:\SharedContent\Bin\HangersAndSupports\Rules\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommonRouteMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonRouteMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.XML">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conn_Obj_Wrapper.cs" />
+    <Compile Include="FINLAssemblyServices.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AK1.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AK2.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AK3.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AK4.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AK5.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AK6.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AR1.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AR2.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AR3.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AR4.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AR5.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_AR6.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_YK1.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_YK2.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_YK3.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_YK4.cs" />
+    <Compile Include="Sub Assemblies\SFS5380_YK5.cs" />
+    <Compile Include="Super Assemblies\AKDblRodHgrPipe2Pipe.cs" />
+    <Compile Include="Super Assemblies\AKDblRodHgrShape.cs" />
+    <Compile Include="Super Assemblies\AKDblRodHgrSteel.cs" />
+    <Compile Include="Super Assemblies\AKDblRodHgrTopStr.cs" />
+    <Compile Include="Super Assemblies\AKRodHgrPipe2Pipe.cs" />
+    <Compile Include="Super Assemblies\AKRodHgrShape.cs" />
+    <Compile Include="Super Assemblies\AKRodHgrSteel.cs" />
+    <Compile Include="Super Assemblies\AKRodHgrTopStr.cs" />
+    <Compile Include="Super Assemblies\ARDblRodHgrPipe2Pipe.cs" />
+    <Compile Include="Super Assemblies\ARDblRodHgrShape.cs" />
+    <Compile Include="Super Assemblies\ARDblRodHgrSteel.cs" />
+    <Compile Include="Super Assemblies\ARDblRodHgrTopStr.cs" />
+    <Compile Include="Super Assemblies\ARRodHgrPipe2Pipe.cs" />
+    <Compile Include="Super Assemblies\ARRodHgrShape.cs" />
+    <Compile Include="Super Assemblies\ARRodHgrSteel.cs" />
+    <Compile Include="Super Assemblies\ARRodHgrTopStr.cs" />
+    <Compile Include="ResourceIdentifiers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SFS5365_Anchor_A.cs" />
+    <Compile Include="SFS5365_Anchor_B.cs" />
+    <Compile Include="SFS5365_Anchor_C.cs" />
+    <Compile Include="SFS5365_Guide_A.cs" />
+    <Compile Include="SFS5365_Guide_B.cs" />
+    <Compile Include="SFS5365_Guide_C.cs" />
+    <Compile Include="SFS5365_Guide_D.cs" />
+    <Compile Include="SFS5365_Guide_E.cs" />
+    <Compile Include="SFS5365_Guide_F.cs" />
+    <Compile Include="SFS5365_Guide_G.cs" />
+    <Compile Include="SFS5365_Guide_H.cs" />
+    <Compile Include="SFS5396_A.cs" />
+    <Compile Include="SFS5396_B.cs" />
+    <Compile Include="SFS5396_C.cs" />
+    <Compile Include="SFS5397_A1.cs" />
+    <Compile Include="SFS5397_A3.cs" />
+    <Compile Include="SFS5397_A4.cs" />
+    <Compile Include="SFS5397_B2.cs" />
+    <Compile Include="SFS5397_B3.cs" />
+    <Compile Include="SFS5397_C1.cs" />
+    <Compile Include="SFS5397_C2.cs" />
+    <Compile Include="SFS5397_D1.cs" />
+    <Compile Include="SFS5397_D2.cs" />
+    <Compile Include="SFS5397_D3.cs" />
+    <Compile Include="SFS5397_E1.cs" />
+    <Compile Include="SFS5398_A1.cs" />
+    <Compile Include="SFS5398_A2.cs" />
+    <Compile Include="SFS5398_B1.cs" />
+    <Compile Include="SFS5398_C1.cs" />
+    <Compile Include="SFS5398_C2.cs" />
+    <Compile Include="SFS5398_D1.cs" />
+    <Compile Include="SFS5398_D2.cs" />
+    <Compile Include="SFS5398_E1.cs" />
+    <Compile Include="SFS5398_E2.cs" />
+    <Compile Include="SFS5398_F1.cs" />
+    <Compile Include="SFS5398_F2.cs" />
+    <Compile Include="SFS5398_F3.cs" />
+    <Compile Include="SFS5398_H1.cs" />
+    <Compile Include="SFS5398_H2.cs" />
+    <Compile Include="SFS5858.cs" />
+    <Compile Include="SFS5859.cs" />
+    <Compile Include="SFS5860.cs" />
+    <Compile Include="SFS5366.cs" />
+    <Compile Include="SFS5368.cs" />
+    <Compile Include="SFS5373.cs" />
+    <Compile Include="SFS5374.cs" />
+    <Compile Include="SFS5367.cs" />
+    <Compile Include="SFS5375.cs" />
+    <Compile Include="SFS5376.cs" />
+    <Compile Include="SFS5377.cs" />
+    <Compile Include="SFS5378.cs" />
+    <Compile Include="SFS5379.cs" />
+    <Compile Include="SFS5394.cs" />
+    <Compile Include="Utility_L_Wrapper.cs" />
+	<Compile Include="..\..\..\..\..\Modules\HgrCompareDoubleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

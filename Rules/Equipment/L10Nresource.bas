@@ -1,0 +1,2 @@
+Public Const IDS_STRING_SHAPE = 1
+Public Const IDS_STRING_DATUMSHAPE = 2

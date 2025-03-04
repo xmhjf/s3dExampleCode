@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E7A9300-20E6-4D6E-89CA-30A299963193}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlanningNamingRules</RootNamespace>
+    <AssemblyName>PlanningNamingRules</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\Planning\Rules\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MarineRuleWrappers">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\MarineRuleWrappers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PlanningMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\PlanningMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartMarineStructureMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SmartMarineStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartPlantStructureMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SmartPlantStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SpaceMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SpaceMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assembly\AssemblyNameRule.cs" />
+    <Compile Include="Assembly\BlockNameRule.cs" />
+    <Compile Include="Assembly\BoardMirrorAssyNameRule.cs" />
+    <Compile Include="Assembly\BUMemberAssyNameRule.cs" />
+    <Compile Include="Assembly\CommonNameRule.cs" />
+    <Compile Include="Assembly\MirrorAssemblyNameRule.cs" />
+    <Compile Include="CommonPart\CommonPartManagerNameRule.cs" />
+    <Compile Include="Assembly\SystemNamingRule.cs" />
+    <Compile Include="CommonPart\DefaultGroupNameRule.cs" />
+    <Compile Include="PlanningJoint\PlnJointFolderNameRule.cs" />
+    <Compile Include="PlanningJoint\PlnJointNameRule.cs" />
+    <Compile Include="PlanningSeam\PlnSeamNameRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

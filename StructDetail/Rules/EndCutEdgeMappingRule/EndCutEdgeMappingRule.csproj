@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C0BE65C-3399-4A01-B1E3-A798DBC111D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EndCutEdgeMappingRule</RootNamespace>
+    <AssemblyName>EndCutEdgeMappingRule</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\StructDetail\Rules\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\StructDetail\Rules\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Debug\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MarineSymbolDefinition">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\MarineSymbolDefinition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\ReferenceDataMiddle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartPlantStructureMiddle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SmartPlantStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartMarineStructureMiddle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SmartMarineStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="StructureSymbolDefinition">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\StructureSymbolDefinition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrossSectionMappings\ICrossSectionMap.cs" />
+    <Compile Include="CrossSectionMappings\Section2LMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionBUTL3Map.cs" />
+    <Compile Include="CrossSectionMappings\SectionCircularMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionCMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionEAUAMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionFBMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionLMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionRectangularMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionSolidCircularMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionTMap.cs" />
+    <Compile Include="CrossSectionMappings\SectionWMap.cs" />
+    <Compile Include="EdgeMappingRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EdgeMap.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="SectionAlias.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

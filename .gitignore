@@ -322,6 +322,18 @@ paket-files/
 # FAKE - F# Make
 .fake/
 
+
+# 忽略所有 .dll 文件
+*.dll
+
+# 忽略其他常见二进制文件
+*.exe
+*.pdb
+
+# 忽略特定文件夹中的文件
+bin/
+obj/
+
 # CodeRush personal settings
 .cr/personal
 

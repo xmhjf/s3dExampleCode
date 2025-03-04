@@ -1,0 +1,102 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "CInsulation"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'   Copyright (c) 2007, Intergraph Corporation. All rights reserved.
+'
+'   CInsulation.cls
+'   Author: VRK
+'   Creation Date:  Friday, Oct 25 2006
+'
+'   Description:
+'   This class module is the place for user to implement graphical part of VBSymbol for this aspect
+'   This class module has One Output:
+'           Insulated Conical head
+'
+'   Change History:
+'   dd.mmm.yyyy     who                     change description
+'   -----------     ---                     ------------------
+'******************************************************************************
+
+Option Explicit
+
+Private m_oSymGeomHelper As IJSymbolGeometryHelper
+Private Const MODULE = "Insulation:" 'Used for error messages
+Private Sub Class_Initialize()
+    Const METHOD = "Class_Initialize:"
+    On Error GoTo Errx
+    
+     Set m_oSymGeomHelper = New SymbolServices
+     
+    Exit Sub
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Sub
+    Private Sub Class_Terminate()
+        Set m_oSymGeomHelper = Nothing
+    End Sub
+Public Sub run(ByVal m_outputColl As Object, ByRef arrayOfInputs(), arrayOfOutputs() As String)
+    Const METHOD = "run"
+    On Error GoTo ErrorLabel
+    
+    Dim oPartFclt As PartFacelets.IJDPart
+    Dim ObjConeInsHeadbody As Object
+    Dim iOutput     As Double
+    
+    Dim parEndHeadConeTopDiameter As Double
+    Dim parVesselDiameter As Double
+    Dim parEndHeadConeHeight As Double
+    Dim parInsulationThickness As Double
+    
+    Dim stPoint   As AutoMath.DPosition
+    Dim enPoint   As AutoMath.DPosition
+   
+    Set stPoint = New AutoMath.DPosition
+    Set enPoint = New AutoMath.DPosition
+    
+    'Inputs
+    Set oPartFclt = arrayOfInputs(1)
+    parVesselDiameter = arrayOfInputs(2)            'P52
+    parEndHeadConeTopDiameter = arrayOfInputs(3)    'P51
+    parEndHeadConeHeight = arrayOfInputs(4)         'P50
+    parInsulationThickness = arrayOfInputs(5)
+    
+    m_oSymGeomHelper.OutputCollection = m_outputColl
+    
+    iOutput = 0
+    parVesselDiameter = parVesselDiameter + 2 * parInsulationThickness
+    parEndHeadConeTopDiameter = parEndHeadConeTopDiameter + 2 * parInsulationThickness
+    
+    stPoint.Set 0, 0, parEndHeadConeHeight
+    enPoint.Set 0, 0, 0
+    
+    Set ObjConeInsHeadbody = PlaceCone(m_outputColl, stPoint, enPoint, parEndHeadConeTopDiameter / 2, parVesselDiameter / 2, True)
+    Set stPoint = Nothing
+    Set enPoint = Nothing
+    
+    'Set the output
+    iOutput = iOutput + 1
+    m_outputColl.AddOutput arrayOfOutputs(iOutput), ObjConeInsHeadbody
+    Set ObjConeInsHeadbody = Nothing
+
+    Exit Sub
+ErrorLabel:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Sub
+
+
+
+
+

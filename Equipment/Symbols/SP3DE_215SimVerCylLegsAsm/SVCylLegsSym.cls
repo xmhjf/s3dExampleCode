@@ -1,0 +1,177 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "SVCylLegsSym"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'
+'   Copyright (c) 2007 Intergraph Corporation. All rights reserved.
+'
+'   SVCylLegsSym.cls
+'   ProgID:  SP3DE_215SimVerCylLegsAsm.SVCylLegsSym
+'   Author:    VRK
+'   Creation Date:  FriDay,March 23 2007
+'
+'   Description:
+'   This is E215 Simple Vertical Cylinder Equipment with Legs Assembly.
+'   This Assembly Uses three Aspects
+'   No.Of Aspects       Name of Aspect               No.of Outputs
+'      1                Physical                            11
+'      2                Insulation                           1
+'      3                ReferenceGeometry                    1
+'
+'   Change History:
+'   dd.mmm.yyyy     who                     change description
+'   -----------     ---                     ------------------
+'
+'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Option Explicit
+Private Const MODULE = "SVCylLegsSym:"  'Used for error messages
+Private m_oSymbolHelper As IJSymbolHelper
+
+'Declaration of the User Symbol Services interface
+Implements IJDUserSymbolServices
+
+Private Sub Class_Initialize()
+    Const METHOD = "Class_Initialize:"
+    On Error GoTo ErrorHandler
+
+    Set m_oSymbolHelper = New SymbolServices
+    m_oSymbolHelper.ProjectName = "SP3DE_215SimVerCylLegsAsm"
+    m_oSymbolHelper.ClassName = "SVCylLegsSym"
+
+    'Inputs
+    m_oSymbolHelper.NumInputs = 18
+
+    m_oSymbolHelper.AddInputDef 1, "End1Type", "Vessel Front Head Type", 1
+    m_oSymbolHelper.AddInputDef 2, "End2Type", "Vessel Rear Head Type", 1
+    m_oSymbolHelper.AddInputDef 3, "VesselTantoTan", "Vessel Tangent to Tangent", 1#
+    m_oSymbolHelper.AddInputDef 4, "VesselDiameter", "Vessel Diameter", 0.5
+    m_oSymbolHelper.AddInputDef 5, "SupportAngularLocation", "Support Angular Location", 90
+    m_oSymbolHelper.AddInputDef 6, "NumberofSupports", "Number of Supports", 4
+    m_oSymbolHelper.AddInputDef 7, "SupportHeight", "Support Height", 0.5
+    m_oSymbolHelper.AddInputDef 8, "SupportLength", "Support Length", 0.175
+    m_oSymbolHelper.AddInputDef 9, "SupportThickness", "Support Thickness", 0.1
+    m_oSymbolHelper.AddInputDef 10, "SupportReferencePoint", "Support Reference Point", 0.1
+    m_oSymbolHelper.AddInputDef 11, "EndHeadConeTopDiameter", "End Head Cone Top Diameter", 0.1
+    m_oSymbolHelper.AddInputDef 12, "EndHeadConeHeight", "End Head Cone Height", 0.3
+    m_oSymbolHelper.AddInputDef 13, "EndHeadKnuckleRadius", "End Head Knuckle Radius", 0.25
+    m_oSymbolHelper.AddInputDef 14, "EndHeadDomeradius", "End Head Dome Radius", 0.3
+    m_oSymbolHelper.AddInputDef 15, "EndHeadFlangedThick1", "End Head Flanged Thickness 1", 0.2
+    m_oSymbolHelper.AddInputDef 16, "EndHeadFlangedThick2", "End Head Flanged Thickness 2", 0.2
+    m_oSymbolHelper.AddInputDef 17, "EndHeadSphericalRadius", "End Head Spherical Radius", 0.3
+    m_oSymbolHelper.AddInputDef 18, "InsulationThickness", "Insulation Thickness", 0.025
+
+    'Outputs
+    m_oSymbolHelper.NumOutputs = 13
+    
+    m_oSymbolHelper.AddOutputDef 1, "VesselCylBodyIns", "Insulated VesselCylBody", Insulation
+    m_oSymbolHelper.AddOutputDef 2, "SimVerCylEqpLegControlPoint", "Control Point of Simple Vertical Cylinder with Equipment Legs", ReferenceGeometry
+    m_oSymbolHelper.AddOutputDef 3, "DefaultSurface", "Default Surface", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 4, "VesselCylBody", "VesselCylBody", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 5, "EqpFoundationPort1", "Foundation Port 1", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 6, "Planes_", "Leg Support", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 7, "Edge_", "Edge", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 8, "Point1_", "Left Face Point", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 9, "Point2_", "Right Face Point", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 10, "Point3_", "Front Face Point", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 11, "Point4_", "Back Face Point", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 12, "Point5_", "Bottom Face Point", SimplePhysical
+    m_oSymbolHelper.AddOutputDef 13, "Point6_", "Top Face Point", SimplePhysical
+
+    'Aspects
+    m_oSymbolHelper.NumAspects = 3
+    
+    m_oSymbolHelper.AddAspectDef 1, "Insulation", "Insulation", Insulation
+    m_oSymbolHelper.AddAspectDef 2, "RefGeometry", "ReferenceGeometry", ReferenceGeometry
+    m_oSymbolHelper.AddAspectDef 3, "Physical", "Physical", SimplePhysical
+
+Exit Sub
+ErrorHandler:
+    ReportUnanticipatedError MODULE, METHOD
+End Sub
+
+Private Sub Class_Terminate()
+    Set m_oSymbolHelper = Nothing
+End Sub
+
+'Note that the rest of the code is generated by the Symbol Wizard and should not need to be modified
+Public Function IJDUserSymbolServices_InstanciateDefinition( _
+                ByVal CodeBase As String, _
+                ByVal defParameters As Variant, _
+                ByVal ActiveConnection As Object) As Object
+    'Call symbol services default implementation of this method
+    Const METHOD = "IJDUserSymbolServices_InstanciateDefinition:"
+    On Error GoTo Errx
+
+    Set IJDUserSymbolServices_InstanciateDefinition = m_oSymbolHelper.InstanciateDefinition(CodeBase, defParameters, ActiveConnection)
+
+    Exit Function
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Function
+
+Public Function IJDUserSymbolServices_GetDefinitionName(ByVal definitionParameters As Variant) As String
+    Const METHOD = "IJDUserSymbolServices_GetDefinitionName:"
+    On Error GoTo Errx
+
+    IJDUserSymbolServices_GetDefinitionName = m_oSymbolHelper.ProjectName + "." + m_oSymbolHelper.ClassName
+
+    Exit Function
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Function
+
+Public Sub IJDUserSymbolServices_InitializeSymbolDefinition(ByRef pSymbolDefinition As IJDSymbolDefinition)
+    Const METHOD = "IJDUserSymbolServices_InitializeSymbolDefinition:"
+    On Error GoTo Errx
+
+    m_oSymbolHelper.InitializeSymbolDefinition pSymbolDefinition
+
+    Exit Sub
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+
+End Sub
+
+Public Sub IJDUserSymbolServices_InvokeRepresentation(ByVal sblOcc As Object, _
+                    ByVal repName As String, _
+                    ByVal outputcoll As Object, _
+                    ByRef arrayOfInputs())
+    Const METHOD = "IJDUserSymbolServices_InvokeRepresentation:"
+    On Error GoTo Errx
+
+    m_oSymbolHelper.InvokeRepresentation sblOcc, repName, outputcoll, arrayOfInputs
+
+    Exit Sub
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Sub
+
+Public Function IJDUserSymbolServices_EditOccurence(ByRef pSymbolOccurence As Object, ByVal transactionMgr As Object) As Boolean
+    Const METHOD = "IJDUserSymbolServices_EditOccurence:"
+    On Error GoTo Errx
+
+    'The definition uses the generic EditOccurrence command
+    IJDUserSymbolServices_EditOccurence = False
+
+    Exit Function
+Errx:
+    Err.Raise Err.Number, Err.Source & " " & METHOD, Err.Description, _
+    Err.HelpFile, Err.HelpContext
+End Function
+
+

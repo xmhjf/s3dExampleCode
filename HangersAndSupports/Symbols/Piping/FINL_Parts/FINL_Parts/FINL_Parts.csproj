@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C5E764E-24BA-4572-8D4A-3BBEFC6459C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Symbols</RootNamespace>
+    <AssemblyName>FINL_Parts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UICulture>en-US</UICulture>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FINL_PartsLocalizer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceIdentifiers.cs" />
+    <Compile Include="SFS4032.cs" />
+    <Compile Include="SFS4683.cs" />
+    <Compile Include="SFS5368.cs" />
+    <Compile Include="SFS5369.cs" />
+    <Compile Include="SFS5370.cs" />
+    <Compile Include="SFS5371.cs" />
+    <Compile Include="SFS5372.cs" />
+    <Compile Include="SFS5381.cs" />
+    <Compile Include="SFS5384.cs" />
+    <Compile Include="SFS5385.cs" />
+    <Compile Include="SFS5386.cs" />
+    <Compile Include="SFS5387.cs" />
+    <Compile Include="SFS5388.cs" />
+    <Compile Include="SFS5389.cs" />
+    <Compile Include="SFS5390.cs" />
+    <Compile Include="SFS5391.cs" />
+    <Compile Include="SFS5392.cs" />
+    <Compile Include="SFS5393A.cs" />
+    <Compile Include="SFS5393B.cs" />
+    <Compile Include="SFS5393C.cs" />
+    <Compile Include="SFS5393D.cs" />
+    <Compile Include="SFS5394_CLIP.cs" />
+    <Compile Include="SFS5394_SLEEVE.cs" />
+    <Compile Include="SFS5394_TRDBAR.cs" />
+    <Compile Include="SFS5395.cs" />
+    <Compile Include="SFS5400.cs" />
+    <Compile Include="SFS5401.cs" />
+    <Compile Include="SFS5402.cs" />
+    <Compile Include="SFS5403.cs" />
+    <Compile Include="SFS5856.cs" />
+    <Compile Include="SFS5857.cs" />
+    <Compile Include="SFS5861.cs" />
+    <Compile Include="SFS5862.cs" />
+	<Compile Include="..\..\..\..\Modules\HgrCompareDoubleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FINL_Parts.en-US.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

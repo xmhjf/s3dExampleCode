@@ -1,0 +1,157 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "SlotASel"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Const m_SelectorProgid As String = CUSTOMERID + "SlotRules.SlotASel"
+Const m_SelectorName As String = CUSTOMERID + "SlotRules.SlotASel"
+Const m_FamilyProgid As String = ""
+
+Const INPUT_PENETRATED = "Penetrated"
+Const INPUT_PENETRATING = "Penetrating"
+
+Private Const MODULE = "S:\StructDetail\Data\SmartOccurrence\" + CUSTOMERID + "SlotRules\SlotASel.cls"
+
+Implements IJDUserSymbolServices
+
+Public Sub SelectorInputs(pIH As IJDInputsHelper)
+  On Error GoTo ErrorHandler
+  
+  pIH.SetInput INPUT_PENETRATING
+  pIH.SetInput INPUT_PENETRATED
+  
+  Exit Sub
+ErrorHandler:
+  Err.Raise LogError(Err, MODULE, "SelectorInputs").Number
+End Sub
+Public Sub SelectorQuestions(pQH As IJDQuestionsHelper)
+  On Error GoTo ErrorHandler
+  
+  'Define questions
+  pQH.SetQuestion "Clearance", 0.1, , "GenerateClearance", LIBRARY_SOURCE_ID
+  
+  Exit Sub
+ErrorHandler:
+  Err.Raise LogError(Err, MODULE, "SelectorQuestions").Number
+End Sub
+
+Public Sub SelectorLogic(pSLH As IJDSelectorLogic)
+  On Error GoTo ErrorHandler
+  
+  ' ************* Collect the Arguments ************
+  
+  'Get the Penetrating Section
+    Dim sXSectionType As String
+    If TypeOf pSLH.InputObject(INPUT_PENETRATING) Is IJProfile Then
+        'Penetrating Object is a Profile
+        Dim oProfilePart As StructDetailObjects.ProfilePart
+        Set oProfilePart = New StructDetailObjects.ProfilePart
+        Set oProfilePart.object = pSLH.InputObject(INPUT_PENETRATING)
+        sXSectionType = oProfilePart.sectionType
+        
+        Set oProfilePart = Nothing
+    ElseIf TypeOf pSLH.InputObject(INPUT_PENETRATING) Is IJPlate Then
+        'Penetrating Object is a Plate
+        Dim oSlotMappingRule As IJSlotMappingRule
+        Set oSlotMappingRule = CreateSlotMappingRuleSymbolInstance
+        
+        Dim oSlot As New StructDetailObjects.Slot
+        Set oSlot.object = pSLH.SmartOccurrence
+        
+        Dim oWeb As Object
+        Dim oFlange As Object
+        Dim o2ndWeb As Object
+        Dim o2ndFlange As Object
+        oSlotMappingRule.GetSectionAlias oSlot.Penetrating, oSlot.Penetrated, sXSectionType, oWeb, oFlange, o2ndWeb, o2ndFlange
+    Else
+        'Unknown Penetrating Object Type
+        Exit Sub
+    End If
+
+    ' Get the Question answers
+   Dim clearance As Double
+   clearance = pSLH.Answer("Clearance")
+
+  ' ********************* Selection code ****************
+  
+  Select Case sXSectionType
+     Case "EA", "UA"
+        pSLH.Add "SlotAA_SM"
+        
+     Case "B"
+        pSLH.Add "SlotBA_SM"
+        
+     Case "FB"
+        pSLH.Add "SlotFA_SM"
+        
+     Case "BUT", "BUTL2"
+        pSLH.Add "SlotTA_SM"
+        
+     'Case Else
+     '   sERROR = "Invalid cross section type ('" & oProfilePart.SectionType & "') specified for " & m_SelectorProgid
+     '   GoTo ErrorHandler
+  End Select
+  
+  Exit Sub
+ErrorHandler:
+  Err.Raise LogError(Err, MODULE, "SelectorLogic").Number
+End Sub
+
+
+
+
+' ********************************************************************************************
+'         !!!!! Start Private Code !!!!!
+'                 - Following Code Should not be edited
+'                 - It exposes the Selector as a regular symbol definition
+' ********************************************************************************************
+Private Function IJDUserSymbolServices_GetDefinitionName(ByVal definitionParameters As Variant) As String
+  IJDUserSymbolServices_GetDefinitionName = m_SelectorName
+End Function
+Private Sub IJDUserSymbolServices_InitializeSymbolDefinition(pSelector As IJDSymbolDefinition)
+  
+  ' Remove all existing defined Input and Output (Representations)
+  ' before defining the current Inputs and Outputs
+  pSelector.IJDInputs.RemoveAllInput
+  pSelector.IJDRepresentations.RemoveAllRepresentation
+  
+  Dim pSelectorFact As New DefinitionFactory
+  pSelectorFact.InitAbstractSelector pSelector
+  Dim pIH As IJDInputsHelper
+  Set pIH = New InputHelper
+  pIH.definition = pSelector
+  pIH.InitAs m_FamilyProgid
+  SelectorInputs pIH
+  Dim pQH As IJDQuestionsHelper
+  Set pQH = New QuestionHelper
+  pQH.Selector = pSelector
+  SelectorQuestions pQH
+End Sub
+Private Function IJDUserSymbolServices_InstanciateDefinition(ByVal CB As String, ByVal DP As Variant, ByVal pRM As Object) As Object
+  Dim pSelectorFact As New DefinitionFactory
+  Set IJDUserSymbolServices_InstanciateDefinition = pSelectorFact.InstanciateSelector(m_SelectorProgid, CB, IJDUserSymbolServices_GetDefinitionName(DP), pRM)
+End Function
+Private Sub IJDUserSymbolServices_InvokeRepresentation(ByVal pSymbolOccurrence As Object, ByVal pRepName As String, ByVal pOutputColl As Object, arrayOfInputs() As Variant)
+End Sub
+Private Function IJDUserSymbolServices_EditOccurence(pSymbolOccurrence As Object, ByVal pTransactionMgr As Object) As Boolean
+End Function
+Public Sub CMSelector(pRep As IJDRepresentation)
+  Dim pSLH As IJDSelectorLogic
+  Set pSLH = New SelectorLogic
+  pSLH.Representation = pRep
+  SelectorLogic pSLH
+End Sub
+' ********************************************************************************************
+'         !!!!! End Private Code !!!!!
+' ********************************************************************************************
+

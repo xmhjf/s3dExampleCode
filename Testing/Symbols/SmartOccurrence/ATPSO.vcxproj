@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Typelib|Win32">
+      <Configuration>Typelib</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D2FB922-E9D5-4593-96A9-972AB2672ECF}</ProjectGuid>
+    <RootNamespace>ATPSO</RootNamespace>
+    <Keyword>AtlProj</Keyword>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="X:\BldTools\PropertySheets\SP3D.Typelib.Win32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="X:\BldTools\PropertySheets\SP3D.Release.Win32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="X:\BldTools\PropertySheets\SP3D.Debug.Win32.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">M:\SharedContent\Bin\Testing\Symbols\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">M:\SharedContent\Bin\Testing\Symbols\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">false</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">
+    <TargetExt>.tlb</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>
+      </TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+      <DllDataFileName>
+      </DllDataFileName>
+      <InterfaceIdentifierFileName>
+      </InterfaceIdentifierFileName>
+      <ProxyFileName>ATPSO_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <OutputDirectory />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>x:\middle\include;x:\shared\include;x:\server\include;m:\commonschema\middle\include;m:\commonapp\middle\include;Typelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);Typelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>true</RegisterOutput>
+      <ModuleDefinitionFile>.\ATPSO.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>x:\server\include;x:\middle\include;x:\shared\include;m:\commonapp\middle\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>
+      </TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+      <DllDataFileName>
+      </DllDataFileName>
+      <InterfaceIdentifierFileName>
+      </InterfaceIdentifierFileName>
+      <ProxyFileName>ATPSO_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <OutputDirectory />
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>x:\middle\include;x:\shared\include;x:\server\include;m:\commonschema\middle\include;m:\commonapp\middle\include;Typelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);Typelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>true</RegisterOutput>
+      <ModuleDefinitionFile>.\ATPSO.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>x:\server\idl;x:\middle\idl;x:\shared\idl;m:\commonapp\middle\idl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <HeaderFileName>%(Filename)_i.h</HeaderFileName>
+      <OutputDirectory>m:\sharedcontent\Src\Testing\Symbols\smartoccurrence\</OutputDirectory>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <Link>
+      <OutputFile>$(OutDir)Trash.dll</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ATPSO.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CABasicDef.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CABasicSym.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CADeleteMemberOutputDef.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CADeleteMemberOutputSym.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CAEvaluateAfterSymbolDef.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CAEvaluateAfterSymbolSym.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CAForParameterRuleDef.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CAForParameterRuleSym.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CANestedOutputParentDef.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CANestedOutputParentSym.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="COM2ndSelectionRuleSel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="COMSelectionRuleRootSel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="COMSelectionRuleSel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SO1GraphicOutput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SONoGraphics.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ATPSO_i.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TestParameterRule.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TestSelRuleWithQs.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="ATPSO.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="ATPSO.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="CADeleteMemberOutputDef.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="CADeleteMemberOutputSym.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="CAEvaluateAfterSymbolDef.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="CAEvaluateAfterSymbolSym.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="COM2ndSelectionRuleSel.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="COMSelectionRuleRootSel.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="COMSelectionRuleSel.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="ATPSO.idl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">x:\server\idl;x:\middle\idl;x:\shared\idl;m:\commonapp\middle\idl;x:\server\include;x:\middle\include;x:\shared\include;m:\commonapp\middle\include;m:\CommonApp\Middle\Utilities\DefinitionHelpersIntf;m:\commonschema\middle\idl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</GenerateStublessProxies>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="CADeleteMemberOutputDef.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="CADeleteMemberOutputSym.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="CAEvaluateAfterSymbolDef.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="CAEvaluateAfterSymbolSym.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="COM2ndSelectionRuleSel.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="COMSelectionRuleRootSel.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="COMSelectionRuleSel.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="dllmain.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resource.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="stdafx.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="targetver.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="ATPSO_i.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ATPSO.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CABasicDef.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CABasicSym.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CAForParameterRuleDef.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CAForParameterRuleSym.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CANestedOutputParentDef.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CANestedOutputParentSym.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="SO1GraphicOutput.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="SONoGraphics.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="TestParameterRule.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="TestSelRuleWithQs.rgs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CABasicDef.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="CABasicSym.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="CAForParameterRuleDef.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="CAForParameterRuleSym.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="CANestedOutputParentDef.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="CANestedOutputParentSym.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="SO1GraphicOutput.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="SONoGraphics.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TestParameterRule.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TestSelRuleWithQs.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Typelib|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

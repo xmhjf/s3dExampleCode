@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C94D2B2B-9EF9-4F13-B3C0-D61C16734221}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Rules</RootNamespace>
+    <AssemblyName>PipeHgrAssemblies2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\Bin\HangersAndSupports\Rules\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\Bin\HangersAndSupports\Rules\Release\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommonRouteMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonRouteMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartPlantStructureMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\SmartPlantStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assy_BeamIShape.cs" />
+    <Compile Include="Assy_BeamLShape.cs" />
+    <Compile Include="Assy_BeamUShape.cs" />
+    <Compile Include="Assy_BeamU_Bracket.cs" />
+    <Compile Include="Assy_GD_AN.cs" />
+    <Compile Include="Assy_GD_GEN.cs" />
+    <Compile Include="Assy_GD_HD.cs" />
+    <Compile Include="Assy_GD_L1.cs" />
+    <Compile Include="Assy_GD_L2.cs" />
+    <Compile Include="Assy_GD_T1.cs" />
+    <Compile Include="Assy_GN_VR_CYL.cs" />
+    <Compile Include="Assy_LE_DL.cs" />
+    <Compile Include="Assy_RR_DR_LS.cs" />
+    <Compile Include="Assy_RR_DR_WS.cs" />
+    <Compile Include="Assy_RR_LR.cs" />
+    <Compile Include="Assy_RR_RI.cs" />
+    <Compile Include="Assy_RR_SR_CL.cs" />
+    <Compile Include="Assy_RR_SR_PA.cs" />
+    <Compile Include="Assy_SH.cs" />
+    <Compile Include="Assy_SH_CL.cs" />
+    <Compile Include="Assy_UBolt.cs" />
+    <Compile Include="Assy_VS_SR_CL.cs" />
+    <Compile Include="Assy_VS_SR_PA.cs" />
+    <Compile Include="CommonAssembly.cs" />
+    <Compile Include="G4G_1400_BC.cs" />
+    <Compile Include="G4G_1400_H.cs" />
+    <Compile Include="G4G_1400_TURN.cs" />
+    <Compile Include="G4G_1400_U.cs" />
+    <Compile Include="HolePentrtPlate.cs" />
+    <Compile Include="PentrtPlate.cs" />
+    <Compile Include="PipeHgrAssemblies2Localizer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceIdentifier.cs" />
+    <Compile Include="SupportAssemblyServices.cs" />
+    <Compile Include="VesselGuide.cs" />
+    <Compile Include="..\..\..\..\..\Modules\HgrCompareDoubleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PipeHgrAssemblies2.en-US.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

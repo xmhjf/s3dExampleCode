@@ -1,0 +1,26 @@
+HKCR
+{
+	ATPSO.CAEvaluateAfterSymbolDef.1 = s 'CAEvaluateAfterSymbolDef Class'
+	{
+		CLSID = s '{7C04C448-F2A6-4E39-880C-26E8EE6ADD25}'
+	}
+	ATPSO.CAEvaluateAfterSymbolDef = s 'CAEvaluateAfterSymbolDef Class'
+	{
+		CLSID = s '{7C04C448-F2A6-4E39-880C-26E8EE6ADD25}'
+		CurVer = s 'ATPSO.CAEvaluateAfterSymbolDef.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7C04C448-F2A6-4E39-880C-26E8EE6ADD25} = s 'CAEvaluateAfterSymbolDef Class'
+		{
+			ProgID = s 'ATPSO.CAEvaluateAfterSymbolDef.1'
+			VersionIndependentProgID = s 'ATPSO.CAEvaluateAfterSymbolDef'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{A95C7667-40AF-4F87-86A1-542E074464A0}'
+		}
+	}
+}

@@ -1,0 +1,271 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "CPhysical"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'
+'   Copyright (c) 2003-07, Intergraph Corporation. All rights reserved.
+'
+'   CPhysical.cls
+'   Author:          NN
+'   Creation Date:  Thursday, Jan 25 2001
+'   Description:
+' This class module is the place for user to implement graphical part of VBSymbol for this aspect
+'
+'   Change History:
+'   dd.mmm.yyyy     who     change description
+'   -----------         -----        ------------------
+'   09.Jul.2003     SymbolTeam(India)       Copyright Information, Header  is added.
+'   24.Oct.2003     SymbolTeam(India)       TR 51102 Removed duplicated Header/Copyright Information.
+'   28.Jul.2005     svsmylav        TR-82161: Hexagonal nut length (parHexaLength) is corrected.
+'                                           Reference: PDS symbol SN=F39, factor as per note 18 of PDS Piping Component Data.
+'  08.SEP.2006     KKC  DI-95670  Replace names with initials in all revision history sheets and symbols
+'  18.Jun.2007     MA   TR-122032 Modified the symbol to display correct graphics for Male Threaded end.
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Option Explicit
+Private PI           As Double
+Private RAD          As Double
+Private Const MODULE = "Physical:" 'Used for error messages
+Private InchToMtr       As Double
+
+Private Sub Class_Initialize()
+
+    PI = 4 * Atn(1)
+    RAD = 180 / PI
+    InchToMtr = 25.4 / 1000
+
+End Sub
+
+
+Public Sub run(ByVal m_OutputColl As Object, ByRef arrayOfInputs(), arrayOfOutputs() As String)
+    
+    Const METHOD = "run"
+    On Error GoTo ErrorLabel
+    
+    Dim oPartFclt       As PartFacelets.IJDPart
+    Dim pipeDiam        As Double
+    Dim flangeThick     As Double
+    Dim cptOffset       As Double
+    Dim flangeDiam      As Double
+    Dim depth           As Double
+    
+    Dim pipeDiam2        As Double
+    Dim flangeThick2     As Double
+    Dim cptOffset2       As Double
+    Dim flangeDiam2      As Double
+    Dim depth2           As Double
+
+    Dim iOutput     As Double
+    Dim ObjBody As Object
+    
+    Dim parFacetoFace As Double
+    Dim parUnionDiameter As Double
+    Dim parInsulationThickness As Double
+
+' Inputs
+    Set oPartFclt = arrayOfInputs(1)
+    parFacetoFace = arrayOfInputs(2)
+    parUnionDiameter = arrayOfInputs(3)
+    parInsulationThickness = arrayOfInputs(4)
+    
+    iOutput = 0
+
+ ' Insert your code for output 1(Body)
+    Dim dPipeOD1 As Double
+    Dim parA72rad           As Double
+    Dim parHexaZ            As Double
+    Dim parHexaY            As Double
+    Dim parHexagoneA(21)     As Double
+    parA72rad = PI / 3
+    parHexaZ = parUnionDiameter / 2 * Cos(parA72rad)
+    parHexaY = parUnionDiameter / 2 * Sin(parA72rad)
+    Dim geomFactory As IngrGeom3D.GeometryFactory
+    Set geomFactory = New IngrGeom3D.GeometryFactory
+    RetrieveParameters 1, oPartFclt, m_OutputColl, pipeDiam, flangeThick, flangeDiam, cptOffset, depth
+    RetrieveParameters 2, oPartFclt, m_OutputColl, pipeDiam2, flangeThick2, flangeDiam2, cptOffset2, depth2
+    dPipeOD1 = pipeDiam
+    
+    Dim parHexaLength As Double
+'   As per note 18 of PDS, parHexaLength need to be calculated using dimension 'E'
+'   and a factor that is determined based on pipe outer diameter
+    Dim half As Double
+    Dim two As Double
+    Dim dDimensionE As Double
+    half = 0.5 * InchToMtr
+    two = 2 * InchToMtr
+    dDimensionE = parFacetoFace / 2
+    If CmpDblLessThanOrEqualTo(dPipeOD1, half) Then
+           parHexaLength = dDimensionE * 0.9
+    Else
+        If CmpDblGreaterthan(dPipeOD1, half) And CmpDblLessThanOrEqualTo(dPipeOD1, two) Then
+            parHexaLength = dDimensionE * 0.75
+        Else
+            If CmpDblGreaterthan(dPipeOD1, two) Then
+                parHexaLength = dDimensionE * 0.6
+            End If
+        End If
+    End If
+
+    Dim stPoint   As AutoMath.DPosition
+    Set stPoint = New AutoMath.DPosition
+    Dim enPoint   As AutoMath.DPosition
+    Set enPoint = New AutoMath.DPosition
+    stPoint.Set -parHexaLength / 2, 0, 0
+    enPoint.Set stPoint.x + parHexaLength, 0, 0
+
+' Point 1
+    parHexagoneA(0) = stPoint.x
+    parHexagoneA(1) = 0
+    parHexagoneA(2) = -parUnionDiameter / 2
+' Point 2
+    parHexagoneA(3) = stPoint.x
+    parHexagoneA(4) = -parHexaY
+    parHexagoneA(5) = -parHexaZ
+' Point 3
+    parHexagoneA(6) = stPoint.x
+    parHexagoneA(7) = -parHexaY
+    parHexagoneA(8) = parHexaZ
+' Point 4
+    parHexagoneA(9) = stPoint.x
+    parHexagoneA(10) = 0
+    parHexagoneA(11) = parUnionDiameter / 2
+' Point 5
+    parHexagoneA(12) = stPoint.x
+    parHexagoneA(13) = parHexaY
+    parHexagoneA(14) = parHexaZ
+' Point 6
+    parHexagoneA(15) = stPoint.x
+    parHexagoneA(16) = parHexaY
+    parHexagoneA(17) = -parHexaZ
+' Point 7
+    parHexagoneA(18) = stPoint.x
+    parHexagoneA(19) = 0
+    parHexagoneA(20) = -parUnionDiameter / 2
+    
+    Dim lines           As Collection
+    Dim oLine           As IngrGeom3D.Line3d
+    Dim oGeomFactory    As IngrGeom3D.GeometryFactory
+
+    Set lines = New Collection
+    Set oGeomFactory = New IngrGeom3D.GeometryFactory
+    Set oLine = oGeomFactory.Lines3d.CreateBy2Points(Nothing, parHexagoneA(0), parHexagoneA(1), parHexagoneA(2), parHexagoneA(3), parHexagoneA(4), parHexagoneA(5))
+    lines.Add oLine
+    Set oLine = oGeomFactory.Lines3d.CreateBy2Points(Nothing, parHexagoneA(3), parHexagoneA(4), parHexagoneA(5), parHexagoneA(6), parHexagoneA(7), parHexagoneA(8))
+    lines.Add oLine
+    Set oLine = oGeomFactory.Lines3d.CreateBy2Points(Nothing, parHexagoneA(6), parHexagoneA(7), parHexagoneA(8), parHexagoneA(9), parHexagoneA(10), parHexagoneA(11))
+    lines.Add oLine
+    Set oLine = oGeomFactory.Lines3d.CreateBy2Points(Nothing, parHexagoneA(9), parHexagoneA(10), parHexagoneA(11), parHexagoneA(12), parHexagoneA(13), parHexagoneA(14))
+    lines.Add oLine
+    Set oLine = oGeomFactory.Lines3d.CreateBy2Points(Nothing, parHexagoneA(12), parHexagoneA(13), parHexagoneA(14), parHexagoneA(15), parHexagoneA(16), parHexagoneA(17))
+    lines.Add oLine
+    Set oLine = oGeomFactory.Lines3d.CreateBy2Points(Nothing, parHexagoneA(15), parHexagoneA(16), parHexagoneA(17), parHexagoneA(18), parHexagoneA(19), parHexagoneA(20))
+    lines.Add oLine
+
+    Dim objHexagoneComplex As IngrGeom3D.ComplexString3d
+    Dim nnstartPoint   As AutoMath.DPosition
+    Set nnstartPoint = New AutoMath.DPosition
+    nnstartPoint.Set parHexagoneA(0), parHexagoneA(1), parHexagoneA(2)
+    
+    Set objHexagoneComplex = PlaceTrCString(nnstartPoint, lines)
+    
+    Set oLine = Nothing
+    Dim iCountSide As Integer
+    For iCountSide = 1 To lines.Count
+        lines.Remove 1
+    Next iCountSide
+    Set lines = Nothing
+    Set oGeomFactory = Nothing
+    
+    Set ObjBody = geomFactory.Projections3d.CreateByCurve(m_OutputColl.ResourceManager, _
+                                                        objHexagoneComplex, 1, 0, 0, parHexaLength, True)
+    Set objHexagoneComplex = Nothing
+    Set nnstartPoint = Nothing
+    
+' Set the output
+    iOutput = iOutput + 1
+    m_OutputColl.AddOutput arrayOfOutputs(iOutput), ObjBody
+    Set ObjBody = Nothing
+    Set geomFactory = Nothing
+    Set stPoint = Nothing
+    Set enPoint = Nothing
+
+'Create cylinder 1
+    Dim objCyl1 As Object
+    Dim oStPoint   As AutoMath.DPosition
+    Set oStPoint = New AutoMath.DPosition
+    Dim oEnPoint   As AutoMath.DPosition
+    Set oEnPoint = New AutoMath.DPosition
+    oStPoint.Set -parFacetoFace / 2, 0, 0
+    oEnPoint.Set -parHexaLength / 2, 0, 0
+    Dim dCylinderdia As Double
+    dCylinderdia = pipeDiam
+    
+    If CmpDblLessThanOrEqualTo(flangeDiam, 0) Then flangeDiam = dCylinderdia
+    Set objCyl1 = PlaceCylinder(m_OutputColl, oStPoint, oEnPoint, flangeDiam, True)
+    ' Set the output
+    m_OutputColl.AddOutput "Body_", objCyl1
+    Set objCyl1 = Nothing
+
+'Create cylinder 2
+    Dim objCyl2 As Object
+    oStPoint.Set parHexaLength / 2, 0, 0
+    oEnPoint.Set parFacetoFace / 2, 0, 0
+    dCylinderdia = pipeDiam2
+    If CmpDblLessThanOrEqualTo(flangeDiam2, 0) Then flangeDiam2 = dCylinderdia
+    Set objCyl2 = PlaceCylinder(m_OutputColl, oStPoint, oEnPoint, flangeDiam2, True)
+    
+    ' Set the output
+    m_OutputColl.AddOutput "Body_", objCyl2
+    Set objCyl2 = Nothing
+    Set oStPoint = Nothing
+    Set oEnPoint = Nothing
+
+' Place Nozzle 1
+    
+    RetrieveParameters 1, oPartFclt, m_OutputColl, pipeDiam, flangeThick, flangeDiam, cptOffset, depth
+    
+    Dim oPlacePoint As AutoMath.DPosition
+    Dim oDir        As AutoMath.DVector
+    Dim objNozzle   As GSCADNozzleEntities.IJDNozzle
+    Set oPlacePoint = New AutoMath.DPosition
+    Set oDir = New AutoMath.DVector
+    oPlacePoint.Set -parFacetoFace / 2 - cptOffset + depth, 0, 0
+    oDir.Set -1, 0, 0
+    
+    Set objNozzle = CreateNozzleJustaCircle(1, oPartFclt, m_OutputColl, oDir, oPlacePoint)
+
+' Set the output
+    iOutput = iOutput + 1
+    m_OutputColl.AddOutput arrayOfOutputs(iOutput), objNozzle
+    Set objNozzle = Nothing
+    
+' Place Nozzle 2
+    RetrieveParameters 2, oPartFclt, m_OutputColl, pipeDiam, flangeThick, flangeDiam, cptOffset, depth
+    oPlacePoint.Set parFacetoFace / 2 + cptOffset - depth, 0, 0
+    oDir.Set 1, 0, 0
+    
+    Set objNozzle = CreateNozzleJustaCircle(2, oPartFclt, m_OutputColl, oDir, oPlacePoint)
+
+' Set the output
+    iOutput = iOutput + 1
+    m_OutputColl.AddOutput arrayOfOutputs(iOutput), objNozzle
+    Set objNozzle = Nothing
+    Set oPlacePoint = Nothing
+    Set oDir = Nothing
+    
+    Exit Sub
+    
+ErrorLabel:
+    ReportUnanticipatedError MODULE, METHOD
+    
+End Sub

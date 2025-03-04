@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SP3D30HCableTray", "SP3D30HCableTray\SP3D30HCableTray.vbproj", "{5103CF95-29AE-4549-A8C9-A519C166DF24}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SP3DBallValve", "SP3DBallValve\SP3DBallValve.vbproj", "{07E3407E-EB9F-4339-AE32-B14A4D5F9EA8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SP3DConduitTee", "SP3DConduitTee\SP3DConduitTee.vbproj", "{99AD1511-2A8F-4585-91F7-0E1EF540F931}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SP3DHElbow", "SP3DHElbow\SP3DHElbow.vbproj", "{AED033E7-DD0C-4D82-A3DB-EEEDB5FCCCDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5103CF95-29AE-4549-A8C9-A519C166DF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5103CF95-29AE-4549-A8C9-A519C166DF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5103CF95-29AE-4549-A8C9-A519C166DF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5103CF95-29AE-4549-A8C9-A519C166DF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E3407E-EB9F-4339-AE32-B14A4D5F9EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E3407E-EB9F-4339-AE32-B14A4D5F9EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E3407E-EB9F-4339-AE32-B14A4D5F9EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E3407E-EB9F-4339-AE32-B14A4D5F9EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99AD1511-2A8F-4585-91F7-0E1EF540F931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AD1511-2A8F-4585-91F7-0E1EF540F931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AD1511-2A8F-4585-91F7-0E1EF540F931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AD1511-2A8F-4585-91F7-0E1EF540F931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED033E7-DD0C-4D82-A3DB-EEEDB5FCCCDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED033E7-DD0C-4D82-A3DB-EEEDB5FCCCDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED033E7-DD0C-4D82-A3DB-EEEDB5FCCCDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED033E7-DD0C-4D82-A3DB-EEEDB5FCCCDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

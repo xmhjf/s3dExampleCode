@@ -1,0 +1,34 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by ATPSO.rc
+//
+#define IDS_PROJNAME                    100
+#define IDR_ATPSO                       101
+#define IDR_CADELETEMEMBEROUTPUTDEF     102
+#define IDR_CADELETEMEMBEROUTPUTSYM     103
+#define IDR_CAEVALUATEAFTERSYMBOLSYM    104
+#define IDR_CAEVALUATEAFTERSYMBOLDEF    105
+#define IDR_COMSELECTIONRULESEL         106
+#define IDR_COMSELECTIONRULEROOTSEL     107
+#define IDR_COM2NDSELECTIONRULESEL      108
+#define IDR_TESTSELRULEWITHQS           109
+#define IDR_COMTESTPARAMETERRULE        110
+#define IDR_CAFORPARAMETERRULEDEF       112
+#define IDR_CAFORPARAMETERRULESYM       113
+#define IDR_SONOGRAPHICS                114
+#define IDR_SO1GRAPHICOUTPUT            115
+#define IDR_CANESTEDOUTPUTPARENTDEF		116
+#define IDR_CANESTEDOUTPUTPARENTSYM		117
+#define IDR_CABASICDEF					118
+#define IDR_CABASICSYM					119
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        201
+#define _APS_NEXT_COMMAND_VALUE         32768
+#define _APS_NEXT_CONTROL_VALUE         201
+#define _APS_NEXT_SYMED_VALUE           120
+#endif
+#endif

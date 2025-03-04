@@ -1,0 +1,93 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "..\include\L10Nresource.h "
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "..\\include\\L10Nresource.h \0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    COMBO_MORE              "More..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SPLITMACROS_ERROR   "ERROR"
+    IDS_SPLITMACROS_UNEXPECTED_ERROR 
+                            "Split connection encountered an unexpected error. See To Do List messages in the Troubleshooting Guide for more information."
+    IDS_SPLITMACROS_NOVALID_INTERSECTION 
+                            "The member system to split and the object selected to define the split location do not intersect."
+    IDS_SPLITMACROS_UNEXP_REFCOLLCOUNT 
+                            "Split connection is missing a required input. Delete the connection and replace."
+    IDS_SPLITMACROS_NOPARENT1 
+                            "Split connection is missing the member system to split. Delete the connection and replace."
+    IDS_SPLITMACROS_NOSECOND_PARENT 
+                            "Split connection is missing the object that identifies the split location. Delete the connection and replace."
+    IDS_SPLITMACROS_UNKNOWNTYPE_PARENT2 
+                            "Object that identifies the split location is not a required linear object. Delete the connection and replace."
+    IDS_SPLITMACROS_SCNDPARENT_SAMEAS_FSTPARENT 
+                            "Split connection is using the same member for both the member to split and to define the split location. Delete the connection and replace."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,330 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "..\include\L10Nresource.h "
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "..\\include\\L10Nresource.h \0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_UNEXPECTED_ERROR "Unexpected Error"
+    IDS_FCMACROS_EROOR      "ERROR"
+    IDS_FCMACROS_ERROR_BADVAL "ERROR::Bad Value"
+    IDS_FCMACROS_VALUE_NOT_CURRENTLY_SUPPORTED 
+                            "Selected value is not supported in the current release"
+    IDS_FCMACROS_AXISALONG_MISSING_INPUT 
+                            "Axis-along frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISALONG_SUPPORTINGMEMB_NOTDEFINED 
+                            "Supporting member not defined. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISALONG_SUPPORTEDMEMB_NOTDEFINED 
+                            "Supported member not defined. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISALONG_INVALIDPOINT 
+                            "Axis-along frame connection's supported member has invalid point-on relationship with another member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISALONG_PREVIOUSCONN_NOTREMOVED 
+                            "Axis-along frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+    IDS_FCMACROS_AXISALONG_MISSING_SUPPORTINGMEMB_INFORM 
+                            "Axis-along frame connection is missing the supporting member information. Change connection to unsupported and then re-select the supporting member."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_AXISALONG_CHANGE_CONN 
+                            "Axis-along frame connection is related to something other than a supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISALONG_SAMEMEMB_FORBOTH 
+                            "Axis-along frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISALONG_REVERIFIED_INVALID 
+                            "Axis-along frame connection was reverified and found to be invalid. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_MEMS_COLINEAR 
+                            "Axis collinear frame connections require the member systems to be collinear. Either modify one of the member systems to make it collinear with the other member or delete the axis collinear frame connection."
+    IDS_FCMACROS_AXISCOLI_MISSING_INPUT 
+                            "Axis-collinear frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_NOTRELATED_MEMBS 
+                            "Axis-collinear frame connection is related to something other than a member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_SAMEMEMBS_FORBOTH 
+                            "Axis-collinear frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_SUPPORTED_TOOFAR 
+                            "Supported member end is too far away from the supporting member."
+    IDS_FCMACROS_AXISCOLI_SUPPORTING_TOOFAR 
+                            "Supporting member end is too far away from the supported member."
+    IDS_FCMACROS_AXISCOLI_NOTCONSTR_BYSAME 
+                            "Members are not constrained by the same joint"
+    IDS_FCMACROS_AXISCOLI_INVALID_ENDPORT 
+                            "Axis-collinear frame connection has an invalid end port relationship. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_PERMISSIONGROUP_SAME 
+                            "Axis-collinear frame connection requires the same permission group for both member systems. Edit one of the permission groups to match the other."
+    IDS_FCMACROS_AXISCOLI_PREVIOUSREL_NOTREMOVED 
+                            "Axis-collinear frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_MISSING_SUPPRTING_INFORM 
+                            "Axis-collinear frame connection is missing the supporting member information. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_RELATEDTO_OTHER 
+                            "Axis-collinear frame connection is related to something other than a supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_MEMBS_SAMEFOR_BOTH 
+                            "Axis-collinear frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_AXISCOLI_REVERIFIED_INVALID 
+                            "Axis-collinear frame connection was reverified and found to be invalid. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_MISSING_INPUT 
+                            "Axis-end frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_NOTRELATED_MEMBS 
+                            "Axis-end frame connection is related to something other than a member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_SUPPORTING_SUPPORTED_SAME 
+                            "Axis-end frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_INVALID_ENDPORT 
+                            "Axis-end frame connection has an invalid end port relationship. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_ENDCONN_INCONSISTENT 
+                            "Axis-end frame connection relationships are inconsistent. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_ENDPORT_DIFF_MEMBS 
+                            "Axis-end frame connection is related to an end port that is different from the supporting member end port. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_SAME_PERMISSIONGROUP 
+                            "Axis-end frame connection requires the same permission group for both member systems. Edit one of the permission groups to match the other."
+    IDS_FCMACROS_AXISEND_PREVIOUSCONN_NOTREMOVED 
+                            "Axis-end frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+    IDS_FCMACROS_AXISEND_MISSING_INFORMATION 
+                            "Axis-end frame connection is missing the supporting member information. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_NOTRELATED_SUPPMEMB 
+                            "Axis-end frame connection is related to something other than a supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_NOTFIND_SUPPORTEDMEMB 
+                            "Axis-end frame connection cannot find supported member end. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_SUPPORTED_TOOFAR 
+                            "Supported member end is too far away from the supporting member."
+    IDS_FCMACROS_AXISEND_REVERIFIED_INVALID 
+                            "Axis-end frame connection was reverified and found to be invalid. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISEND_SUPPORTEDENDS_SHARESINGLE_JOINT 
+                            "Supported member ends share single end joint. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CENTER_MISSING_INPUT 
+                            "Centerline frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_CENTER_NOTRELATED_SUPPORTING 
+                            "Centerline frame connection is related to something other than a supporting member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CENTER_NOTRELATED_SUPPORTED 
+                            "Centerline frame connection is related to something other than a supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CENTER_SUPPORTED_INVALIDPOINT 
+                            "Centerline frame connection's supported member has invalid point-on relationship with another member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CENTER_NOTREMOVED_PREVIOUSCONN 
+                            "Centerline frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+    IDS_FCMACROS_CENTER_MISSING_INFORMATION_SUPPPORTING 
+                            "Centerline frame connection is missing the supporting member information. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CENTER_NOTRELATED_SUPPORTINGMEMBS 
+                            "Centerline frame connection is related to something other than a supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CENTER_SAMEMEMBS_BOTH 
+                            "Centerline frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CENTER_REVERIFIED_INVALID 
+                            "Centerline frame connection was reverified and found to be invalid. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CHEVRON_MISSING_INPUT 
+                            "Chevron frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CHEVRON_NOTRELATED_BRACEMEMBS 
+                            "Chevron frame connection is related to something other than a brace member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CHEVRON_NOTRELATED_SUPPORTING 
+                            "Chevron frame connection is related to something other than a supporting member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CHEVRON_PREVIOUSCONN_NOTREMOVED 
+                            "Chevron frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+    IDS_FCMACROS_CHEVRON_MISSING_SUPPORTING_INFORMATION 
+                            "Chevron frame connection is missing the supporting member information. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CHEVRON_NORELATED_SUPPORTING 
+                            "Chevron frame connection is related to something other than a supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_CHEVRON_SAMEMEMBS_BOTH 
+                            "Chevron frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FLUSH_MISSING_INPUT 
+                            "Flush frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_FLUSH_MISSING_SUPPORTED_MEMBS 
+                            "Flush frame connection is missing the supported member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FLUSH_MISSING_SUPPORTING_MEMBS 
+                            "Flush frame connection is missing the supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FLUSH_MEMBER_INVALID_POINT 
+                            "Flush frame connection's supported member has invalid point-on relation to another member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FLUSH_PREVIOUSCONN_NOTREMOVED 
+                            "Flush frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+    IDS_FCMACROS_FLUSH_MISSING_INFORMATION_SUPPORTING 
+                            "Flush frame connection is missing the supporting member information. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FLUSH_NOTRELATED_SUPPORTING 
+                            "Flush frame connection is related to something other than a supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FLUSH_SAMEMEBS_BOTH 
+                            "Flush frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FLUSH_REVERIFIED_INVALID 
+                            "Flush frame connection was reverified and found to be invalid. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_FRAME_PREVIOUSREL_NOTCLEAR 
+                            "Frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+    IDS_FCMACROS_FRAME_CANNOTUSE_ASOBJ1 
+                            "Cannot use this frame connection as Obj1 to SetRelatedObject. See To Do List messages in the Troubleshooting Guide for more information."
+    IDS_FCMACROS_FRAME_CANNOTUSE_ASOBJ2 
+                            "Cannot use this frame connection as Obj2 to SetRelatedObject. See To Do List messages in the Troubleshooting Guide for more information."
+    IDS_FCMACROS_SEATED_MISSING_INPUT 
+                            "Seated frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SEATED_MISSING_SUPPORTEDMEMBS 
+                            "Seated frame connection is missing the supported member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SEATED_MISSING_SUPPORTING_MEMBS 
+                            "Seated frame connection is missing the supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SEATED_INVALID_PORT_SUPPORTED 
+                            "Seated frame connection's supported member has invalid point-on relation to another member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SEATED_PREVIOUSCONN_NOTREMOVED 
+                            "Seated frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting member."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_SEATED_MISSING_SUPPORTED_INFORMATION 
+                            "Seated frame connection is missing the supporting member information. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SEATED_NOTRELATED_SUPPORTINGMEMBS 
+                            "Seated frame connection is related to something other than a supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SEATED_SAMEMEMBS_FORBOTH 
+                            "Seated frame connection is using the same member system for both the supporting and supported member. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SEATED_REVERIFIED_INVALID 
+                            "Seated frame connection was reverified and found to be invalid. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SURFACE_MISSSING_INPUT 
+                            "Surface frame connection is missing a required input. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SURFACE_MISSING_MEMBS 
+                            "Surface frame connection is missing the member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SURFACE_MISSING_SURFACE 
+                            "Surface frame connection is missing the surface. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SURFACE_NOTRELATED_VALIDSURFACE 
+                            "Surface frame connection is related to something other than a valid surface. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_SURFACE_REVERIFIED_INVALID 
+                            "Surface frame connection was reverified and found to be invalid. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_VC_MISSING_REQDINPUT 
+                            "Vertical corner brace frame connection is missing a required input. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_MISSING_BRACEMEMBS 
+                            "Vertical corner brace frame connection is missing the brace member system. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_MISSING_SUPPORTINGMEMB 
+                            "Vertical corner brace frame connection is missing a supporting member system. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_MISSING_TWO_MEMBS 
+                            "Vertical corner brace frame connection is missing one of the two require supporting member systems. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_VC_EXPECTED_BRACEJOINT 
+                            "Vertical corner brace frame connection requires that the brace have a point on relationship to the intersection of the supporting members. Change connection to unsupported and then re-select the intersection."
+    IDS_FCMACROS_VC_NOTPOINTON_RELATED 
+                            "Brace is not point-on related to a split connection or an end-joint of a member. Change connection to unsupported and then re-select the intersection."
+    IDS_FCMACROS_VC_INVALID_RELATIONSHIP 
+                            "Vertical corner brace frame connection has invalid relationships between member systems. Change connection to unsupported and then re-select the intersection."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_VC_PREVIOUSCONN_NOTREMOVED 
+                            "Vertical corner brace frame connection is invalid because the previous connection was not removed. Change connection to unsupported and the re-select the supporting members."
+    IDS_FCMACROS_VC_MISSING_SUPPORTING_MEMBS 
+                            "Vertical corner brace frame connection is missing the first supporting member information. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_NOTRELATED_SUPPORTINGMEMB 
+                            "Vertical corner brace frame connection is related to something other than the first supporting member system. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_VC_MISSING_SUPPRTINGMEMBS 
+                            "Vertical corner brace frame connection is missing the second supporting member information. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_NOTRELATED_SECOND_SUPPORTING 
+                            "Vertical corner brace frame connection is related to something other than the second supporting member system. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_USING_BRACEMEMB_INCORRECTLY 
+                            "Vertical corner brace frame connection is using the brace member incorrectly as a supporting member. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_SAMEMEMBS_FORBOTH 
+                            "Vertical corner brace frame connection is using the same member system for both supporting members. The two supporting members must be different members. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_CANNOTIDENTIFY_END 
+                            "Vertical corner brace frame connection cannot identify the end of the brace to connect. Change connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_BRACEEND_NOTNEAR_SUPPORTING 
+                            "Brace end is not located near the first supporting member in the vertical corner brace frame connection. Change the connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_BRACEEND_NOTNEAR_SEC_SUPPORTING 
+                            "Brace end is not located near the second supporting member in the vertical corner brace frame connection. Change the connection to unsupported and then re-select the supporting members."
+    IDS_FCMACROS_VC_PORT_UNABLETO_GETMEMBS 
+                            "Supporting Port unable to get related MemberSystem connection."
+    IDS_FCMACROS_VC_UNKNOWNOBECT "Unknown object type from port.get_ILC."
+    IDS_FCMACROS_VC_FAILURETO_ESTB_REL 
+                            "Failure to establish correct relations"
+    IDS_FCMACROS_AXISCOLI_SUPPORTEDNOT_ATEND 
+                            "Supported member is not at the end of the supporting member as required by the axis-collinear frame connection. "
+    IDS_FCMACROS_CHEVRON_NOTDEFINED_SUPPORTED 
+                            " Supported member not defined. Change connection to unsupported and then re-select the supporting member.\n"
+    IDS_FCMACROS_UNSUPP_MISSING_REQDDATA 
+                            "Unsupported frame connection is missing required data. Delete this frame connection."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FCMACROS_UNSUPP_LINKEDTO_MORETHANONE 
+                            "Unsupported frame connection is linked to more than one member system. Delete this frame connection."
+    IDS_FCMACROS_UNSUPP_MISSING_PARENT 
+                            "Unsupported frame connection is missing its parent member system information. Delete this frame connection."
+    IDS_FCMACROS_UNSUPP_NOTLINKED_MEMBS 
+                            "Unsupported frame connection is linked to something other than a member system. Delete this frame connection."
+    IDS_FCMACROS_AXISCOLI_REL_INCONSISTANT 
+                            "Axis-colinear frame connection relationships are inconsistent. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_REL_DIFF_ENDPORT 
+                            "Axis-colinear frame connection is related to an end port that is different from the supporting member end port. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_AXISCOLI_CANNOTFIND_SUPPMEMBS 
+                            "Axis-colinear frame connection cannot find supported member end. Change connection to unsupported and then re-select the supporting member."
+    IDS_FCMACROS_UNEXPECTED_REFCOLL "Unexpected refcoll count="
+    IDS_FCMACROS_NOOBJ2_INREF "No object 2 in Reference coll"
+    IDS_FCMACROS_UNKNOWNOBJ1_INREF "Unknown object 1 in Reference coll"
+    IDS_FCMACROS_RELOBJ1_SHOULDBE_SUPPORTING_MEMB 
+                            "RelatedObject1 should be the supporting MemberSystem"
+    IDS_FCMACROS_UNKNOWNOBJ2_INREF "Unknown object 2 in Reference coll"
+    IDS_FCMACROS_PREVIOUS_RELATIONS "Previous Relations Not Cleared"
+    IDS_FCMACROS_NORELATED_OBJ1 "No RelatedObject1"
+    IDS_FCMACROS_UNKNOWN_RELATEDOBJ1 "Unknown type of RelatedObject1"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

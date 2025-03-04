@@ -1,0 +1,162 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "SlotBC_LT_PAT_Parm"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+'
+' Parameter rule for Web Left and Top Connected SlotBC:
+' This slot has: Point between Bottom and Left
+'                Arc between Left and Top
+'                Tangent Arc between Top and Right
+'
+' It applies to following cross sections:
+' Bulb
+' Flat Bar
+'
+' Modify class name to particular rule
+Private Const m_sClassName As String = "SlotBC_LT_PAT_Parm"
+
+' No need to modify following variables
+Private Const m_sRuleProgID As String = m_sProjectName + "." + m_sClassName
+Private Const m_sRuleName As String = m_sRuleProgID
+Private Const m_sFamilyProgID As String = ""
+Private Const MODULE = m_sProjectPath + m_sClassName + ".cls"
+'
+Implements IJDUserSymbolServices
+
+Private Sub ParameterRuleInputs(oIH As IJDInputsHelper)
+  On Error GoTo ErrorHandler
+    
+  oIH.SetInput INPUT_PENETRATING
+  oIH.SetInput INPUT_PENETRATED
+    
+  Exit Sub
+ErrorHandler:
+  Err.Raise LogError(Err, MODULE, "ParameterRuleInputs").Number
+End Sub
+
+Private Sub ParameterRuleLogic(oPLH As IJDParameterLogic)
+   On Error GoTo ErrorHandler
+  
+  'Get the Penetrating Section
+  Dim sXSectionType As String
+  If TypeOf oPLH.InputObject(INPUT_PENETRATING) Is IJProfile Then
+      'Penetrating Object is a Profile
+      Dim oProfilePart As StructDetailObjects.ProfilePart
+      Set oProfilePart = New StructDetailObjects.ProfilePart
+      Set oProfilePart.object = oPLH.InputObject(INPUT_PENETRATING)
+      sXSectionType = oProfilePart.sectionType
+      Set oProfilePart = Nothing
+  ElseIf TypeOf oPLH.InputObject(INPUT_PENETRATING) Is IJPlate Then
+      'Penetrating Object is a Plate
+      Dim oSlotMappingRule As IJSlotMappingRule
+      Set oSlotMappingRule = CreateSlotMappingRuleSymbolInstance
+      
+      Dim oSlot As New StructDetailObjects.Slot
+      Set oSlot.object = oPLH.SmartOccurrence
+      
+      Dim oWeb As Object
+      Dim oFlange As Object
+      Dim o2ndWeb As Object
+      Dim o2ndFlange As Object
+      oSlotMappingRule.GetSectionAlias oSlot.Penetrating, oSlot.Penetrated, sXSectionType, oWeb, oFlange, o2ndWeb, o2ndFlange
+  Else
+      'Unknown Penetrating Object Type
+      Exit Sub
+  End If
+  
+   ' Set parameters
+   Dim dSlotAngle As Double
+   Dim dTopFlangeRightTopCornerRadius As Double
+  
+   dSlotAngle = GetSlotAngle(oPLH)
+   Select Case sXSectionType
+      Case "B", "FB"
+         dTopFlangeRightTopCornerRadius = 0.05
+         
+      Case Else
+         MsgBox m_sClassName & " should NOT be fired if cross section is not B or FB."
+         
+         ' For testing purpose,to be removed
+         dTopFlangeRightTopCornerRadius = 0.05
+      
+   End Select
+  
+   oPLH.Add PARAM_TOP_FLANGE_RIGHT_TOP_CORNER_RADIUS, dTopFlangeRightTopCornerRadius
+   oPLH.Add PARAM_SLOT_ANGLE, dSlotAngle
+  
+   SetSlotAssyOrientation oPLH
+  
+   Exit Sub
+ErrorHandler:
+   Err.Raise LogError(Err, MODULE, "ParameterRuleLogic").Number
+End Sub
+
+' ********************************************************************************************
+'         !!!!! Start Private Code !!!!!
+'                 - Following Code Should not be edited
+'                 - It exposes the Selector as a regular symbol definition
+' ********************************************************************************************
+Private Function IJDUserSymbolServices_GetDefinitionName(ByVal vDefinitionParameters As Variant) As String
+   IJDUserSymbolServices_GetDefinitionName = m_sRuleName
+End Function
+Private Sub IJDUserSymbolServices_InitializeSymbolDefinition(oSelector As IJDSymbolDefinition)
+   ' Remove all existing defined Input and Output (Representations)
+   ' before defining the current Inputs and Outputs
+   oSelector.IJDInputs.RemoveAllInput
+   oSelector.IJDRepresentations.RemoveAllRepresentation
+ 
+   Dim oSelectorFact As New DefinitionFactory
+  
+   oSelectorFact.InitAbstractParameterRule oSelector
+   Set oSelectorFact = Nothing
+  
+   Dim oIH As IJDInputsHelper
+  
+   Set oIH = New InputHelper
+   oIH.definition = oSelector
+   oIH.InitAs m_sFamilyProgID
+   ParameterRuleInputs oIH
+   Set oIH = Nothing
+  
+  '----------- Define Output and Add it to the representation ------------------
+   Dim oOH As IJDOutputsHelper
+  
+   Set oOH = New OutputHelper
+   oOH.Representation = oSelector.IJDRepresentations.Item(1)
+   oOH.SetOutput PARAM_TOP_FLANGE_RIGHT_TOP_CORNER_RADIUS
+   oOH.SetOutput PARAM_SLOT_ANGLE
+   Set oOH = Nothing
+
+End Sub
+Private Function IJDUserSymbolServices_InstanciateDefinition(ByVal sCB As String, ByVal vDP As Variant, ByVal oRM As Object) As Object
+   Dim oSelectorFact As New DefinitionFactory
+   
+   Set IJDUserSymbolServices_InstanciateDefinition = oSelectorFact.InstanciateParameterRule(m_sRuleProgID, sCB, IJDUserSymbolServices_GetDefinitionName(vDP), oRM)
+   Set oSelectorFact = Nothing
+End Function
+Private Sub IJDUserSymbolServices_InvokeRepresentation(ByVal oSymbolOccurrence As Object, ByVal sRepName As String, ByVal oOutputColl As Object, arrayOfInputs() As Variant)
+End Sub
+Private Function IJDUserSymbolServices_EditOccurence(oSymbolOccurrence As Object, ByVal oTransactionMgr As Object) As Boolean
+End Function
+Public Sub CMParameterRule(oRep As IJDRepresentation)
+   Dim oPLH As IJDParameterLogic
+  
+   Set oPLH = New ParameterLogic
+   oPLH.Representation = oRep
+   ParameterRuleLogic oPLH
+   Set oPLH = Nothing
+End Sub
+' ********************************************************************************************
+'         !!!!! End Private Code !!!!!
+' ********************************************************************************************

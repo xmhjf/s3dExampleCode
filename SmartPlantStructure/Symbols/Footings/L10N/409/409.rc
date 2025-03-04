@@ -1,0 +1,128 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "..\include\L10Nresource.h "
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "..\\include\\L10Nresource.h \0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    COMBO_MORE              "More..."
+    IDS_FTGMACROS_INVALID_Z_VALUE 
+                            "Specify an elevation that is below the top of the Footing"
+    IDS_SYMFILE_NOTACCESSSIBLE 
+                            ".Sym file of some cross-sections is not accessible"
+    IDS_SMARTPLANT3D        "Smart 3D"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COMBINEDFTG_REQDMIN_TWOMEMBS 
+                            "Combined footings require a minimum of two supported members."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BOSLEVEL_SUPPORTEDMEMBS_TOBESAME 
+                            "Combined footings require all supported members to have the same bottom-of-steel elevation."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FTGMACROS_ERROR     "ERROR"
+    IDS_FTGMACROS_SCHEMAERROR "SchemaERROR"
+    IDS_FTGMACROS_NEGATIVE_ATTRIBVAL "Negative Attribute Value"
+    IDS_FTGMACROS_MISSING_SUPPORTED_MEMB 
+                            "The member system that the footing was supporting is missing. Delete footing or assign footing to a new member system."
+    IDS_FTGMACROS_MISSING_SUPPORTING_PLANE 
+                            "Footing requires a supporting plane that is missing."
+    IDS_FTGMACROS_PLANEABOVE_INPUTMEMB_CANNOT_COMPUTE 
+                            "Footing support plane is above the bottom of the supported member. Footing pier height is an invalid negative value."
+    IDS_FTGMACROS_INVALID_PIERHEIGHT 
+                            "Pier height is invalid. Check the bottom plane and the defined grout thickness."
+    IDS_FTGMACROS_INSUFFICIENT_INPUTS 
+                            "Footing cannot be placed using selected inputs. Delete and replace."
+    IDS_FTGMACROS_VALUE_GREATERTHAN_ZERO "Value should be greater than zero"
+    IDS_FTGMACROS_BOTTOMPLANE_NOTVALID 
+                            "Footing support plane is not valid for some supported members. Footing pier height is an invalid negative value."
+    IDS_FTGMACROS_BOTTOMPLANE_NOTVALID_CANNOTCOMPUTE 
+                            "Footing support plane is not valid. Software cannot compute the pier height. Delete and replace footing."
+    IDS_FTGMACROS_PIERHEIGHT_INVALID 
+                            "Pier height is invalid. Check the bottom plane and the defined grout thickness."
+    IDS_FTGMACROS_BOTTOMPLANE_CANNOTCOMPUTE_SLABHEIGHT 
+                            "Footing support plane is above the bottom of the supported member. Footing slab height is an invalid negative value."
+    IDS_FTGMACROS_INVALID_BOTTTOMPLANE_CANNOTCOMPUTE 
+                            "Footing support plane is not valid. Software cannot compute the slab height. Delete and replace footing."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FTGMACROS_OCTGROUT_NOTSUPPORTED "Octagonal Grout is not supported"
+    IDS_FTGMACROS_INVALIDPIER_HEIGHT 
+                            "Pier height is invalid. Check the bottom plane and the defined grout thickness."
+    IDS_FTGMACROS_PIERHEIGHT_INVALID_CHECK 
+                            "Pier height is invalid. Check the bottom plane and the defined grout thickness."
+    IDS_FTGMACROS_NOTSUPPPORT_SUPPMEMBS 
+                            "Footing symbol does not support requested number of Supported Members"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72C48E9F-BF0F-46C5-8916-7EC7164217DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Structure</RootNamespace>
+    <AssemblyName>Connections</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>M:\SharedContent\Bin\StructDetail\CustomAssemblies\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UICulture>en-US</UICulture>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <HintPath>X:\Container\Bin\Assemblies\$(Configuration)\CommonMiddle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MarineSymbolDefinition">
+      <HintPath>X:\Container\Bin\Assemblies\$(Configuration)\MarineSymbolDefinition.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <HintPath>X:\Container\Bin\Assemblies\$(Configuration)\ReferenceDataMiddle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartMarineStructureMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <HintPath>X:\Container\Bin\Assemblies\$(Configuration)\SmartMarineStructureMiddle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartPlantStructureMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <HintPath>X:\Container\Bin\Assemblies\$(Configuration)\SmartPlantStructureMiddle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="StructureSymbolDefinition">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\StructureSymbolDefinition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DetailingCustomAssembliesConstants.cs">
+      <Link>DetailingCustomAssembliesConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\DetailingCustomAssembliesEnums.cs">
+      <Link>DetailingCustomAssembliesEnums.cs</Link>
+    </Compile>
+    <Compile Include="..\DetailingCustomAssembliesServices.cs">
+      <Link>DetailingCustomAssembliesServices.cs</Link>
+    </Compile>
+    <Compile Include="..\MemberAssemblyConnectionShape.cs">
+      <Link>MemberAssemblyConnectionShape.cs</Link>
+    </Compile>
+    <Compile Include="ConnectionsResourceIds.cs" />
+    <Compile Include="Definitions\RootTeeWeldDefinition.cs" />
+    <Compile Include="Definitions\StiffenerEndToPlateFaceDefinition.cs" />
+    <Compile Include="ParameterRules\ChainWeldParameterRule.cs" />
+    <Compile Include="ParameterRules\FilletWeld1ParameterRule.cs" />
+    <Compile Include="ParameterRules\FilletWeld2ParameterRule.cs" />
+    <Compile Include="ParameterRules\FlangeFilletParameterRule.cs" />
+    <Compile Include="ParameterRules\StaggeredWeldParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeld1ParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeld2ParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeld3ParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeld4ParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeld5ParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeld6ParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeld7ParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeldChillParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeldKParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeldSquareParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeldVParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeldXParameterRule.cs" />
+    <Compile Include="ParameterRules\TeeWeldYParameterRule.cs" />
+    <Compile Include="ParameterRules\WebFilletParameterRule.cs" />
+    <Compile Include="ParameterRules\ZigZagWeldParameterRule.cs" />
+    <Compile Include="ConnectionServices.cs" />
+    <Compile Include="SelectorRules\ChamferTeeWeldSelectorRule.cs" />
+    <Compile Include="SelectorRules\LeafTeeWeldSelectorRule .cs" />
+    <Compile Include="SelectorRules\RootTeeWeldSelectorRule.cs" />
+    <Compile Include="SelectorRules\StiffenerEndByPlateSelectorRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Connections.en-US.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

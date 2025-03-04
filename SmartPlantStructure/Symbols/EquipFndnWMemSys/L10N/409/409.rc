@@ -1,0 +1,91 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "..\include\L10Nresource.h "
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "..\\include\\L10Nresource.h \0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    COMBO_MORE              "More..."
+    IDS_EQPFND_CLOSEFOR_SELECTED 
+                            "Equipment foundation port are too close together for the selected foundation."
+    IDS_EQPFND_NOTASSOC_WITHEQP 
+                            "The equipment foundation is not associated with an equipment."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EQPFNDMEM_ERROR     "ERROR"
+    IDS_EQPFNDMEM_EQPFND_NOTASSOC_WITHEQP 
+                            "The equipment foundation is not associated with an equipment."
+    IDS_EQPFNDMEM_ASSOCEQP_MODIFIED_NOHEIGHT 
+                            "The associated equipment was modified and has caused the foundation to have no height."
+    IDS_EQPFNDMEM_FNDWIDTH_LENGTH_ZERO 
+                            "Foundation width or length is less than zero."
+    IDS_EQPFNDMEM_SCHEMAERROR "SchemaERROR"
+    IDS_EQPFNDMEM_INVALID_NEGATIVE_VALUE "Invalid Negative Attribute Value "
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

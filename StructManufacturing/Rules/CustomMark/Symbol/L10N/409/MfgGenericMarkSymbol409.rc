@@ -1,0 +1,119 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include ".\Include\L10Nresource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    ".\\Include\\L10Nresource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_GENERICMARK_SYMBOL_INPUT_1 "Plate System"
+    IDS_GENERICMARK_SYMBOL_INPUT_2 "Upper Frame"
+    IDS_GENERICMARK_SYMBOL_INPUT_3 "Lower Frame"
+    IDS_GENERICMARK_SYMBOL_INPUT_4 "Longitudinal Reference"
+    IDS_GENERICMARK_SYMBOL_INPUT_5 "Plane Reference"
+    IDS_GENERICMARK_SYMBOL_INPUT_6 "Starting Planes"
+    IDS_GENERICMARK_SYMBOL_INPUT_7 "Girth Offsets"
+    IDS_BLOCKMARK_SYMBOL_INPUT_1 "Pin Jig"
+    IDS_BLOCKMARK_SYMBOL_INPUT_2 "Offset Value"
+    IDS_BLOCKMARK_SYMBOL_INPUT_3 "Supported Plates by Type"
+    IDS_BLOCKMARK_SYMBOL_INPUT_4 "Supported Plates by User"
+    IDS_GENERICMARK_SYMBOL_PLATESYSTEM_PROMPT "Select a Plate System"
+    IDS_GENERICMARK_SYMBOL_BOUNDARY1_PROMPT "Select Boundary 1"
+    IDS_GENERICMARK_SYMBOL_BOUNDARY2_PROMPT "Select Boundary 2"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_GENERICMARK_SYMBOL_LONGITUDINALREFERENCE_PROMPT 
+                            "Select Longitudinal Reference"
+    IDS_GENERICMARK_SYMBOL_PLANEREFERENCE_PROMPT "Select Plane Reference"
+    IDS_GENERICMARK_SYMBOL_OFFSETVALUE_PROMPT 
+                            "Input an Offset value for placing the Skid Mark"
+    IDS_GENERICMARK_SYMBOL_OFFSETVALUE_DISPLAYNAME "Offset"
+    IDS_GENERICMARK_SYMBOL_STARTFRAME_PROMPT "Select a frame"
+    IDS_GENERICMARK_SYMBOL_INPUTOFFSETVALUE_PROMPT 
+                            "Key in offset distance along girth"
+    IDS_GENERICMARK_SYMBOL_GIRTHOFFSET "GirthOffset Values"
+    IDS_GENERICMARK_SYMBOL_STARTINGPLANE "Starting Plane"
+    IDS_BILGEKEELMARK_SYMBOL_INPUT_2 "Plate/Profile System"
+    IDS_BILGEKEELMARK_SYMBOL_MF_SYSTEM_PROMPT 
+                            "Select a connected Plate or Profile System"
+    IDS_BILGEKEELMARK_SYMBOL_MARKINGSIDE "Marking Side"
+    IDS_BILGEKEELMARK_SYMBOL_REFSURFACE "Reference Surface"
+    IDS_BILGEKEELMARK_SYMBOL_REFSURFACE_PROMPT 
+                            "Select connected part's reference surface"
+    IDS_BLOCKMARK_SYMBOL_PINJIG_PROMPT "Select a Pin Jig"
+    IDS_BLOCKMARK_SYMBOL_OFFSETVALUE_PROMPT "Enter Offset Value"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BLOCKMARK_SYMBOL_SUPPPLATESBYTYPE_PROMPT 
+                            "Select Supported Plates by Type: Symbol automatically gets plates to be marked based on Type."
+    IDS_BLOCKMARK_SYMBOL_SUPPPLATESBYUSER_PROMPT 
+                            "Select Plates to be marked manually: Allowed only if supported plates by Type is 'User Selection'"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

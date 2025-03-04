@@ -1,0 +1,14 @@
+Public Const IDS_DUPLICATENAME = 1
+Public Const IDS_HASCHANGED = 2
+Public Const IDS_BLANKNAME = 3
+Public Const IDS_SYSTEM = 4
+Public Const IDS_NEW = 5
+Public Const IDS_GENERIC = 6
+Public Const IDS_CONDUIT = 7
+Public Const IDS_DUCTING = 8
+Public Const IDS_MACHINERY = 9
+Public Const IDS_PIPELINE = 10
+Public Const IDS_PIPING = 11
+Public Const IDS_STRUCTURAL = 12
+Public Const IDS_UNIT = 13
+Public Const IDS_AREA = 14

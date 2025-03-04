@@ -1,0 +1,10 @@
+; ATPSO.def : Declares the module parameters.
+
+LIBRARY      "ATPSO.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall		PRIVATE

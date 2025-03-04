@@ -1,0 +1,48 @@
+----------------------------------------------
+	Sql query filter Examples
+
+Note: 	This file provides some of the examples for sql query filters.
+	Please see the 'Info on SQL Query Filters.doc' for more info.
+
+History:
+	Rpattabi	12/2/2004	Creation
+    Rpattabi   12/9/2004   Mentioned about SELECT oid query as alternative to SELECT *
+------------------------------------------------
+
+1. Usage of get_ShpStrMaterial:
+
+      SELECT * FROM get_ShpStrMaterial( 'Carbon', 'A36', 'Systems' )   
+	-- Returns all systems with Carbon of A36 grade.
+
+      SELECT * FROM get_ShpStrMaterial( 'Carbon steel', 'All', 'Parts' )  
+	-- Returns all parts with material Carbon steel.
+
+      SELECT * FROM get_ShpStrMaterial( 'Carbon', 'A36', 'all' )       
+	-- Returns all objects with Carbon of A36 grade.
+
+2. Usage of get_ShpStrCrossSection:
+
+	SELECT * FROM get_ShpStrCrossSection( 'B','BF 100x30', 'Profile Systems' )   
+	-- Returns profile systems with BF 100x30 xsection.
+
+	SELECT * FROM get_ShpStrCrossSection( 'FB', 'All', 'Stiffener Parts' ) 
+	 -- Returns stiffener parts with FB section type.
+
+
+3. Usage of get_ShpStrThickness:
+
+	SELECT * FROM get_ShpStrThickness( 0.00158750, 'Plate Systems' )   
+	SELECT * FROM get_ShpStrThickness( 0.00158750, 'System Generated Plate Part')  
+
+Note:
+    For these queries, there is no difference between the following ways
+        SELECT * FROM ...
+        SELECT oid FROM ...
+
+    The user can use whichever is convenient for him/her.
+
+    So the following queries return the same result:
+        SELECT * FROM get_ShpStrCrossSection( 'B','BF 100x30', 'Profile Systems' )   
+        SELECT oid FROM get_ShpStrCrossSection( 'B','BF 100x30', 'Profile Systems' )   
+        
+    

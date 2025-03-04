@@ -1,0 +1,1515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="0" xml:space="preserve">
+    <value>HSSmartPart.</value>
+  </data>
+  <data name="1" xml:space="preserve">
+    <value>Invalid input arguments.</value>
+  </data>
+  <data name="2" xml:space="preserve">
+    <value>Section not found in Catalog.</value>
+  </data>
+  <data name="3" xml:space="preserve">
+    <value>RodEndType code list value should be between 1 and 5</value>
+  </data>
+  <data name="4" xml:space="preserve">
+    <value>Error while constructing outputs</value>
+  </data>
+  <data name="5" xml:space="preserve">
+    <value>Error while creating the ports</value>
+  </data>
+  <data name="6" xml:space="preserve">
+    <value> Error while setting the port orientation</value>
+  </data>
+  <data name="7" xml:space="preserve">
+    <value>Error while getting Material Type or Material Grade</value>
+  </data>
+  <data name="8" xml:space="preserve">
+    <value>Invalid code list value</value>
+  </data>
+  <data name="9" xml:space="preserve">
+    <value>Invalid property value</value>
+  </data>
+  <data name="10" xml:space="preserve">
+    <value> Error in loading nut data</value>
+  </data>
+  <data name="11" xml:space="preserve">
+    <value>Error in adding nut additional inputs</value>
+  </data>
+  <data name="12" xml:space="preserve">
+    <value>Error in AddNutOutputs.</value>
+  </data>
+  <data name="13" xml:space="preserve">
+    <value>Error in AddNut</value>
+  </data>
+  <data name="14" xml:space="preserve">
+    <value>ShapeType code list value should be between 0 and 3</value>
+  </data>
+  <data name="15" xml:space="preserve">
+    <value>ShapeWidth1 value should not be less than or equal to zero</value>
+  </data>
+  <data name="16" xml:space="preserve">
+    <value>ShapeLength value should not be less than zero</value>
+  </data>
+  <data name="17" xml:space="preserve">
+    <value>Error in adding additional inputs</value>
+  </data>
+  <data name="18" xml:space="preserve">
+    <value>PinDiameter value should not be less than or equal to zero</value>
+  </data>
+  <data name="19" xml:space="preserve">
+    <value>CotterDiameter value should not be less than or equal to zero</value>
+  </data>
+  <data name="20" xml:space="preserve">
+    <value>Length value should not be less than or equal to zero</value>
+  </data>
+  <data name="21" xml:space="preserve">
+    <value>CotterLength value should not be less than or equal to zero</value>
+  </data>
+  <data name="22" xml:space="preserve">
+    <value>Error in loading pin data</value>
+  </data>
+  <data name="23" xml:space="preserve">
+    <value>Error in implementing weight CG</value>
+  </data>
+  <data name="24" xml:space="preserve">
+    <value>Error in AddTurnbuckle</value>
+  </data>
+  <data name="25" xml:space="preserve">
+    <value>Turnbuckle has no Center Tube or Side Blocks</value>
+  </data>
+  <data name="26" xml:space="preserve">
+    <value>Diameter1 value should not be less than or equal to zero</value>
+  </data>
+  <data name="27" xml:space="preserve">
+    <value>Turnbuckle Opening1 value should not be less than or equal to zero</value>
+  </data>
+  <data name="28" xml:space="preserve">
+    <value>Length2 value should not be less than or equal to zero</value>
+  </data>
+  <data name="29" xml:space="preserve">
+    <value>Width2 value should not be less than or equal to zero</value>
+  </data>
+  <data name="30" xml:space="preserve">
+    <value>Thickness2 value should not be less than or equal to zero</value>
+  </data>
+  <data name="31" xml:space="preserve">
+    <value>Error in loading Turnbuckle data</value>
+  </data>
+  <data name="32" xml:space="preserve">
+    <value>Error in loading WBABolt data</value>
+  </data>
+  <data name="33" xml:space="preserve">
+    <value>Error in WBABolt</value>
+  </data>
+  <data name="34" xml:space="preserve">
+    <value>Gap1 value should not be less than zero</value>
+  </data>
+  <data name="35" xml:space="preserve">
+    <value>Thickness1 value should not be less than zero</value>
+  </data>
+  <data name="36" xml:space="preserve">
+    <value>Height1 value should not be less than zero</value>
+  </data>
+  <data name="37" xml:space="preserve">
+    <value>Width1 value should not be less than zero</value>
+  </data>
+  <data name="38" xml:space="preserve">
+    <value>TLCornerType code list value should be between 0 and 7</value>
+  </data>
+  <data name="39" xml:space="preserve">
+    <value>TRCornerType code list value should be between 0 and 7</value>
+  </data>
+  <data name="40" xml:space="preserve">
+    <value>Error in loading WBAHole data</value>
+  </data>
+  <data name="41" xml:space="preserve">
+    <value>Error in WBAHole</value>
+  </data>
+  <data name="42" xml:space="preserve">
+    <value>WBAHoleConfig code list value should be 1 and 2</value>
+  </data>
+  <data name="43" xml:space="preserve">
+    <value>SimpShapeType code list value should be 1 and 2</value>
+  </data>
+  <data name="44" xml:space="preserve">
+    <value>WbaHole thickness4 value should not be less than zero</value>
+  </data>
+  <data name="45" xml:space="preserve">
+    <value>Length2 value should not be less than zero</value>
+  </data>
+  <data name="46" xml:space="preserve">
+    <value>Width2 value should not be less than zero</value>
+  </data>
+  <data name="47" xml:space="preserve">
+    <value>Thickness2 value should not be less than zero</value>
+  </data>
+  <data name="48" xml:space="preserve">
+    <value>Offset1 value should not be less than zero</value>
+  </data>
+  <data name="49" xml:space="preserve">
+    <value>Offset2 value should not be less than zero</value>
+  </data>
+  <data name="50" xml:space="preserve">
+    <value>Thickness3 value should not be less than zero</value>
+  </data>
+  <data name="51" xml:space="preserve">
+    <value>Width of Flat Spot is too large for the U Bolt</value>
+  </data>
+  <data name="52" xml:space="preserve">
+    <value>Outside Pipe Diameter is too large for the U Bolt</value>
+  </data>
+  <data name="53" xml:space="preserve">
+    <value>Error in loading UBolt data</value>
+  </data>
+  <data name="54" xml:space="preserve">
+    <value>Error in UBolt</value>
+  </data>
+  <data name="55" xml:space="preserve">
+    <value>Distance from Pipe to Steel (PipeToSteel) is outside the acceptable range</value>
+  </data>
+  <data name="56" xml:space="preserve">
+    <value>UBoltOneSided code list value should be 1 or 2</value>
+  </data>
+  <data name="57" xml:space="preserve">
+    <value>BLCornerType code list value should be between 0 and 7</value>
+  </data>
+  <data name="58" xml:space="preserve">
+    <value>BRCornerType code list value should be between 0 and 7</value>
+  </data>
+  <data name="59" xml:space="preserve">
+    <value>Error in loading Plate data</value>
+  </data>
+  <data name="60" xml:space="preserve">
+    <value>Rectangular Notch sizes invalid - ignoring corner type</value>
+  </data>
+  <data name="61" xml:space="preserve">
+    <value>Angled Notch sizes invalid - ignoring  corner type. </value>
+  </data>
+  <data name="62" xml:space="preserve">
+    <value>Angled Notch X size with specified radius is larger than plate width - ignoring  corner type</value>
+  </data>
+  <data name="63" xml:space="preserve">
+    <value>Angled Notch Y size with specified radius is larger than plate length - ignoring  corner type</value>
+  </data>
+  <data name="64" xml:space="preserve">
+    <value>Round Notch is offset too far off plate, not visible - ignoring  corner type</value>
+  </data>
+  <data name="65" xml:space="preserve">
+    <value>Round Notch X or Y is offset too far off plate, not visible - ignoring  corner type.  </value>
+  </data>
+  <data name="66" xml:space="preserve">
+    <value>Round Notch has invalid radius - ignoring  corner type</value>
+  </data>
+  <data name="67" xml:space="preserve">
+    <value>Round Notch radius with specified offsets is larger than plate width - ignoring  corner type</value>
+  </data>
+  <data name="68" xml:space="preserve">
+    <value>Rounded Corner has invalid radius - ignoring  corner type</value>
+  </data>
+  <data name="69" xml:space="preserve">
+    <value>Rounded Top Corner has positive X offset, not allowed - using negative of value</value>
+  </data>
+  <data name="70" xml:space="preserve">
+    <value>Rounded Top Corner has positive Y offset, not allowed - using negative of value</value>
+  </data>
+  <data name="71" xml:space="preserve">
+    <value>Rounded Corner with offsets would be off the plate - ignoring  corner type</value>
+  </data>
+  <data name="72" xml:space="preserve">
+    <value>Round Corner with offsets larger than plate width - ignoring  corner type. </value>
+  </data>
+  <data name="73" xml:space="preserve">
+    <value>Curved End Y offset is greater than specified Curved End radius - ignoring Curved End</value>
+  </data>
+  <data name="74" xml:space="preserve">
+    <value>Curved End doesn't fit on remaining top edge - ignoring Curved End</value>
+  </data>
+  <data name="75" xml:space="preserve">
+    <value>Error in Plate</value>
+  </data>
+  <data name="76" xml:space="preserve">
+    <value>Error in loading Clevis data</value>
+  </data>
+  <data name="77" xml:space="preserve">
+    <value>Error in AddClevis</value>
+  </data>
+  <data name="78" xml:space="preserve">
+    <value>Error in adding Clevis additional inputs</value>
+  </data>
+  <data name="79" xml:space="preserve">
+    <value>Error in adding Clevis additional outputs</value>
+  </data>
+  <data name="80" xml:space="preserve">
+    <value>Error in adding Plate additional inputs</value>
+  </data>
+  <data name="81" xml:space="preserve">
+    <value>Error in AddPlateOutputs.</value>
+  </data>
+  <data name="82" xml:space="preserve">
+    <value>Error in adding WBABolt additional inputs</value>
+  </data>
+  <data name="83" xml:space="preserve">
+    <value>Error in adding WBABolt additional outputs</value>
+  </data>
+  <data name="84" xml:space="preserve">
+    <value>Error in adding WBAHole additional inputs</value>
+  </data>
+  <data name="85" xml:space="preserve">
+    <value>Error in adding WBAHole additional outputs</value>
+  </data>
+  <data name="86" xml:space="preserve">
+    <value>Error in adding UBolt additional inputs</value>
+  </data>
+  <data name="87" xml:space="preserve">
+    <value>Error in adding UBolt additional outputs</value>
+  </data>
+  <data name="88" xml:space="preserve">
+    <value>Error in adding Turnbuckle additional inputs</value>
+  </data>
+  <data name="89" xml:space="preserve">
+    <value>Error in AddTurnbuckleOutputs</value>
+  </data>
+  <data name="90" xml:space="preserve">
+    <value>Error in adding Pin additional inputs</value>
+  </data>
+  <data name="91" xml:space="preserve">
+    <value>Error in adding Pin additional outputs</value>
+  </data>
+  <data name="92" xml:space="preserve">
+    <value>Width3 value should not be less than or equal to zero</value>
+  </data>
+  <data name="93" xml:space="preserve">
+    <value>Thickness3 value should not be less than or equal to zero</value>
+  </data>
+  <data name="94" xml:space="preserve">
+    <value>Pin1Diameter value should not be less than or equal to zero</value>
+  </data>
+  <data name="95" xml:space="preserve">
+    <value>Pin1Length value should not be less than or equal to zero</value>
+  </data>
+  <data name="96" xml:space="preserve">
+    <value>A negative GRIP(Gap2) was specified, a GRIP of zero was used instead AddClevis</value>
+  </data>
+  <data name="97" xml:space="preserve">
+    <value>Clevis has neither Round Ends or Side Blocks AddCreateBoxClevis</value>
+  </data>
+  <data name="98" xml:space="preserve">
+    <value>Error in loading StrutB data</value>
+  </data>
+  <data name="99" xml:space="preserve">
+    <value>Error in AddStrutB</value>
+  </data>
+  <data name="100" xml:space="preserve">
+    <value>Error in adding StrutB additional inputs</value>
+  </data>
+  <data name="101" xml:space="preserve">
+    <value>Error in adding StrutB additional outputs</value>
+  </data>
+  <data name="102" xml:space="preserve">
+    <value>Diameter1 value should not be equal to zero</value>
+  </data>
+  <data name="103" xml:space="preserve">
+    <value>Thickness1 value should not be equal to zero</value>
+  </data>
+  <data name="104" xml:space="preserve">
+    <value>Width1 value should not be zero</value>
+  </data>
+  <data name="105" xml:space="preserve">
+    <value>Width2 value should not be zero</value>
+  </data>
+  <data name="106" xml:space="preserve">
+    <value>Thickness2 value should not be zero</value>
+  </data>
+  <data name="107" xml:space="preserve">
+    <value>Pin1Diameter value should not be 0 or negative</value>
+  </data>
+  <data name="108" xml:space="preserve">
+    <value>Thickness1 value should be greater than zero</value>
+  </data>
+  <data name="109" xml:space="preserve">
+    <value>Gap2 value should not be less than zero</value>
+  </data>
+  <data name="110" xml:space="preserve">
+    <value>Angle1 value should not be less than zero</value>
+  </data>
+  <data name="111" xml:space="preserve">
+    <value>Width5 value should not be 0 or negative</value>
+  </data>
+  <data name="112" xml:space="preserve">
+    <value>Width1 And Width2 values should not be 0 or negative</value>
+  </data>
+  <data name="113" xml:space="preserve">
+    <value>Offset1 must be greater then 0.  Using the outside diameter of the pipe clamp</value>
+  </data>
+  <data name="114" xml:space="preserve">
+    <value>Width3 can not be greater than the outside diameter of the pipe</value>
+  </data>
+  <data name="115" xml:space="preserve">
+    <value>Width3 is greater than the heights of the pipe clamp</value>
+  </data>
+  <data name="116" xml:space="preserve">
+    <value>Offset2 must be greater then 0.  Using the outside diameter of the pipe clamp</value>
+  </data>
+  <data name="117" xml:space="preserve">
+    <value>Height2 must be greater than 0.  Using the value for height1</value>
+  </data>
+  <data name="118" xml:space="preserve">
+    <value>Error in AddPipeClamp</value>
+  </data>
+  <data name="119" xml:space="preserve">
+    <value>Error in AddClamp</value>
+  </data>
+  <data name="120" xml:space="preserve">
+    <value>Error in AddClampWithWings</value>
+  </data>
+  <data name="121" xml:space="preserve">
+    <value>Error in AddClampShape</value>
+  </data>
+  <data name="122" xml:space="preserve">
+    <value>Error in AddGussets</value>
+  </data>
+  <data name="123" xml:space="preserve">
+    <value>Error in AddBoltRows</value>
+  </data>
+  <data name="124" xml:space="preserve">
+    <value>Error in AddBoltByRow</value>
+  </data>
+  <data name="125" xml:space="preserve">
+    <value>Error in MultiPosition</value>
+  </data>
+  <data name="126" xml:space="preserve">
+    <value>You should not pass a Qty of 2 located by center with a distance of zero</value>
+  </data>
+  <data name="127" xml:space="preserve">
+    <value>You should not have a Quantity of 3 located by center with a distance of zero</value>
+  </data>
+  <data name="128" xml:space="preserve">
+    <value>The Width is too small for the distance and Quantity</value>
+  </data>
+  <data name="129" xml:space="preserve">
+    <value>There should be a distance greater than zero</value>
+  </data>
+  <data name="130" xml:space="preserve">
+    <value>Error in LoadBoltRowData</value>
+  </data>
+  <data name="131" xml:space="preserve">
+    <value>Error in AddBoltRowInputs</value>
+  </data>
+  <data name="132" xml:space="preserve">
+    <value>Error in CreateSideConnection</value>
+  </data>
+  <data name="133" xml:space="preserve">
+    <value>Error in AddPipeClampInputs</value>
+  </data>
+  <data name="134" xml:space="preserve">
+    <value>Error in AddPipeClampOutputs</value>
+  </data>
+  <data name="135" xml:space="preserve">
+    <value>Error in LoadPipeClampData</value>
+  </data>
+  <data name="136" xml:space="preserve">
+    <value>Width1 should be greater than zero</value>
+  </data>
+  <data name="137" xml:space="preserve">
+    <value>Width2 should be greater than zero</value>
+  </data>
+  <data name="138" xml:space="preserve">
+    <value>Width3 must be greater then 0.  Using the outside diameter of the pipe clamp</value>
+  </data>
+  <data name="139" xml:space="preserve">
+    <value>Width4 should be greater than zero</value>
+  </data>
+  <data name="140" xml:space="preserve">
+    <value>StiffenerHeight can not be less than zero</value>
+  </data>
+  <data name="141" xml:space="preserve">
+    <value>Thicjness2 should be greater than zero</value>
+  </data>
+  <data name="142" xml:space="preserve">
+    <value>Pin1Diameter can not be less than zero</value>
+  </data>
+  <data name="143" xml:space="preserve">
+    <value>StiffenerLength can not be less than zero</value>
+  </data>
+  <data name="144" xml:space="preserve">
+    <value>Length1 should be greater than zero</value>
+  </data>
+  <data name="145" xml:space="preserve">
+    <value>Length2 should be greater than zero</value>
+  </data>
+  <data name="146" xml:space="preserve">
+    <value>Length3 should be greater than zero</value>
+  </data>
+  <data name="147" xml:space="preserve">
+    <value>Length4 should be greater than zero</value>
+  </data>
+  <data name="148" xml:space="preserve">
+    <value>Error in AddGussetsByRow</value>
+  </data>
+  <data name="149" xml:space="preserve">
+    <value>Error in LoadBlockClampData</value>
+  </data>
+  <data name="150" xml:space="preserve">
+    <value>Error in AddBlockClampInputs</value>
+  </data>
+  <data name="151" xml:space="preserve">
+    <value>Error in AddBlockClampOutputs</value>
+  </data>
+  <data name="152" xml:space="preserve">
+    <value>Error in LoadPlateDataByQuery</value>
+  </data>
+  <data name="153" xml:space="preserve">
+    <value>Error in AddBlockClamp</value>
+  </data>
+  <data name="154" xml:space="preserve">
+    <value>Error in AddBlockClampShape</value>
+  </data>
+  <data name="155" xml:space="preserve">
+    <value>Error in adding Guide additional inputs</value>
+  </data>
+  <data name="156" xml:space="preserve">
+    <value>Error in adding Guide additional outputs</value>
+  </data>
+  <data name="157" xml:space="preserve">
+    <value>The Specified Width1 is too small. The symbol may not place correctly</value>
+  </data>
+  <data name="158" xml:space="preserve">
+    <value>The Specified Width3 is too small. The symbol may not place properly</value>
+  </data>
+  <data name="159" xml:space="preserve">
+    <value>The top most horizontal plate has an invalid offset relative to the plate below</value>
+  </data>
+  <data name="160" xml:space="preserve">
+    <value>SolidBaseVerPl must be set to 2. The guide may not place properly</value>
+  </data>
+  <data name="161" xml:space="preserve">
+    <value>SolidVerHorPl must be set to 2. The guide may not place properly</value>
+  </data>
+  <data name="162" xml:space="preserve">
+    <value>Thickness2 must be specified. The guide may not place properly</value>
+  </data>
+  <data name="163" xml:space="preserve">
+    <value>Length2 must be specified. The guide may not place properly</value>
+  </data>
+  <data name="164" xml:space="preserve">
+    <value>Error in AddGuideShape</value>
+  </data>
+  <data name="165" xml:space="preserve">
+    <value>Error in AddRodInputs</value>
+  </data>
+  <data name="166" xml:space="preserve">
+    <value>Error in adding loading Guide data</value>
+  </data>
+  <data name="167" xml:space="preserve">
+    <value>SecConfig code list value should be between 1 and 2</value>
+  </data>
+  <data name="168" xml:space="preserve">
+    <value>VerPlSecStand  value can not be null or empty</value>
+  </data>
+  <data name="169" xml:space="preserve">
+    <value>VerPlSecSize value can not be null or empty</value>
+  </data>
+  <data name="170" xml:space="preserve">
+    <value>VerPlSecType value can not be null or empty</value>
+  </data>
+  <data name="171" xml:space="preserve">
+    <value>HorPlSecStand value can not be null or empty</value>
+  </data>
+  <data name="172" xml:space="preserve">
+    <value>HorPlSecSize value can not be null or empty</value>
+  </data>
+  <data name="173" xml:space="preserve">
+    <value>HorPlSecType value can not be null or empty</value>
+  </data>
+  <data name="174" xml:space="preserve">
+    <value>Connection code list value should be between 1 and 15</value>
+  </data>
+  <data name="175" xml:space="preserve">
+    <value>Mirrored code list value should be between 1 and 2</value>
+  </data>
+  <data name="176" xml:space="preserve">
+    <value>Error in AddGussetsWithChamferByRow</value>
+  </data>
+  <data name="177" xml:space="preserve">
+    <value>Error in AddSlidePlateInputs</value>
+  </data>
+  <data name="178" xml:space="preserve">
+    <value>Error in AddSlidePlateOutputs</value>
+  </data>
+  <data name="179" xml:space="preserve">
+    <value>Error in LoadSlidePlateData</value>
+  </data>
+  <data name="180" xml:space="preserve">
+    <value>Error in AddSlidePlate</value>
+  </data>
+  <data name="181" xml:space="preserve">
+    <value>Error in AddSwivelRingInputs</value>
+  </data>
+  <data name="182" xml:space="preserve">
+    <value>Error in AddSwivelRingOutputs</value>
+  </data>
+  <data name="183" xml:space="preserve">
+    <value>Error in LoadSwivelRingData</value>
+  </data>
+  <data name="184" xml:space="preserve">
+    <value>Error in AddSwivelRing</value>
+  </data>
+  <data name="185" xml:space="preserve">
+    <value>Error in LoadGuideDataByQuery</value>
+  </data>
+  <data name="186" xml:space="preserve">
+    <value>Rod Diameter must have a value greater than zero</value>
+  </data>
+  <data name="187" xml:space="preserve">
+    <value>Please check values for Width1 and Width2</value>
+  </data>
+  <data name="188" xml:space="preserve">
+    <value>You cannot place wrap on J Hangers</value>
+  </data>
+  <data name="189" xml:space="preserve">
+    <value>Error in AddSwivelLiner</value>
+  </data>
+  <data name="190" xml:space="preserve">
+    <value>Pin diameter too large: clashes with eye nut dimensions</value>
+  </data>
+  <data name="191" xml:space="preserve">
+    <value>Error in AddEyeNut</value>
+  </data>
+  <data name="192" xml:space="preserve">
+    <value>InnerWidth2 should not be less than zero</value>
+  </data>
+  <data name="193" xml:space="preserve">
+    <value>InnerLength2 should not be less than zero or zero</value>
+  </data>
+  <data name="194" xml:space="preserve">
+    <value>Error in LoadEyeNutData</value>
+  </data>
+  <data name="195" xml:space="preserve">
+    <value>Error in AddEyeNutInputs</value>
+  </data>
+  <data name="196" xml:space="preserve">
+    <value>Error in AddEyeNutOutputs</value>
+  </data>
+  <data name="197" xml:space="preserve">
+    <value>Error in AddYokeClampInputs</value>
+  </data>
+  <data name="198" xml:space="preserve">
+    <value>Error in AddYokeClampOutputs</value>
+  </data>
+  <data name="199" xml:space="preserve">
+    <value>Enter Positive value for Diameter1</value>
+  </data>
+  <data name="200" xml:space="preserve">
+    <value>Rod Takeout Should greater than half of the Diamter1 plus half of the Pin1 Diameter</value>
+  </data>
+  <data name="201" xml:space="preserve">
+    <value>Length1 should not be equals to zero</value>
+  </data>
+  <data name="202" xml:space="preserve">
+    <value>Length2 should not be equals to zero</value>
+  </data>
+  <data name="203" xml:space="preserve">
+    <value>Required inputs are Missing</value>
+  </data>
+  <data name="204" xml:space="preserve">
+    <value>Pipe OD is required</value>
+  </data>
+  <data name="205" xml:space="preserve">
+    <value>Thickness1 and Radius1 should be greater than zero</value>
+  </data>
+  <data name="206" xml:space="preserve">
+    <value>Angle1 should be greater than zero</value>
+  </data>
+  <data name="207" xml:space="preserve">
+    <value>Error in LoadPipeClampDataByQuery</value>
+  </data>
+  <data name="208" xml:space="preserve">
+    <value>Error in AddProtectSaddle</value>
+  </data>
+  <data name="209" xml:space="preserve">
+    <value>Error in AddProtectSaddleInputs</value>
+  </data>
+  <data name="210" xml:space="preserve">
+    <value>Error in AddProtectSaddleOutputs</value>
+  </data>
+  <data name="211" xml:space="preserve">
+    <value>Error in LoadProtectSaddle</value>
+  </data>
+  <data name="212" xml:space="preserve">
+    <value>Height1 should not be equals to 0 or negative</value>
+  </data>
+  <data name="213" xml:space="preserve">
+    <value>Width1 and Width2 must be greater than 0 and less than PipeOD/2</value>
+  </data>
+  <data name="214" xml:space="preserve">
+    <value>Angle1 and Angle2 must be greater than zero</value>
+  </data>
+  <data name="215" xml:space="preserve">
+    <value>Angle3 and Angle4 must be greater than zero</value>
+  </data>
+  <data name="216" xml:space="preserve">
+    <value>Angle1 + Angle2 must not be greater than 360 degrees</value>
+  </data>
+  <data name="217" xml:space="preserve">
+    <value>Angle1 + Angle2+ Angle3 + Angle4  must not be greater than 360 degrees</value>
+  </data>
+  <data name="218" xml:space="preserve">
+    <value>Angle1 + Angle2 + Angle3 + Angle4 must be equal to 360</value>
+  </data>
+  <data name="219" xml:space="preserve">
+    <value>Angle5 or Height1 must be greater than zero</value>
+  </data>
+  <data name="220" xml:space="preserve">
+    <value>Error in AddSheild</value>
+  </data>
+  <data name="221" xml:space="preserve">
+    <value>Error in AddSheildShape</value>
+  </data>
+  <data name="222" xml:space="preserve">
+    <value>Error in AddShieldInputs</value>
+  </data>
+  <data name="223" xml:space="preserve">
+    <value>Error in AddShieldOutputs</value>
+  </data>
+  <data name="224" xml:space="preserve">
+    <value>Error in LoadShieldData</value>
+  </data>
+  <data name="225" xml:space="preserve">
+    <value>Error in LoadLineData</value>
+  </data>
+  <data name="226" xml:space="preserve">
+    <value>Error in ShieldMultiPosition</value>
+  </data>
+  <data name="227" xml:space="preserve">
+    <value>RodDiameter value should not be less than or equal to zero</value>
+  </data>
+  <data name="228" xml:space="preserve">
+    <value>Length Of Rod should be betweem MinLength and MaxLength</value>
+  </data>
+  <data name="229" xml:space="preserve">
+    <value>Error in AddRod</value>
+  </data>
+  <data name="230" xml:space="preserve">
+    <value>Error in AddRod1Inputs</value>
+  </data>
+  <data name="231" xml:space="preserve">
+    <value>Error in AddRod1Outputs</value>
+  </data>
+  <data name="232" xml:space="preserve">
+    <value>Error in LoadRod1Data</value>
+  </data>
+  <data name="233" xml:space="preserve">
+    <value>Diameter2 value should not be less than or equal to zero</value>
+  </data>
+  <data name="234" xml:space="preserve">
+    <value>Pin2Diameter value should not be 0 or negative</value>
+  </data>
+  <data name="235" xml:space="preserve">
+    <value>Pin2Length value should not be zero</value>
+  </data>
+  <data name="236" xml:space="preserve">
+    <value>The distance from the pipe centerline to the top of the clevis must be longer than rod takeout</value>
+  </data>
+  <data name="237" xml:space="preserve">
+    <value>Rod Take Out should greater than 0.5 * Diameter1 plus Pin1Diameter</value>
+  </data>
+  <data name="238" xml:space="preserve">
+    <value>Length2 should less than or equal to Pin1Length - 2 * Thickness1</value>
+  </data>
+  <data name="239" xml:space="preserve">
+    <value>Length2 should greater than or equal to Diameter1</value>
+  </data>
+  <data name="240" xml:space="preserve">
+    <value>Height8 must be less than Height5</value>
+  </data>
+  <data name="241" xml:space="preserve">
+    <value>Pin2 Length must be less than or equal to Length2</value>
+  </data>
+  <data name="242" xml:space="preserve">
+    <value>Pin2 Length must be less than or equal to Length2 and Diameter1</value>
+  </data>
+  <data name="243" xml:space="preserve">
+    <value>Error in AddClevisHanger</value>
+  </data>
+  <data name="244" xml:space="preserve">
+    <value>Error in AddClevisHangerInputs</value>
+  </data>
+  <data name="245" xml:space="preserve">
+    <value>Error in AddClevisHangerOutputs</value>
+  </data>
+  <data name="246" xml:space="preserve">
+    <value>Error in LoadClevisHangerData</value>
+  </data>
+  <data name="247" xml:space="preserve">
+    <value>Enter Positive value for Pin1Diameter</value>
+  </data>
+  <data name="248" xml:space="preserve">
+    <value>Error in AddYokeClamp</value>
+  </data>
+  <data name="249" xml:space="preserve">
+    <value>Width3 should not be equal to zero</value>
+  </data>
+  <data name="250" xml:space="preserve">
+    <value>RodTakeOut should not be less than or equal to zero</value>
+  </data>
+  <data name="251" xml:space="preserve">
+    <value>Heigth6 should not be less than zero</value>
+  </data>
+  <data name="252" xml:space="preserve">
+    <value>Heigth5 should not be greater than zero</value>
+  </data>
+  <data name="253" xml:space="preserve">
+    <value>Pin1Diameter should not be less than or equal to zero</value>
+  </data>
+  <data name="254" xml:space="preserve">
+    <value>Heigth2 should not be less than or equal to zero</value>
+  </data>
+  <data name="255" xml:space="preserve">
+    <value>Error in LoadYokeClampData</value>
+  </data>
+  <data name="256" xml:space="preserve">
+    <value>Length5 should not be greater than zero</value>
+  </data>
+  <data name="257" xml:space="preserve">
+    <value>Error in LoadElbowLugData</value>
+  </data>
+  <data name="258" xml:space="preserve">
+    <value>Error in adding ElbowLug inputs</value>
+  </data>
+  <data name="259" xml:space="preserve">
+    <value>Error in adding ElbowLug outputs</value>
+  </data>
+  <data name="260" xml:space="preserve">
+    <value>Error in addElbowLug</value>
+  </data>
+  <data name="261" xml:space="preserve">
+    <value>Angle 1 should be between 90 and 270 degrees</value>
+  </data>
+  <data name="262" xml:space="preserve">
+    <value>Angle 2 should be between 0 and 30 degrees</value>
+  </data>
+  <data name="263" xml:space="preserve">
+    <value>Angle 3 should be between 0 and 30 degrees</value>
+  </data>
+  <data name="264" xml:space="preserve">
+    <value>Angle 4 should be between 0 and 45 degrees</value>
+  </data>
+  <data name="265" xml:space="preserve">
+    <value>Angle3 value is not given Properly</value>
+  </data>
+  <data name="266" xml:space="preserve">
+    <value>Gap1 value should not be less than or equal to zero</value>
+  </data>
+  <data name="267" xml:space="preserve">
+    <value>Height value should not be less than or equal to zero</value>
+  </data>
+  <data name="268" xml:space="preserve">
+    <value>Error in LoadStrapData</value>
+  </data>
+  <data name="269" xml:space="preserve">
+    <value>Error in adding Strap inputs</value>
+  </data>
+  <data name="270" xml:space="preserve">
+    <value>Error in adding Strap Outputs</value>
+  </data>
+  <data name="271" xml:space="preserve">
+    <value>Error in AddStrap</value>
+  </data>
+  <data name="272" xml:space="preserve">
+    <value>Width of Flat Spot exceeds entire width of strap</value>
+  </data>
+  <data name="273" xml:space="preserve">
+    <value>Width of wings is less than the straps width</value>
+  </data>
+  <data name="274" xml:space="preserve">
+    <value>PipeOD should not be greater than StrapWidthInside</value>
+  </data>
+  <data name="275" xml:space="preserve">
+    <value>Length value should not equal to zero</value>
+  </data>
+  <data name="276" xml:space="preserve">
+    <value>Error in AddBeamClampInputs</value>
+  </data>
+  <data name="277" xml:space="preserve">
+    <value>Error in AddAddBoltInputs</value>
+  </data>
+  <data name="278" xml:space="preserve">
+    <value>Error in AddBeamClampOutputs</value>
+  </data>
+  <data name="279" xml:space="preserve">
+    <value>Error in LoadBoltData</value>
+  </data>
+  <data name="280" xml:space="preserve">
+    <value>Error in LoadBeamClipDataByQuery</value>
+  </data>
+  <data name="281" xml:space="preserve">
+    <value>Error in LoadNutDataByQuery</value>
+  </data>
+  <data name="282" xml:space="preserve">
+    <value>Error in LoadBeamClampData</value>
+  </data>
+  <data name="283" xml:space="preserve">
+    <value>Error in AddBoltWithHead</value>
+  </data>
+  <data name="284" xml:space="preserve">
+    <value>Error in AddBeamClamp</value>
+  </data>
+  <data name="285" xml:space="preserve">
+    <value>Error in AddBeamClip</value>
+  </data>
+  <data name="286" xml:space="preserve">
+    <value>Error in AddMalleableBeamClampInputs</value>
+  </data>
+  <data name="287" xml:space="preserve">
+    <value>Error in AddMalleableBeamClampOutputs</value>
+  </data>
+  <data name="288" xml:space="preserve">
+    <value>Error in LoadMaleableBCData</value>
+  </data>
+  <data name="289" xml:space="preserve">
+    <value>Error in LoadEyeNutDataByQuery</value>
+  </data>
+  <data name="290" xml:space="preserve">
+    <value>Error in AddMalleablBeamClamp</value>
+  </data>
+  <data name="291" xml:space="preserve">
+    <value>Width1 and Width 2 value are not enough to create the Overlap with Other Beam clip</value>
+  </data>
+  <data name="292" xml:space="preserve">
+    <value>Length1 is less than Structure Width with Gaps</value>
+  </data>
+  <data name="293" xml:space="preserve">
+    <value>Length1 is less than Structure Width with Gaps and Clip Widths. Resetting the value</value>
+  </data>
+  <data name="294" xml:space="preserve">
+    <value>UBolt Length is less than Structure Width with Gaps. Resetting the value</value>
+  </data>
+  <data name="295" xml:space="preserve">
+    <value>UBolt Length is less than Left Vertical Offset</value>
+  </data>
+  <data name="296" xml:space="preserve">
+    <value>UBolt Length is less than Right Vertical Offset</value>
+  </data>
+  <data name="297" xml:space="preserve">
+    <value>Depth should not be less than or equal to zero</value>
+  </data>
+  <data name="298" xml:space="preserve">
+    <value>TopWidth should not be less than or equal to zero</value>
+  </data>
+  <data name="299" xml:space="preserve">
+    <value>Thickness should not be less than or equal to zero</value>
+  </data>
+  <data name="300" xml:space="preserve">
+    <value>Clamp Thickness should not be less than or equal to zero</value>
+  </data>
+  <data name="301" xml:space="preserve">
+    <value>Structure Width should not be less than or equal to zero</value>
+  </data>
+  <data name="302" xml:space="preserve">
+    <value>Pin1Length should be more than FlangeWidth + 2* Thickness. Resetting value to FlangeWidth + 4* Thickness</value>
+  </data>
+  <data name="303" xml:space="preserve">
+    <value>Pin2 Diameter should not be more than the Thickness of the Malleable Beam Clamp</value>
+  </data>
+  <data name="304" xml:space="preserve">
+    <value> UBolt Length is less than Right Vertical Offset</value>
+  </data>
+  <data name="305" xml:space="preserve">
+    <value>Shoe Width is less than zero of Shoe of Type DrawBeam_T</value>
+  </data>
+  <data name="306" xml:space="preserve">
+    <value>Shoe Length is less than zero of Shoe of Type DrawBeam_T</value>
+  </data>
+  <data name="307" xml:space="preserve">
+    <value>Error in DrawBeam_T</value>
+  </data>
+  <data name="308" xml:space="preserve">
+    <value>Error in DrawBeam_B2BL</value>
+  </data>
+  <data name="309" xml:space="preserve">
+    <value>Error in DrawBeam_Cradle</value>
+  </data>
+  <data name="310" xml:space="preserve">
+    <value>Error in DrawBeam_C</value>
+  </data>
+  <data name="311" xml:space="preserve">
+    <value>Error in DrawBeam_2L</value>
+  </data>
+  <data name="312" xml:space="preserve">
+    <value>Error in DrawBeam_W</value>
+  </data>
+  <data name="313" xml:space="preserve">
+    <value>Error in DrawBeam_Irregular</value>
+  </data>
+  <data name="314" xml:space="preserve">
+    <value>Shoe Length is less than zero of Shoe in type 2L</value>
+  </data>
+  <data name="315" xml:space="preserve">
+    <value>Shoe Length is less than zero of Shoe in DrawBeam_Irregular</value>
+  </data>
+  <data name="316" xml:space="preserve">
+    <value>Shoe Width is less than zero of Shoe in DrawBeam_Irregular</value>
+  </data>
+  <data name="317" xml:space="preserve">
+    <value>Lower spacing must be less than upper leg spacing</value>
+  </data>
+  <data name="318" xml:space="preserve">
+    <value>Shoe Length is less than zero of Shoe in type 2L</value>
+  </data>
+  <data name="319" xml:space="preserve">
+    <value>Shoe Length is less than zero of Shoe in type DrawBeam_B2BL</value>
+  </data>
+  <data name="320" xml:space="preserve">
+    <value>Shoe Length is less than zero of Shoe in type DrawBeam_Cradle</value>
+  </data>
+  <data name="321" xml:space="preserve">
+    <value>Shoe Length is less than zero of Shoe in type DrawBeam_C</value>
+  </data>
+  <data name="322" xml:space="preserve">
+    <value>Shoe Width is less than zero of Shoe in type DrawBeam_B2BL</value>
+  </data>
+  <data name="323" xml:space="preserve">
+    <value>Error in StarPlateShape</value>
+  </data>
+  <data name="324" xml:space="preserve">
+    <value>Error in DrawStandardSection</value>
+  </data>
+  <data name="325" xml:space="preserve">
+    <value>Error in Shoe</value>
+  </data>
+  <data name="326" xml:space="preserve">
+    <value>Error in LoadShoeDataByQuery</value>
+  </data>
+  <data name="327" xml:space="preserve">
+    <value>Error in LoadUBoltDataByQuery</value>
+  </data>
+  <data name="328" xml:space="preserve">
+    <value>Error in LoadStrapDataByQuery</value>
+  </data>
+  <data name="329" xml:space="preserve">
+    <value>Error in LoadSheildDataByQuery</value>
+  </data>
+  <data name="330" xml:space="preserve">
+    <value>Error in LoadSlidePlateDataByQuery</value>
+  </data>
+  <data name="331" xml:space="preserve">
+    <value>Length Of DummyLeg should be betweem MinLength and MaxLength</value>
+  </data>
+  <data name="332" xml:space="preserve">
+    <value>Bottom Shape is required to create Stanchion</value>
+  </data>
+  <data name="333" xml:space="preserve">
+    <value>Pipe Diameter is required to create Dummy Leg</value>
+  </data>
+  <data name="334" xml:space="preserve">
+    <value>Bottom Shape is required to create Dummy Leg</value>
+  </data>
+  <data name="335" xml:space="preserve">
+    <value>For Fixed Length Part, either Length or BottomShape and TopShape(if exists) Heights are to be provided</value>
+  </data>
+  <data name="336" xml:space="preserve">
+    <value>BottomShape is reqiured for part placement</value>
+  </data>
+  <data name="337" xml:space="preserve">
+    <value>Need to Provide Height for atleast one of Bottom and Top shapes</value>
+  </data>
+  <data name="338" xml:space="preserve">
+    <value>Bottom shape has given Height value. So part cannot be a Streached</value>
+  </data>
+  <data name="339" xml:space="preserve">
+    <value>Need to Provide Height for atleast one of Bottom and Top shapes</value>
+  </data>
+  <data name="340" xml:space="preserve">
+    <value>Top stanchion shape cannot be created for Standard steel without Baseplate</value>
+  </data>
+  <data name="341" xml:space="preserve">
+    <value>Pipe Diameter is required to Calculate DummyLeg Weight</value>
+  </data>
+  <data name="342" xml:space="preserve">
+    <value>Error in LoadDummyLegData</value>
+  </data>
+  <data name="343" xml:space="preserve">
+    <value>Error in LoadStanchShapeDataByQuery</value>
+  </data>
+  <data name="344" xml:space="preserve">
+    <value>Error in LoadDummyLegShapeDataByQuery</value>
+  </data>
+  <data name="345" xml:space="preserve">
+    <value>Error in AddStanchionShape</value>
+  </data>
+  <data name="346" xml:space="preserve">
+    <value>Error in AddDummyLegShape</value>
+  </data>
+  <data name="347" xml:space="preserve">
+    <value>Top plate is not available for Dummy Leg. So bolts cannot be included</value>
+  </data>
+  <data name="348" xml:space="preserve">
+    <value>Offset1 is more than (PipeOD - DummyWidth)/2</value>
+  </data>
+  <data name="349" xml:space="preserve">
+    <value>Offset1 is more than ElbowRadius - DummyWidth/2</value>
+  </data>
+  <data name="350" xml:space="preserve">
+    <value>DummyWidth is more than PipeOD</value>
+  </data>
+  <data name="351" xml:space="preserve">
+    <value>DummyLeg shape cannot be created for Standard steel</value>
+  </data>
+  <data name="352" xml:space="preserve">
+    <value>Error in AddPlateShapeWithBolts</value>
+  </data>
+  <data name="353" xml:space="preserve">
+    <value>Error in CreChamBoxLine</value>
+  </data>
+  <data name="354" xml:space="preserve">
+    <value>Error in AddDummyLegInputs</value>
+  </data>
+  <data name="355" xml:space="preserve">
+    <value>Error in AddDummyLegOutputs</value>
+  </data>
+  <data name="356" xml:space="preserve">
+    <value>The Shoe Gap should not be grater than zero</value>
+  </data>
+  <data name="357" xml:space="preserve">
+    <value>Length must be greater than zero</value>
+  </data>
+  <data name="358" xml:space="preserve">
+    <value>Offset PipeClamp Configuration is not applicable for a SplitPipe Ring</value>
+  </data>
+  <data name="359" xml:space="preserve">
+    <value>Width3 is needed, Setting it to Height1 + Height2</value>
+  </data>
+  <data name="360" xml:space="preserve">
+    <value>Error in LoadHolePortData</value>
+  </data>
+  <data name="361" xml:space="preserve">
+    <value>Error in LoadRoutePortData</value>
+  </data>
+  <data name="362" xml:space="preserve">
+    <value>Error in AddRoutePortInput</value>
+  </data>
+  <data name="363" xml:space="preserve">
+    <value>Error in LoadRoutePortData</value>
+  </data>
+  <data name="364" xml:space="preserve">
+    <value>Error in RotatePort</value>
+  </data>
+  <data name="365" xml:space="preserve">
+    <value>Error in HoleRotatePort</value>
+  </data>
+  <data name="366" xml:space="preserve">
+    <value>Error in LoadStandardPortData</value>
+  </data>
+  <data name="367" xml:space="preserve">
+    <value>Error in AddStandardPortInputs</value>
+  </data>
+  <data name="368" xml:space="preserve">
+    <value>Error in AddStandardPortoutputs</value>
+  </data>
+  <data name="369" xml:space="preserve">
+    <value>Error in AddHolePortinputs</value>
+  </data>
+  <data name="370" xml:space="preserve">
+    <value>Error in AddHolePortoutputs</value>
+  </data>
+  <data name="371" xml:space="preserve">
+    <value>Error in RoutePortOutput</value>
+  </data>
+  <data name="372" xml:space="preserve">
+    <value>Elbow Radius Should be positive value</value>
+  </data>
+  <data name="373" xml:space="preserve">
+    <value>Face to center Should be positive value</value>
+  </data>
+  <data name="374" xml:space="preserve">
+    <value>Either Width, Length or Thickness wasn't valid. Can't create a plate graphic shape</value>
+  </data>
+  <data name="375" xml:space="preserve">
+    <value>Diameter1 should be greater than zero </value>
+  </data>
+  <data name="376" xml:space="preserve">
+    <value>PipeOD can not be zero </value>
+  </data>
+  <data name="377" xml:space="preserve">
+    <value>Stanchion Height and Stanchion Gap should not be equal</value>
+  </data>
+  <data name="378" xml:space="preserve">
+    <value>The Spring Rate must be greater than zero.</value>
+  </data>
+  <data name="379" xml:space="preserve">
+    <value>The Operating Load is below the minimum working range.</value>
+  </data>
+  <data name="380" xml:space="preserve">
+    <value>The Operating Load is above the maximum working range.</value>
+  </data>
+  <data name="381" xml:space="preserve">
+    <value>The Installed Load is below the minimum working range.</value>
+  </data>
+  <data name="382" xml:space="preserve">
+    <value>The Installed Load is above the maximum working range.</value>
+  </data>
+  <data name="383" xml:space="preserve">
+    <value>Variability has exceeded the maximum allowable value.</value>
+  </data>
+  <data name="384" xml:space="preserve">
+    <value>Error in BOMDescription of VariableBOM.cs.</value>
+  </data>
+  <data name="385" xml:space="preserve">
+    <value>Could not get Cross-section object.</value>
+  </data>
+  <data name="386" xml:space="preserve">
+    <value>CC value should be greater than zero.</value>
+  </data>
+  <data name="387" xml:space="preserve">
+    <value>Error in loading StrutA data.</value>
+  </data>
+  <data name="388" xml:space="preserve">
+    <value>Travel excess allowance.</value>
+  </data>
+  <data name="389" xml:space="preserve">
+    <value>Length of the strut must be between minLength and maxLength attributes.</value>
+  </data>
+  <data name="390" xml:space="preserve">
+    <value>Error in AddStrutA.</value>
+  </data>
+  <data name="391" xml:space="preserve">
+    <value>Error in MakeShape.</value>
+  </data>
+  <data name="392" xml:space="preserve">
+    <value>Error in LoadTurnbuckleByQuery.</value>
+  </data>
+  <data name="393" xml:space="preserve">
+    <value>Total Travel is less than the minimum allowable value for a size Constant.</value>
+  </data>
+  <data name="394" xml:space="preserve">
+    <value>Total Travel is greater than the maximum allowable value for a size Constant.</value>
+  </data>
+  <data name="395" xml:space="preserve">
+    <value>Configuration 1 not valid for Type U Constants</value>
+  </data>
+  <data name="396" xml:space="preserve">
+    <value>Horizontal Configuration not valid for Type G Constants.</value>
+  </data>
+  <data name="397" xml:space="preserve">
+    <value>Steel Details are not found.</value>
+  </data>
+  <data name="398" xml:space="preserve">
+    <value>Error in LoadWBABoltDataByQuery.</value>
+  </data>
+  <data name="399" xml:space="preserve">
+    <value>Error in GetSmartShapeType.</value>
+  </data>
+  <data name="400" xml:space="preserve">
+    <value>Error in LoadConstantData.</value>
+  </data>
+  <data name="401" xml:space="preserve">
+    <value>Error in LoadClevisDataByQuery.</value>
+  </data>
+  <data name="402" xml:space="preserve">
+    <value>Error in LoadPinDataByQuery.</value>
+  </data>
+  <data name="403" xml:space="preserve">
+    <value>Error in GetConstantSizeRowProperties.</value>
+  </data>
+  <data name="404" xml:space="preserve">
+    <value>Error in GetConstantTravelRowAttributes.</value>
+  </data>
+  <data name="405" xml:space="preserve">
+    <value>Error in GetConstantLoadAttributes.</value>
+  </data>
+  <data name="406" xml:space="preserve">
+    <value>Error in LoadRodDataByQuery.</value>
+  </data>
+  <data name="407" xml:space="preserve">
+    <value>Error in BOMDescription of ConstantBOM.cs.</value>
+  </data>
+  <data name="408" xml:space="preserve">
+    <value>Error in BOMDescription of Struct_A.cs.</value>
+  </data>
+  <data name="409" xml:space="preserve">
+    <value>Error occured while implementing GroutAdditionalInputs.. </value>
+  </data>
+  <data name="410" xml:space="preserve">
+    <value>Error occured while implementing LoadGroutData. </value>
+  </data>
+  <data name="411" xml:space="preserve">
+    <value>Error occured while implementing GroutAdditionalOutputs. </value>
+  </data>
+  <data name="412" xml:space="preserve">
+    <value>Error occured while implementing AddGroutCircular. </value>
+  </data>
+  <data name="413" xml:space="preserve">
+    <value>Error occured while implementing AddGrout. </value>
+  </data>
+  <data name="414" xml:space="preserve">
+    <value>Error Invalid BottomWidth1. </value>
+  </data>
+  <data name="415" xml:space="preserve">
+    <value>Error Invalid GroutTopWidth1. </value>
+  </data>
+  <data name="416" xml:space="preserve">
+    <value> Error Invalid GroutHeight. </value>
+  </data>
+  <data name="417" xml:space="preserve">
+    <value> "Setposition can not be greater than stroke. Resetting it to Maximum Setpostion". </value>
+  </data>
+  <data name="418" xml:space="preserve">
+    <value> Error in adding Pipe R-Pad inputs. </value>
+  </data>
+  <data name="419" xml:space="preserve">
+    <value> Error in AddPipeRPadOutputs. </value>
+  </data>
+  <data name="420" xml:space="preserve">
+    <value> Error in LoadPipeRPadData. </value>
+  </data>
+  <data name="421" xml:space="preserve">
+    <value> Error in adding Elbow R-Pad inputs. </value>
+  </data>
+  <data name="422" xml:space="preserve">
+    <value> Error in AddElbowRPadOutputs. </value>
+  </data>
+  <data name="423" xml:space="preserve">
+    <value> Error in LoadElbowRPadData. </value>
+  </data>
+  <data name="424" xml:space="preserve">
+    <value> Invalid R-Pad Dimensions. </value>
+  </data>
+  <data name="425" xml:space="preserve">
+    <value> Error in AddPipeRPad. </value>
+  </data>
+  <data name="426" xml:space="preserve">
+    <value> Error in AddElbowRPad. </value>
+  </data>
+  <data name="427" xml:space="preserve">
+    <value> Error in LoadSpreaderBeamData. </value>
+  </data>
+  <data name="428" xml:space="preserve">
+    <value> Error in LoadClevisHangerDataByQuery. </value>
+  </data>
+  <data name="429" xml:space="preserve">
+    <value> Error in LoadSwivelDataByQuery. </value>
+  </data>
+  <data name="430" xml:space="preserve">
+    <value> Error in LoadWBAHoleDataByQuery. </value>
+  </data>
+  <data name="431" xml:space="preserve">
+    <value> Length of the section cannot be zero. </value>
+  </data>
+  <data name="432" xml:space="preserve">
+    <value> SteelName can not be Empty. </value>
+  </data>
+  <data name="433" xml:space="preserve">
+    <value> SteelStandard can not be Empty. </value>
+  </data>
+  <data name="434" xml:space="preserve">
+    <value> SteelTye can not be Empty. </value>
+  </data>
+  <data name="435" xml:space="preserve">
+    <value> Error in AddSpreaderBeamInputs. </value>
+  </data>
+  <data name="436" xml:space="preserve">
+    <value> Insulation Length canot be less than Run Insulation thickness. </value>
+  </data>
+  <data name="437" xml:space="preserve">
+    <value> Width1 and Width2 value should not be zero. </value>
+  </data>
+  <data name="438" xml:space="preserve">
+    <value>Vertical Plate Shape Data is required</value>
+  </data>
+  <data name="439" xml:space="preserve">
+    <value>Total height of vertical plate is less than the minimum allowable height.</value>
+  </data>
+  <data name="440" xml:space="preserve">
+    <value>Total height of vertical plate is greater than the maximum allowable height.</value>
+  </data>
+  <data name="441" xml:space="preserve">
+    <value>The C-C Value is less than the minimum allowable C-C Value.</value>
+  </data>
+  <data name="442" xml:space="preserve">
+    <value>The C-C Value is greater than the maximum allowable C-C Value.</value>
+  </data>
+  <data name="443" xml:space="preserve">
+    <value>Error in AddPlateShapeWithHole method.</value>
+  </data>
+  <data name="444" xml:space="preserve">
+    <value>Error in Hole1HInset input of plate with hole</value>
+  </data>
+  <data name="445" xml:space="preserve">
+    <value>Error in Hole1VInset input of plate with hole</value>
+  </data>
+  <data name="446" xml:space="preserve">
+    <value>Error in Hole1Diameter input of plate with hole</value>
+  </data>
+  <data name="447" xml:space="preserve">
+    <value>The given value of Dummyleg Insulation Thickess cannot be applied as it exceeds the total Outer Diameter of the Pipe</value>
+  </data>
+  <data name="448" xml:space="preserve">
+    <value>Length of the insulation exceeds the DummyLength. Resetting it to maximum length</value>
+  </data>
+  <data name="449" xml:space="preserve">
+    <value>Given value must be between the Minimum and Maximum range</value>
+  </data>
+  <data name="450" xml:space="preserve">
+    <value>Error occured in LoadGripclampData Method.</value>
+  </data>
+  <data name="451" xml:space="preserve">
+    <value>Error in AddGripclampData</value>
+  </data>
+  <data name="452" xml:space="preserve">
+    <value>Error occured in LoadHorizontalTravelerData Method.</value>
+  </data>
+  <data name="453" xml:space="preserve">
+    <value>Error occured in AddHorizontalTravelerData Method.</value>
+  </data>
+  <data name="454" xml:space="preserve">
+    <value>Error occured in Add PipeSaddleInputs Method.</value>
+  </data>
+  <data name="455" xml:space="preserve">
+    <value>Error in Loading PipeSaddle Data.</value>
+  </data>
+  <data name="456" xml:space="preserve">
+    <value>Error occured AddPipeSaddle Method.</value>
+  </data>
+  <data name="457" xml:space="preserve">
+    <value>Error occured in AddBoltSmartpartInputs Method.</value>
+  </data>
+  <data name="458" xml:space="preserve">
+    <value>Error in loading BoltSmartpart data.</value>
+  </data>
+  <data name="459" xml:space="preserve">
+    <value>Error in Adding BoltSmartpart.</value>
+  </data>
+  <data name="460" xml:space="preserve">
+    <value>Error occured in LoadPipeLugData Method.</value>
+  </data>
+  <data name="461" xml:space="preserve">
+    <value>Error in Adding Welding Lug.</value>
+  </data>
+  <data name="462" xml:space="preserve">
+    <value>Gap1 is more than the correct expected value. Decrease Gap1 or Increase Length of the Bolt</value>
+  </data>
+  <data name="463" xml:space="preserve">
+    <value>Error occured in LoadLugPlateData Method.</value>
+  </data>
+  <data name="464" xml:space="preserve">
+    <value>Error in Adding Lug Plate.</value>
+  </data>
+</root>

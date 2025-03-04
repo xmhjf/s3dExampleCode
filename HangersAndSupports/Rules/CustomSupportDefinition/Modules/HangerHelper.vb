@@ -1,0 +1,3 @@
+﻿Module HangerHelper
+
+End Module

@@ -1,0 +1,481 @@
+// ATPSO.idl : IDL source for ATPSO
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATPSO.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "CustomAssembly.idl";
+
+[
+	object,
+	uuid(D6E7D86E-1140-4A65-AD1D-9C545161B2D0),
+	dual,
+	nonextensible,
+	helpstring("ICADeleteMemberOutputDef Interface"),
+	pointer_default(unique)
+]
+interface ICADeleteMemberOutputDef : IDispatch{
+    [id(0x60030005), helpstring("Final Construct method")]
+    HRESULT CMFinalConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+    [id(0x60030006), helpstring("Construct method")]
+    HRESULT CMConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+    [id(0x60030007), helpstring("Evaluate method")]
+    HRESULT CMEvaluateCAO([in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+    [id(0x60030008), helpstring("Construct sphere method")]
+    HRESULT CMConstructSphere([in] IJDMemberDescription* pMemberDescription, 
+                    [in] IUnknown* pResourceManager, 
+                    [in, out] IDispatch** pObj);
+    [id(0x60030009), helpstring("SetInput sphere method")]
+    HRESULT CMSetInputSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000a), helpstring("Final Construct sphere  method")]
+    HRESULT CMFinalConstructSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000b), helpstring("Release sphere  method")]
+    HRESULT CMReleaseSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000c), helpstring("Evaluate sphere properties method")]
+    HRESULT CMEvaluateSphereProperties([in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+    [id(0x6003000d), helpstring("Evaluate sphere geometry method")]
+    HRESULT CMEvaluateSphereGeometry([in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+};
+[
+	object,
+	uuid(18A2C589-D381-46DC-A7C9-9A7DF6A5AA63),
+	dual,
+	nonextensible,
+	helpstring("ICADeleteMemberOutputSym Interface"),
+	pointer_default(unique)
+]
+interface ICADeleteMemberOutputSym : IDispatch{
+	[id(0x60030005),  helpstring("Generate physical aspect method for symbol")]
+    HRESULT Physical([in, out] IJDRepresentationStdCustomMethod** pIRepSCM);
+};
+[
+	object,
+	uuid(6AE5114E-7A57-4885-BB71-99EB4AABA5EC),
+	dual,
+	nonextensible,
+	helpstring("ICAEvaluateAfterSymbolSym Interface"),
+	pointer_default(unique)
+]
+interface ICAEvaluateAfterSymbolSym : IDispatch{
+	[id(0x60030005),  helpstring("Generate physical aspect method for symbol")]
+    HRESULT Physical([in, out] IJDRepresentationStdCustomMethod** pIRepSCM);
+};
+[
+	object,
+	uuid(0A87A52A-41A6-4A6B-B331-DD964C2ACF60),
+	dual,
+	nonextensible,
+	helpstring("ICAEvaluateAfterSymbolDef Interface"),
+	pointer_default(unique)
+]
+interface ICAEvaluateAfterSymbolDef : IDispatch{
+	[id(0x60030005), helpstring("Final construct")]
+	HRESULT CMFinalConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+    [id(0x60030006), helpstring("Construct")]
+    HRESULT CMConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+    [id(0x60030007), helpstring("Evaluate before CustomAssembly evaluate")]
+    HRESULT CMEvaluateCAOBefore( [in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+    [id(0x60030008), helpstring("Evaluate after CustomAssembly evaluate")]
+    HRESULT CMEvaluateCAOAfter( [in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+    [id(0x60030009), helpstring("Construct sphere output")]
+    HRESULT CMConstructSphere( [in] IJDMemberDescription* pMemberDescription, 
+                    [in] IUnknown* pResourceManager, 
+                    [in, out] IDispatch** pObj);
+    [id(0x6003000a), helpstring("Set inputs")]
+    HRESULT CMSetInputSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000b), helpstring("Final construct for sphere output")]
+    HRESULT CMFinalConstructSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000c), helpstring("Release sphere output")]
+    HRESULT CMReleaseSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000d), helpstring("Evalaute sphere properties")]
+    HRESULT CMEvaluateSphereProperties(
+                    [in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+    [id(0x6003000e), helpstring("Evaluate sphere geometry")]
+    HRESULT CMEvaluateSphereGeometry( [in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+};
+[
+	object,
+	uuid(1ECEAC32-4154-4C1C-8535-55F5847FBD2A),
+	dual,
+	nonextensible,
+	helpstring("ICOMSelectionRuleSel Interface"),
+	pointer_default(unique)
+]
+interface ICOMSelectionRuleSel : IDispatch{
+	[id(0x60030005), helpstring("Standard CMSelector")] 
+	HRESULT CMSelector([in] IJDRepresentation * pRepresentation);
+};
+[
+	object,
+	uuid(EF9D05C0-893D-4084-8F6F-0B1CBFBF750F),
+	dual,
+	nonextensible,
+	helpstring("ICOMSelectionRuleRootSel Interface"),
+	pointer_default(unique)
+]
+interface ICOMSelectionRuleRootSel : IDispatch{
+	[id(0x60030005), helpstring("Standard CMSelector")] 
+	HRESULT CMSelector([in] IJDRepresentation * pRepresentation);
+};
+[
+	object,
+	uuid(270F5D5A-6F54-497D-8DA1-212B909292A5),
+	dual,
+	nonextensible,
+	helpstring("ICOM2ndSelectionRuleSel Interface"),
+	pointer_default(unique)
+]
+interface ICOM2ndSelectionRuleSel : IDispatch{
+	[id(0x60030005), helpstring("Standard CMSelector")] 
+	HRESULT CMSelector([in] IJDRepresentation * pRepresentation);
+};
+[
+	object,
+	uuid(750BBA63-407F-42BF-AA8E-66763B6DB3BA),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITestSelRuleWithQs : IDispatch{
+	[id(0x60030005), helpstring("Standard CMSelector")] 
+	HRESULT CMSelector([in] IJDRepresentation * pRepresentation);
+    [id(0x60030006), helpstring("Custom Question1 selector default method")]
+    HRESULT Question1MethodCM( [in] IJDInputStdCustomMethod* pInput, 
+                        [in, out] IDispatch** ppArgument);
+    [id(0x60030007), helpstring("Custom Question2 selector default method")]
+    HRESULT Question2MethodCM( [in] IJDInputStdCustomMethod* pInput, 
+                        [in, out] IDispatch** ppArgument);
+};
+[
+	object,
+	uuid(8CC1C108-0BEB-4CEB-9208-7FBD660DF09F),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICOMTestParameterRule : IDispatch{
+    [id(0x60030008), helpstring("Standard CMParameterRule")]
+    HRESULT CMParameterRule([in] IJDRepresentation * pRepresentation);
+};
+[
+	object,
+	uuid(1C20CEB2-B64E-4946-A93D-6D8E4B1F2116),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICAForParameterRuleDef : IDispatch{
+    [id(0x60030005), helpstring("Final Construct method")]
+    HRESULT CMFinalConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+    [id(0x60030006), helpstring("Construct method")]
+    HRESULT CMConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+    [id(0x60030007), helpstring("Evaluate method")]
+    HRESULT CMEvaluateCAO([in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+    [id(0x60030008), helpstring("Construct sphere method")]
+    HRESULT CMConstructSphere([in] IJDMemberDescription* pMemberDescription, 
+                    [in] IUnknown* pResourceManager, 
+                    [in, out] IDispatch** pObj);
+    [id(0x60030009), helpstring("SetInput sphere method")]
+    HRESULT CMSetInputSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000a), helpstring("Final Construct sphere  method")]
+    HRESULT CMFinalConstructSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000b), helpstring("Release sphere  method")]
+    HRESULT CMReleaseSphere([in, out] IJDMemberDescription** pMemberDesc);
+    [id(0x6003000c), helpstring("Evaluate sphere properties method")]
+    HRESULT CMEvaluateSphereProperties([in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+    [id(0x6003000d), helpstring("Evaluate sphere geometry method")]
+    HRESULT CMEvaluateSphereGeometry([in, out] IJDPropertyDescription** pPropertyDescriptions, 
+                    [in, out] IDispatch** pObject);
+};
+[
+	object,
+	uuid(D835FF24-0B30-4A9D-AA86-E5D867ADDD58),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICAForParameterRuleSym : IDispatch{
+	[id(0x60030005),  helpstring("Generate physical aspect method for symbol")]
+    HRESULT Physical([in, out] IJDRepresentationStdCustomMethod** pIRepSCM);
+};
+[
+	object,
+	uuid(273050D7-BEA4-4DFB-9B0C-411EF56CD9AC),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ISONoGraphics : IDispatch{
+	[id(0x60030005),  helpstring("Generate physical aspect method for symbol")]
+    HRESULT Physical([in, out] IJDRepresentationStdCustomMethod** pIRepSCM);
+};
+[
+	object,
+	uuid(16F840AA-9135-42B1-A4E1-3832AEF010E1),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ISO1GraphicOutput : IDispatch{
+	[id(0x60030005),  helpstring("Generate physical aspect method for symbol")]
+    HRESULT Physical([in, out] IJDRepresentationStdCustomMethod** pIRepSCM);
+};
+[
+	object,
+	uuid(266C38F3-421F-4491-9923-75CA40458D4F),
+	dual,
+	nonextensible,
+	helpstring("ICANestedOutputParentSym Interface"),
+	pointer_default(unique)
+]
+interface ICANestedOutputParentSym : IDispatch{
+	[id(0x60030005), helpstring("Generate physical aspect method for symbol")]
+	HRESULT Physical([in, out] IJDRepresentationStdCustomMethod** pIRepSCM);
+};
+[
+	object,
+	uuid(B00BD839-FAF5-466A-8CF9-827138DAA42F),
+	dual,
+	nonextensible,
+	helpstring("ICANestedOutputParentDef Interface"),
+	pointer_default(unique)
+]
+interface ICANestedOutputParentDef : IDispatch{
+	[id(0x60030005), helpstring("Final Construct method")]
+	HRESULT CMFinalConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+	[id(0x60030006), helpstring("Construct method")]
+	HRESULT CMConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+	[id(0x60030007), helpstring("Evaluate method")]
+	HRESULT CMEvaluateCAO([in, out] IJDPropertyDescription** pPropertyDescriptions,
+		[in, out] IDispatch** pObject);
+	[id(0x60030008), helpstring("Construct nested output method")]
+	HRESULT CMConstructNestedOutput([in] IJDMemberDescription* pMemberDescription,
+		[in] IUnknown* pResourceManager,
+		[in, out] IDispatch** pObj);
+	[id(0x60030009), helpstring("SetInput nested output method")]
+	HRESULT CMSetInputNestedOutput([in, out] IJDMemberDescription** pMemberDesc);
+	[id(0x6003000a), helpstring("Final Construct nested output  method")]
+	HRESULT CMFinalConstructNestedOutput([in, out] IJDMemberDescription** pMemberDesc);
+	[id(0x6003000b), helpstring("Release nested output  method")]
+	HRESULT CMReleaseNestedOutput([in, out] IJDMemberDescription** pMemberDesc);
+	[id(0x6003000c), helpstring("Evaluate nested output properties method")]
+	HRESULT CMEvaluateNestedOutputProperties([in, out] IJDPropertyDescription** pPropertyDescriptions,
+		[in, out] IDispatch** pObject);
+	[id(0x6003000d), helpstring("Evaluate nested output geometry method")]
+	HRESULT CMEvaluateNestedOutputGeometry([in, out] IJDPropertyDescription** pPropertyDescriptions,
+		[in, out] IDispatch** pObject);
+};
+[
+	object,
+	uuid(F0AFC39A-F4C9-408D-8FF5-7E2C922CCB0E),
+	dual,
+	nonextensible,
+	helpstring("ICABasicDef Interface"),
+	pointer_default(unique)
+]
+interface ICABasicDef : IDispatch{
+	[id(0x60030005), helpstring("Final Construct method")]
+	HRESULT CMFinalConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+	[id(0x60030006), helpstring("Construct method")]
+	HRESULT CMConstructAsm([in, out] IJDAggregatorDescription** pAggregatorDescription);
+	[id(0x60030007), helpstring("Evaluate method")]
+	HRESULT CMEvaluateCAO([in, out] IJDPropertyDescription** pPropertyDescriptions,
+		[in, out] IDispatch** pObject);
+	[id(0x60030008), helpstring("Construct sphere method")]
+	HRESULT CMConstructSphere([in] IJDMemberDescription* pMemberDescription,
+		[in] IUnknown* pResourceManager,
+		[in, out] IDispatch** pObj);
+	[id(0x60030009), helpstring("SetInput sphere method")]
+	HRESULT CMSetInputSphere([in, out] IJDMemberDescription** pMemberDesc);
+	[id(0x6003000a), helpstring("Final Construct sphere  method")]
+	HRESULT CMFinalConstructSphere([in, out] IJDMemberDescription** pMemberDesc);
+	[id(0x6003000b), helpstring("Release sphere  method")]
+	HRESULT CMReleaseSphere([in, out] IJDMemberDescription** pMemberDesc);
+	[id(0x6003000c), helpstring("Evaluate sphere properties method")]
+	HRESULT CMEvaluateSphereProperties([in, out] IJDPropertyDescription** pPropertyDescriptions,
+		[in, out] IDispatch** pObject);
+	[id(0x6003000d), helpstring("Evaluate sphere geometry method")]
+	HRESULT CMEvaluateSphereGeometry([in, out] IJDPropertyDescription** pPropertyDescriptions,
+		[in, out] IDispatch** pObject);
+};
+[
+	object,
+	uuid(9944D0A9-D898-41D1-BD81-A0A26E725FDD),
+	dual,
+	nonextensible,
+	helpstring("ICABasicSym Interface"),
+	pointer_default(unique)
+]
+interface ICABasicSym : IDispatch{
+	[id(0x60030005), helpstring("Generate physical aspect method for symbol")]
+	HRESULT Physical([in, out] IJDRepresentationStdCustomMethod** pIRepSCM);
+};
+
+[
+	uuid(A95C7667-40AF-4F87-86A1-542E074464A0),
+	version(1.0),
+	helpstring("ATPSO 1.0 Type Library")
+]
+library ATPSO
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(0F66A04C-4E3C-40F0-B40E-E9E1D51A1F95),
+		helpstring("CADeleteMemberOutputDef Class")
+	]
+	coclass CADeleteMemberOutputDef
+	{
+		[default] interface ICADeleteMemberOutputDef;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(1C8970B0-92D3-4AAA-BF5A-72EFE4DA8CB3),
+		helpstring("CADeleteMemberOutputSym Class")
+	]
+	coclass CADeleteMemberOutputSym
+	{
+		[default] interface ICADeleteMemberOutputSym;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(9FD62BD4-B0FF-47D9-9203-46A09799824F),
+		helpstring("CAEvaluateAfterSymbolSym Class")
+	]
+	coclass CAEvaluateAfterSymbolSym
+	{
+		[default] interface ICAEvaluateAfterSymbolSym;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(7C04C448-F2A6-4E39-880C-26E8EE6ADD25),
+		helpstring("CAEvaluateAfterSymbolDef Class")
+	]
+	coclass CAEvaluateAfterSymbolDef
+	{
+		[default] interface ICAEvaluateAfterSymbolDef;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(AD0F81C3-941F-4A4A-B020-B24AF3A0252F),
+		helpstring("COMSelectionRuleSel Class")
+	]
+	coclass COMSelectionRuleSel
+	{
+		[default] interface ICOMSelectionRuleSel;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(64D91A79-5CB7-441F-933D-9A0C2D564D09),
+		helpstring("COMSelectionRuleRootSel Class")
+	]
+	coclass COMSelectionRuleRootSel
+	{
+		[default] interface ICOMSelectionRuleRootSel;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(71664078-A2CF-471B-9EA8-0C314CE2617D),
+		helpstring("COM2ndSelectionRuleSel Class")
+	]
+	coclass COM2ndSelectionRuleSel
+	{
+		[default] interface ICOM2ndSelectionRuleSel;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(6233ABA4-5635-4F58-B51D-5E4DF34F92B1),
+		helpstring("TestSelRuleWithQs Class")
+	]
+	coclass TestSelRuleWithQs
+	{
+		[default] interface ITestSelRuleWithQs;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(47E60D53-F154-481D-85F4-9EEB88E2C162),
+		helpstring("TestParameterRule Class")
+	]
+	coclass COMTestParameterRule
+	{
+		[default] interface ICOMTestParameterRule;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(8072837C-2979-4124-BC12-88AB3892EF7D)		
+	]
+	coclass CAForParameterRuleDef
+	{
+		[default] interface ICAForParameterRuleDef;
+	};
+	[
+		uuid(E75458B5-167F-46FE-BCF1-7227F8B848E3)		
+	]
+	coclass CAForParameterRuleSym
+	{
+		[default] interface ICAForParameterRuleSym;
+	};
+	[
+		uuid(61661D07-CCD3-4787-9946-4A0971EBCCA3)		
+	]
+	coclass SONoGraphics
+	{
+		[default] interface ISONoGraphics;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(11EBB6C3-11B4-4C26-AAC0-D6307F0A1539)		
+	]
+	coclass SO1GraphicOutput
+	{
+		[default] interface ISO1GraphicOutput;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(96B0D8F3-BF28-4993-8504-808F1B2D1FA2),
+		helpstring("CANestedOutputParentDef Class")
+	]
+	coclass CANestedOutputParentDef
+	{
+		[default] interface ICANestedOutputParentDef;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(61F36747-A466-42E6-BAFD-ED7C5FF77E0A),
+		helpstring("CANestedOutputParentSym Class")
+	]
+	coclass CANestedOutputParentSym
+	{
+		[default] interface ICANestedOutputParentSym;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(E81D4319-D466-41ED-AD82-72BDA654745C),
+		helpstring("CABasicDef Class")
+	]
+	coclass CABasicDef
+	{
+		[default] interface ICABasicDef;
+		interface IJDUserSymbolServices;
+	};
+	[
+		uuid(68432C7A-5E6C-4C3B-9BF8-7008CCF85635),
+		helpstring("CABasicSym Class")
+	]
+	coclass CABasicSym
+	{
+		[default] interface ICABasicSym;
+		interface IJDUserSymbolServices;
+	};
+};
+

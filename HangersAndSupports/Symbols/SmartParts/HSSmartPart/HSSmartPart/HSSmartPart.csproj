@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8BF3DD9-5E00-43A1-8ABC-A97D4E0E08FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Symbols</RootNamespace>
+    <AssemblyName>HSSmartPart</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UICulture>en-US</UICulture>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.CommonToolkit.Middle, Version=1.0.0.209, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <HintPath>X:\Container\Bin\SxS\Intergraph\Intergraph.CommonToolkit.Middle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartPlantStructureMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\SmartPlantStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeamClamp\BeamClamp.cs" />
+    <Compile Include="BeamClamp\Malleable.cs" />
+    <Compile Include="Bolt\Bolt.cs" />
+    <Compile Include="Constant\ConstantBOM.cs" />
+    <Compile Include="Constant\ConstantTypeA.cs" />
+    <Compile Include="Constant\ConstantTypeB.cs" />
+    <Compile Include="Constant\ConstantTypeC.cs" />
+    <Compile Include="Constant\ConstantTypeD.cs" />
+    <Compile Include="Constant\ConstantTypeE.cs" />
+    <Compile Include="Constant\ConstantTypeF.cs" />
+    <Compile Include="Constant\ConstantTypeG.cs" />
+    <Compile Include="Constant\ConstantTypeU.cs" />
+    <Compile Include="DummyLeg\DummyLeg.cs" />
+    <Compile Include="GripClamp\GripClamp.cs" />
+    <Compile Include="Grout\Grout.cs" />
+    <Compile Include="HorizontalTraveler\HorizontalTraveler.cs" />
+    <Compile Include="Insulation\Insulation.cs" />
+    <Compile Include="LugPlate\LugPlate.cs" />
+    <Compile Include="PipeSaddle\PipeSaddle.cs" />
+    <Compile Include="PlatePipeClamp\PlatePipeClamp.cs" />
+    <Compile Include="Plate\OneStdOneHole.cs" />
+    <Compile Include="Plate\OneStdOneHoleOneRoute.cs" />
+    <Compile Include="Plate\OneStdTwoHole.cs" />
+    <Compile Include="Plate\RoutePort.cs" />
+    <Compile Include="Plate\RoutePortOnly.cs" />
+    <Compile Include="Plate\ThreeHolePort.cs" />
+    <Compile Include="Plate\TwoHolePort.cs" />
+    <Compile Include="Plate\TwoStandardPort.cs" />
+    <Compile Include="Plate\WithBasePlate.cs" />
+    <Compile Include="ResourceIdentifiers.cs" />
+    <Compile Include="RPad\ElbowRPad.cs" />
+    <Compile Include="RPad\PipeRPad.cs" />
+    <Compile Include="Shoe\Shoe.cs" />
+    <Compile Include="SmartPartLocalizer.cs" />
+    <Compile Include="BlockClamp\BlockClamp.cs" />
+    <Compile Include="ClevisHanger\ClevisHanger.cs" />
+    <Compile Include="Clevis\Clevis.cs" />
+    <Compile Include="EyeNut\EyeNut.cs" />
+    <Compile Include="Guide\Guide.cs" />
+    <Compile Include="Pin\Pin.cs" />
+    <Compile Include="PipeClamp\PipeClamp.cs" />
+    <Compile Include="ProtectSaddle\ProtectSaddle.cs" />
+    <Compile Include="Rod\Rod.cs" />
+    <Compile Include="ElbowLug\ElbowLug.cs" />
+    <Compile Include="Shield\Shield.cs" />
+    <Compile Include="SlidePlate\SlidePlate.cs" />
+    <Compile Include="SmartPartSymbolException.cs" />
+    <Compile Include="SpreaderBeam\SpreaderBeam.cs" />
+    <Compile Include="Strap\Strap.cs" />
+    <Compile Include="Strut\Strut_A.cs" />
+    <Compile Include="Strut\Strut_B.cs" />
+    <Compile Include="SwivelRing\SwivelRing.cs" />
+    <Compile Include="UBolt\UBolt.cs" />
+    <Compile Include="VariableSpring\VariableBOM.cs" />
+    <Compile Include="VariableSpring\VariableTypeA.cs" />
+    <Compile Include="VariableSpring\VariableTypeB.cs" />
+    <Compile Include="VariableSpring\VariableTypeC.cs" />
+    <Compile Include="VariableSpring\VariableTypeD.cs" />
+    <Compile Include="VariableSpring\VariableTypeE.cs" />
+    <Compile Include="VariableSpring\VariableTypeF.cs" />
+    <Compile Include="VariableSpring\VariableTypeG.cs" />
+    <Compile Include="VariableSpring\VariableTypeGA.cs" />
+    <Compile Include="WBABolt\S3DWBABolt.cs" />
+    <Compile Include="WBAHole\S3DWBAHole.cs" />
+    <Compile Include="SmartPartComponentDefinition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Nut\Nut.cs" />
+    <Compile Include="Turnbuckle\Turnbuckle.cs" />
+    <Compile Include="Weld\WeldPoint.cs" />
+    <Compile Include="Weld\WeldRect.cs" />
+    <Compile Include="Weld\WeldSection.cs" />
+    <Compile Include="PipeLug\PipeLug.cs" />
+    <Compile Include="YokeClamp\YokeClamp.cs" />
+    <Compile Include="..\..\..\..\Modules\HgrCompareDoubleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\HSSmartPart.en-US.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

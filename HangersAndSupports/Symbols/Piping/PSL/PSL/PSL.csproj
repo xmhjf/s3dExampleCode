@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B962D431-DAC6-4B4F-A171-69EC936FB889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Symbols</RootNamespace>
+    <AssemblyName>PSL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UICulture>en-US</UICulture>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\PSL_353.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\PSL_F495.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\PSL_F496.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Beam Attachments\PSL_114.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Beam Attachments\PSL_122.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Beam Attachments\PSL_122A.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Beam Attachments\PSL_125.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Beam Attachments\PSL_130.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_308.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_311.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_313.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_FPR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_PC2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_PC3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_RC4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clamp\PSL_RC6.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Constant\PSL_HBM.cs" />
+    <Compile Include="Constant\PSL_HBMCS.cs" />
+    <Compile Include="Constant\PSL_HD_TS1.cs" />
+    <Compile Include="Constant\PSL_HD_TS2.cs" />
+    <Compile Include="Constant\PSL_HD_TS3.cs" />
+    <Compile Include="Constant\PSL_HD_TS4.cs" />
+    <Compile Include="Constant\PSL_HD_TS5.cs" />
+    <Compile Include="Constant\PSL_HS_TS2.cs" />
+    <Compile Include="Constant\PSL_HS_TS3.cs" />
+    <Compile Include="Constant\PSL_VBM.cs" />
+    <Compile Include="Constant\PSL_VBMCS.cs" />
+    <Compile Include="Constant\PSL_VD_TS1.cs" />
+    <Compile Include="Constant\PSL_VD_TS2.cs" />
+    <Compile Include="Constant\PSL_VD_TS3.cs" />
+    <Compile Include="Constant\PSL_VD_TS4.cs" />
+    <Compile Include="Constant\PSL_VD_TS5.cs" />
+    <Compile Include="Constant\PSL_VIBM.cs" />
+    <Compile Include="Constant\PSL_VID_TS2.cs" />
+    <Compile Include="Constant\PSL_VID_TS3.cs" />
+    <Compile Include="Constant\PSL_VID_TS4.cs" />
+    <Compile Include="Constant\PSL_VIS_TS2.cs" />
+    <Compile Include="Constant\PSL_VIS_TS3.cs" />
+    <Compile Include="Constant\PSL_VS_TS2.cs" />
+    <Compile Include="Constant\PSL_VS_TS3.cs" />
+    <Compile Include="Dynamic\PSL_511.cs" />
+    <Compile Include="Dynamic\PSL_512.cs" />
+    <Compile Include="Dynamic\PSL_513.cs" />
+    <Compile Include="Dynamic\PSL_513S.cs" />
+    <Compile Include="Dynamic\PSL_514.cs" />
+    <Compile Include="Dynamic\PSL_515.cs" />
+    <Compile Include="Dynamic\PSL_516.cs" />
+    <Compile Include="Dynamic\PSL_517.cs" />
+    <Compile Include="Iso\PSL_801.cs" />
+    <Compile Include="Iso\PSL_816.cs" />
+    <Compile Include="Iso\PSL_818.cs" />
+    <Compile Include="Iso\PSL_901.cs" />
+    <Compile Include="Iso\PSL_916.cs" />
+    <Compile Include="Iso\PSL_918.cs" />
+    <Compile Include="Iso\PSL_PC2_CM.cs" />
+    <Compile Include="Iso\PSL_PC3_CM.cs" />
+    <Compile Include="Miscellaneous\PSL_276A.cs" />
+    <Compile Include="Miscellaneous\PSL_276B.cs" />
+    <Compile Include="Miscellaneous\PSL_276C.cs" />
+    <Compile Include="Miscellaneous\PSL_358.cs" />
+    <Compile Include="PSLLocalizer.cs" />
+    <Compile Include="PSLSymbolServices.cs" />
+    <Compile Include="ResourceIdentifiers.cs" />
+    <Compile Include="Rod Fitting\PSL_234.cs" />
+    <Compile Include="Rod Fitting\PSL_235.cs" />
+    <Compile Include="Rod Fitting\PSL_235A.cs" />
+    <Compile Include="Rod Fitting\PSL_236.cs" />
+    <Compile Include="Rod Fitting\PSL_238.cs" />
+    <Compile Include="Rod Fitting\PSL_239.cs" />
+    <Compile Include="Rod Fitting\PSL_274.cs" />
+    <Compile Include="Rod Fitting\PSL_277.cs" />
+    <Compile Include="Rod Fitting\PSL_278.cs" />
+    <Compile Include="Rod Fitting\PSL_279.cs" />
+    <Compile Include="Rod Fitting\PSL_280.cs" />
+    <Compile Include="Rod Fitting\PSL_281.cs" />
+    <Compile Include="Rod Fitting\PSL_282.cs" />
+    <Compile Include="Rod\PSL_226.cs" />
+    <Compile Include="Rod\PSL_227.cs" />
+    <Compile Include="Rod\PSL_228.cs" />
+    <Compile Include="Rod\PSL_228A.cs" />
+    <Compile Include="Rod\PSL_230.cs" />
+    <Compile Include="Shoe\PSL_349.cs" />
+    <Compile Include="Shoe\PSL_350_LRG.cs" />
+    <Compile Include="Shoe\PSL_350_SML.cs" />
+    <Compile Include="Shoe\PSL_351.cs" />
+    <Compile Include="Shoe\PSL_PB1.cs" />
+    <Compile Include="Shoe\PSL_PB1_CM.cs" />
+    <Compile Include="Shoe\PSL_PB2.cs" />
+    <Compile Include="Shoe\PSL_PB2_CM.cs" />
+    <Compile Include="Shoe\PSL_PB3.cs" />
+    <Compile Include="Shoe\PSL_PB3_CM.cs" />
+    <Compile Include="Shoe\PSL_PB4.cs" />
+    <Compile Include="Shoe\PSL_PB4_CM.cs" />
+    <Compile Include="Strap\PSL_347.cs" />
+    <Compile Include="Strap\PSL_383.cs" />
+    <Compile Include="Trap\PSL_486.cs" />
+    <Compile Include="Trap\PSL_487.cs" />
+    <Compile Include="Trap\PSL_488.cs" />
+    <Compile Include="Variable\PSL_SB.cs" />
+    <Compile Include="Variable\PSL_V2_BM.cs" />
+    <Compile Include="Variable\PSL_V2_DS.cs" />
+    <Compile Include="Variable\PSL_V2_ES.cs" />
+    <Compile Include="Variable\PSL_V2_TA.cs" />
+    <Compile Include="Variable\PSL_V2_TS1.cs" />
+    <Compile Include="Variable\PSL_V2_TS2.cs" />
+    <Compile Include="Variable\PSL_V2_TS3.cs" />
+    <Compile Include="Variable\PSL_V3_TS3.cs" />
+	<Compile Include="..\..\..\..\Modules\HgrCompareDoubleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PSL.en-US.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

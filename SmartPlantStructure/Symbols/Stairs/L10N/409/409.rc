@@ -1,0 +1,95 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "..\include\L10Nresource.h "
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "..\\include\\L10Nresource.h \0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    COMBO_MORE              "More..."
+    IDS_SYMFILE_NOTACCESSSIBLE 
+                            ".Sym file of some cross-sections is not accessible"
+    IDS_SMARTPLANT3D        "Smart 3D"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STAIR_MISSING_INPUTS_BOTTOM 
+                            "Stair is missing the bottom surface reference object. Edit stair and select a new bottom reference."
+    IDS_STAIR_MISSING_INPUTS_TOPEDGE 
+                            "Stair is missing the top edge reference object. Edit stair and select a new top edge."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STAIRMACROS_ERROR   "ERROR"
+    IDS_STAIRMACROS_INVALID_WIDTH "Invalid Width value"
+    IDS_STAIRMACROS_INVALID_OFFSET "Invalid offset value"
+    IDS_STAIRMACROS_INVALID_PITCH "Invalid pitch value"
+    IDS_STAIRMACROS_SCHEMAERROR "SchemaERROR"
+    IDS_STAIRMACTOS_INVALID_ATTRIB_VALUE "Invalid Attribute Value "
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

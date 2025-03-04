@@ -1,0 +1,100 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "..\include\L10Nresource.h "
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "..\\include\\L10Nresource.h \0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    COMBO_MORE              "More..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FEATUREMACROS_ERROR "ERROR"
+    IDS_FEATUREMACROS_SCHEMAERROR "SchemaERROR"
+    IDS_FEATUREMACROS_FLNGCLEARANCE_MEMBDEPTH 
+                            "FlangeInsideClearance > half of Member depth"
+    IDS_FEATUREMACROS_VALUE_MUSTBE_POSITIVE 
+                            "Value must be equal to or greater than Zero"
+    IDS_FEATUREMACROS_CLEAREANCE_MEMBLENGTH 
+                            "Clearance must be less than half the member depth."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FEATUREMACROS_SELECTMEMBERS "Select member(s)"
+    IDS_FEATUREMACROS_SELECTMEMB_TRIMMED "Select Member to be Trimmed"
+    IDS_FEATUREMACROS_SELECT_CUTSURFACE "Select Cutting Surface"
+    IDS_FEATUREMACROS_VALUE_BE_GREATERTHAN_ZERO "Value must be >= 0"
+    IDS_FEATUREMACROS_SELECT_COPELENGTH "Select Surface Defining Cope Length"
+    IDS_FEATUREMACROS_SELECT_COPEDEPTH "Select Surface Defining Cope Depth"
+    IDS_FEATUREMACROS_MINCOPEDEPTH_MEMBDEPTH 
+                            "Min. CopeDepthClearance > Member depth"
+    IDS_FEATUREMACROS_MINCOPELENGTH_MEMBLENGTH 
+                            "Min. CopeLengthClearance > Member length"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

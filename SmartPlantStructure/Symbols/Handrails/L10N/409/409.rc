@@ -1,0 +1,102 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "..\include\L10Nresource.h "
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "..\\include\\L10Nresource.h \0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    COMBO_MORE              "More..."
+    IDS_SYMFILE_NOTACCESSSIBLE 
+                            ".Sym file of some cross-sections is not accessible"
+    IDS_SMARTPLANT3D        "Smart 3D"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MIDRAILSPACING_NOTDEFINED "MidrailSpacing not defined"
+    IDS_EDIT_HANDRAIL_PATH  "Handrail path segment is not a line or arc. Edit handrail path and redefine all path segments to be either a line or an arc"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HANDRAIL_MIDRAILSPACING_NOTDEFINED "MidrailSpacing not defined"
+    IDS_HANDRAIL_ERROR      "ERROR"
+    IDS_HANDRAIL_SCHEMAERROR "SchemaERROR"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HANDRAIL_INVALID_ATTRIB_CHECK "Invalid Attribute - Check User inputs"
+    IDS_HANDRAIL_INVALID_ATTRIB "Invalid Attribute Value "
+    IDS_HANDRAIL_EDIT_HANDRAIL_PATH 
+                            "Handrail path segment is not a line or arc. Edit handrail path and redefine all path segments to be either a line or an arc."
+    IDS_HANDRAIL_INVALID_SEGMENT 
+                            "Handrail path has an invalid vertical segment. Redefine path to remove vertical segment."
+    IDS_HANDRAIL_ZERO_SEGMENT 
+                            "Handrail path has a zero-length segment. Redefine path to either delete zero-length segment or to give the segment length."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

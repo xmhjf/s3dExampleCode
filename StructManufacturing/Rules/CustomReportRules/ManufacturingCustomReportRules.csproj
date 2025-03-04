@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35B8C47D-6361-4922-A6D7-9802ED98FEF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Manufacturing</RootNamespace>
+    <AssemblyName>ManufacturingCustomReportRules</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\StructManufacturing\Rules\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>..\..\..\..\Bin\StructManufacturing\Rules\Release\ManufacturingCustomReportRules.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\StructManufacturing\Rules\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Bin\StructManufacturing\Rules\Release\ManufacturingCustomReportRules.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GridsMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\$(Configuration)\GridsMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ManufacturingMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\ManufacturingMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ManufacturingSymbolDefinition">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\ManufacturingSymbolDefinition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PlanningMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\PlanningMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartMarineStructureMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SmartMarineStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartPlantStructureMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SmartPlantStructureMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SpaceMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Debug\SpaceMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.XML">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomReportLogService.cs" />
+    <Compile Include="Plate\ManufacturingPlatePropertiesCustomReport.cs" />
+    <Compile Include="Member\ManufacturingMemberCustomReport.cs" />
+    <Compile Include="Nesting\NestingTemplateReport.cs" />
+    <Compile Include="Plate\ManufacturingPlateUnfoldSurfaceReport.cs" />
+    <Compile Include="Profile\ManufacturingProfileCatalogSectionReport.cs" />
+    <Compile Include="Profile\ManufacturingProfileCheckDependancyAPI.cs" />
+    <Compile Include="Profile\ManufacturingProfileCurvatureReport.cs" />
+    <Compile Include="Profile\ManufacturingProfileCustomReport.cs" />
+    <Compile Include="PinJig\PinJigBasicCustomReport.cs" />
+    <Compile Include="PinJig\PinJigCustomReport.cs" />
+    <Compile Include="Profile\ManufacturingProfileKnuckleReport.cs" />
+    <Compile Include="Profile\ManufacturingProfileLengthReport.cs" />
+    <Compile Include="Profile\ManufacturingProfileSectionCatalogXML.cs" />
+    <Compile Include="Profile\ManufacturingProfileWeightReport.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shrinkage\ShrinkageReport.cs" />
+    <Compile Include="TemplateSet\TemplateSetCustomReport.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

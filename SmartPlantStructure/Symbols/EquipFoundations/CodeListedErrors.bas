@@ -1,0 +1,10 @@
+Attribute VB_Name = "CodeListedErrors"
+
+Public Const EqpToDoMsgCodelist = "StructEqpToDoMessages"
+Public Const TDL_EQPFND_CLOSEFOR_SELECTED = 1
+Public Const TDL_EQPFND_NOTASSOC_WITHEQP = 2
+Public Const TDL_EQPFNDMACROS_ASSOCEQP_MODIFIED_NOHEIGHT = 3
+Public Const TDL_EQPFNDMACROS_FNDWIDTH_LENGTH_ZERO = 4
+Public Const TDL_EQPFNDMACROS_EQPFND_MODIFIED_NODIA = 5
+
+

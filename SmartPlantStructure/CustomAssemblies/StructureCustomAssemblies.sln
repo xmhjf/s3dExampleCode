@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberAssemblyConnections", "Connections\MemberAssemblyConnections.csproj", "{72C48E9F-BF0F-46C5-8916-7EC7164217DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Features", "Features\Features.csproj", "{CCD63BE3-7608-4B9D-9072-279276788386}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{143F6BC8-B4D6-44E4-8435-07DAEFAC77C7}"
+	ProjectSection(SolutionItems) = preProject
+		StructureCustomAssembliesConstants.cs = StructureCustomAssembliesConstants.cs
+		StructureCustomAssembliesEnums.cs = StructureCustomAssembliesEnums.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72C48E9F-BF0F-46C5-8916-7EC7164217DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C48E9F-BF0F-46C5-8916-7EC7164217DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCD63BE3-7608-4B9D-9072-279276788386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD63BE3-7608-4B9D-9072-279276788386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

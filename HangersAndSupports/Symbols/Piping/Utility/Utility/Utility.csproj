@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1B2386E-7338-4627-9CBA-558A431236A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Symbols</RootNamespace>
+    <AssemblyName>Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>M:\SharedContent\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UICulture>en-US</UICulture>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1495b921d589236c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>X:\Container\Bin\Assemblies\Release\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BottomLug.cs" />
+    <Compile Include="DimensionPort.cs" />
+    <Compile Include="HgrElbowLug.cs" />
+    <Compile Include="UtilityBOMBoltClamp.cs" />
+    <Compile Include="UtilityBOMDescriptionOA.cs" />
+    <Compile Include="UtilityBOMPartDescription.cs" />
+    <Compile Include="UtilityLocalizer.cs" />
+    <Compile Include="UtilitySymbolResourceIDs.cs" />
+    <Compile Include="Utility_CURVED_PLATE.cs" />
+    <Compile Include="Utility_CUTBACK_C1.cs" />
+    <Compile Include="Utility_CUTBACK_C2.cs" />
+    <Compile Include="Utility_CUTBACK_L1.cs" />
+    <Compile Include="Utility_CUTBACK_L2.cs" />
+    <Compile Include="Utility_CUTBACK_T1.cs" />
+    <Compile Include="Utility_CUTBACK_T2.cs" />
+    <Compile Include="Utility_CUTBACK_TS1.cs" />
+    <Compile Include="Utility_CUTBACK_TS2.cs" />
+    <Compile Include="Utility_CUTBACK_W1.cs" />
+    <Compile Include="Utility_CUTBACK_W2.cs" />
+    <Compile Include="Utility_END_PLATE.cs" />
+    <Compile Include="Utility_END_PLATE_HOLED.cs" />
+    <Compile Include="Utility_END_PLATE_TAPER.cs" />
+    <Compile Include="Utility_END_PLATE_VAR.cs" />
+    <Compile Include="Utility_FOUR_HOLE_PLATE.cs" />
+    <Compile Include="Utility_FOUR_HOLE_PLATE2.cs" />
+    <Compile Include="Utility_GenericBrace.cs" />
+    <Compile Include="Utility_GEN_3_BOLT_CLAMP.cs" />
+    <Compile Include="Utility_GEN_HOOD.cs" />
+    <Compile Include="Utility_GEN_PIPE_ATT.cs" />
+    <Compile Include="Utility_GEN_PIPE_ATT2.cs" />
+    <Compile Include="Utility_GEN_U_BOLT.cs" />
+    <Compile Include="Utility_Connection.cs" />
+    <Compile Include="Utility_GEN_4_LIN_BOLT_CL.cs" />
+    <Compile Include="Utility_GENERIC_C.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility_GENERIC_L.cs" />
+    <Compile Include="Utility_GENERIC_T.cs" />
+    <Compile Include="Utility_GENERIC_W.cs" />
+    <Compile Include="Utility_GEN_4_BOLT_CLAMP.cs" />
+    <Compile Include="Utility_GEN_CLAMP.cs" />
+    <Compile Include="Utility_GEN_HEX_NUT.cs" />
+    <Compile Include="Utility_GEN_REC_STRAP.cs" />
+    <Compile Include="Utility_GEN_U_STRAP.cs" />
+    <Compile Include="Utility_GROUT.cs" />
+    <Compile Include="Utility_GUSSET.cs" />
+    <Compile Include="Utility_GUSSET2.cs" />
+    <Compile Include="Utility_GUSSET_NOTCHED.cs" />
+    <Compile Include="Utility_HALF_END_PLATE.cs" />
+    <Compile Include="Utility_I_BEAM_STIFFENER.cs" />
+    <Compile Include="Utility_NOTCH_PLATE.cs" />
+    <Compile Include="Utility_PIPE_STRAP.cs" />
+    <Compile Include="Utility_PLATE.cs" />
+    <Compile Include="Utility_SHEAR_TAB.cs" />
+    <Compile Include="Utility_SQUARE_GROUT.cs" />
+    <Compile Include="Utility_TRUNNION.cs" />
+    <Compile Include="Utility_TWO_HOLE_PLATE.cs" />
+    <Compile Include="Utility_USER_FIXED_BOX.cs" />
+    <Compile Include="Utility_USER_FIXED_CYL.cs" />
+    <Compile Include="Utility_USER_VARIABLE_BOX.cs" />
+    <Compile Include="Utility_USER_VARIABLE_CYL.cs" />
+    <Compile Include="Utility_U_BOLT_PLATE.cs" />
+	<Compile Include="..\..\..\..\Modules\HgrCompareDoubleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Utility.en-US.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

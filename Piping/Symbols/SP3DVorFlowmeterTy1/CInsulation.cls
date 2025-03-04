@@ -1,0 +1,133 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "CInsulation"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'
+'   Copyright (c) 2003, Intergraph Corporation. All rights reserved.
+'
+'   CInsulation.cls
+'   Author:          BG
+'   Creation Date:  Tuesday, Sep 20 2002
+'   Description:
+' This class module is the place for user to implement graphical part of VBSymbol for this aspect
+' The symbol is prepared based on INtools Instrument Components(PDS Eden Name=IVM1,
+' PDMS Category Name=IFNC). Physical aspect consist of one horizontal cylinder, one vertical cylinder,
+' another horizontal cylinder as Instrument cylinder and two nozzles one facing -ive direction direction
+' of X-axis and the other in +ive direction of X-axis.
+' Insulation aspect consist of a cylinders one along X-axis and a box to cover both  vertical  and horizontal
+' Instrument cylinder.
+'
+'   Change History:
+'   dd.mmm.yyyy     who     change description
+'   -----------         -----        ------------------
+'   09.Jul.2003     SymbolTeam(India)       Copyright Information, Header  is added.  
+'  08.SEP.2006     KKC  DI-95670  Replace names with initials in all revision history sheets and symbols
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Option Explicit
+Private Const MODULE = "Insulation:" 'Used for error messages
+
+Private Sub Class_Initialize()
+'''
+End Sub
+Public Sub run(ByVal m_OutputColl As Object, ByRef arrayOfInputs(), arrayOfOutputs() As String)
+    
+    Const METHOD = "run"
+    On Error GoTo ErrorLabel
+    
+    Dim oPartFclt       As PartFacelets.IJDPart
+    Dim iOutput     As Double
+    Dim pipeDiam1        As Double
+    Dim flangeThick     As Double
+    Dim sptOffset       As Double
+    Dim flangeDiam1      As Double
+    Dim depth           As Double
+    Dim pipeDiam2        As Double
+    Dim flangeDiam2      As Double
+    
+    Dim ObjVerCylinIns As Object
+    Dim ObjHoriCylinIns As Object
+    
+    Dim parFace1toCenter As Double
+    Dim parFace2toCenter As Double
+    Dim parFlowDiameter As Double
+    Dim parInstrumentHeight As Double
+    Dim parInstrumentLength As Double
+    Dim parInstrumentLength1 As Double
+    Dim parInstrumentDiameter As Double
+    Dim parInsulationThickness As Double
+
+' Inputs
+    Set oPartFclt = arrayOfInputs(1)
+    parFace1toCenter = arrayOfInputs(2)   'D2
+    parFace2toCenter = arrayOfInputs(3)  'D3
+    parFlowDiameter = arrayOfInputs(4) 'D4
+    parInstrumentHeight = arrayOfInputs(5)       'D5
+    parInstrumentLength = arrayOfInputs(6)      'D6
+    parInstrumentLength1 = arrayOfInputs(7)     'D7
+    parInstrumentDiameter = arrayOfInputs(8)    'D8
+    parInsulationThickness = arrayOfInputs(9)
+    iOutput = 0
+
+ ' Insert your code for output 6(Horizontal Cylinder Insulation)
+    Dim startPoint       As AutoMath.DPosition
+    Dim endPoint         As AutoMath.DPosition
+    Dim insulationDia As Double
+    Dim MaxDia  As Double
+    Set startPoint = New AutoMath.DPosition
+    Set endPoint = New AutoMath.DPosition
+    
+    'Check for max amoung Pipes, flanges and parFlowDiameter values
+    RetrieveParameters 1, oPartFclt, m_OutputColl, pipeDiam1, flangeThick, flangeDiam1, sptOffset, depth
+    RetrieveParameters 2, oPartFclt, m_OutputColl, pipeDiam2, flangeThick, flangeDiam2, sptOffset, depth
+    
+    MaxDia = pipeDiam1
+    If MaxDia < pipeDiam2 Then MaxDia = pipeDiam2
+    If MaxDia < flangeDiam1 Then MaxDia = flangeDiam1
+    If MaxDia < flangeDiam2 Then MaxDia = flangeDiam2
+    If MaxDia < parFlowDiameter Then MaxDia = parFlowDiameter
+    
+    insulationDia = MaxDia + 2 * parInsulationThickness
+    startPoint.Set -parFace1toCenter - parInsulationThickness, 0, 0
+    endPoint.Set parFace2toCenter + parInsulationThickness, 0, 0
+    Set ObjHoriCylinIns = PlaceCylinder(m_OutputColl, startPoint, endPoint, _
+                                                            insulationDia, True)
+' Set the output
+    iOutput = iOutput + 1
+    m_OutputColl.AddOutput arrayOfOutputs(iOutput), ObjHoriCylinIns
+    Set ObjHoriCylinIns = Nothing
+    
+' Insert your code for output 6(Vertical Cylinder and Hori Cylinder Insulation )
+    startPoint.Set -parInstrumentLength - parInsulationThickness, _
+                            parFlowDiameter / 2, _
+                            -parInstrumentDiameter / 2 - parInsulationThickness
+
+    endPoint.Set parInstrumentLength1 + parInsulationThickness, _
+                            parInstrumentHeight + parInstrumentDiameter / 2 + parInsulationThickness, _
+                            parInstrumentDiameter / 2 + parInsulationThickness
+                            
+    Set ObjVerCylinIns = PlaceBox(m_OutputColl, startPoint, endPoint)
+    
+' Set the output
+    iOutput = iOutput + 1
+    m_OutputColl.AddOutput arrayOfOutputs(iOutput), ObjVerCylinIns
+    Set ObjVerCylinIns = Nothing
+    Set startPoint = Nothing
+    Set endPoint = Nothing
+    Exit Sub
+    
+ErrorLabel:
+    ReportUnanticipatedError MODULE, METHOD
+    Resume Next
+    
+End Sub

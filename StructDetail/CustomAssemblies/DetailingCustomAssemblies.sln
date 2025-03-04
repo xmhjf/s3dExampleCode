@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndCuts", "EndCuts\EndCuts.csproj", "{49BEE625-F3A2-435D-9297-DDC8E0CD016E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connections", "Connections\Connections.csproj", "{72C48E9F-BF0F-46C5-8916-7EC7164217DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Penetrations", "Penetrations\Penetrations.csproj", "{E10F7E33-EDE2-4143-9792-A5C01A6C0878}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C5B8CFC8-4553-4A28-8807-8F6260E7E9F4}"
+	ProjectSection(SolutionItems) = preProject
+		DetailingCustomAssembliesConstants.cs = DetailingCustomAssembliesConstants.cs
+		DetailingCustomAssembliesEnums.cs = DetailingCustomAssembliesEnums.cs
+		DetailingCustomAssembliesServices.cs = DetailingCustomAssembliesServices.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chamfers", "Chamfers\Chamfers.csproj", "{F7D04CD4-EB5F-42E6-8942-8312DEB29919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CornerFeatures", "CornerFeatures\CornerFeatures.csproj", "{8F19851D-0ABC-438E-BC39-69F93AE6C9A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeFeatures", "EdgeFeatures\EdgeFeatures.csproj", "{979B1F75-CD95-427D-9437-12F4862D8F51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49BEE625-F3A2-435D-9297-DDC8E0CD016E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BEE625-F3A2-435D-9297-DDC8E0CD016E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C48E9F-BF0F-46C5-8916-7EC7164217DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C48E9F-BF0F-46C5-8916-7EC7164217DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E10F7E33-EDE2-4143-9792-A5C01A6C0878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10F7E33-EDE2-4143-9792-A5C01A6C0878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7D04CD4-EB5F-42E6-8942-8312DEB29919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7D04CD4-EB5F-42E6-8942-8312DEB29919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F19851D-0ABC-438E-BC39-69F93AE6C9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F19851D-0ABC-438E-BC39-69F93AE6C9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979B1F75-CD95-427D-9437-12F4862D8F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979B1F75-CD95-427D-9437-12F4862D8F51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

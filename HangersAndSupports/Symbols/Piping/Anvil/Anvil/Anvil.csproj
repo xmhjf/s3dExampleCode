@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{592E5021-4444-4D8A-AD7A-8698275E67F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingr.SP3D.Content.Support.Symbols</RootNamespace>
+    <AssemblyName>Anvil</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\HangersAndSupports\Symbols\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>X:\Tools\Developer\Key\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UICulture>en-US</UICulture>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\CommonMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReferenceDataMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\ReferenceDataMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SupportMiddle">
+      <HintPath>X:\Container\Bin\Assemblies\Release\SupportMiddle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnvilBOMConstantSupport.cs" />
+    <Compile Include="AnvilBOMConstantSupport2.cs" />
+    <Compile Include="AnvilBOMEndThreadedRod.cs" />
+    <Compile Include="AnvilBOMEyeRodThread.cs" />
+    <Compile Include="AnvilBOMPipeStachion.cs" />
+    <Compile Include="AnvilBOMSpringsVariable.cs" />
+    <Compile Include="AnvilBOMSpringsVariable2.cs" />
+    <Compile Include="AnvilBOMSpringsVariable3.cs" />
+    <Compile Include="AnvilBOMwithFinish.cs" />
+    <Compile Include="AnvilBOMwithRodFinish.cs" />
+    <Compile Include="AnvilLocalizer.cs" />
+    <Compile Include="Anvil_FIG103.cs" />
+    <Compile Include="Anvil_FIG133.cs" />
+    <Compile Include="Anvil_FIG135.cs" />
+    <Compile Include="Anvil_FIG136.cs" />
+    <Compile Include="Anvil_FIG137.cs" />
+    <Compile Include="Anvil_FIG140.cs" />
+    <Compile Include="Anvil_FIG146.cs" />
+    <Compile Include="Anvil_FIG157.cs" />
+    <Compile Include="Anvil_FIG160.cs" />
+    <Compile Include="Anvil_FIG167.cs" />
+    <Compile Include="Anvil_FIG181.cs" />
+    <Compile Include="Anvil_FIG191.cs" />
+    <Compile Include="Anvil_FIG192.cs" />
+    <Compile Include="Anvil_FIG200.cs" />
+    <Compile Include="Anvil_FIG201.cs" />
+    <Compile Include="Anvil_FIG211.cs" />
+    <Compile Include="Anvil_FIG212.cs" />
+    <Compile Include="Anvil_FIG218.cs" />
+    <Compile Include="Anvil_FIG222.cs" />
+    <Compile Include="Anvil_FIG224.cs" />
+    <Compile Include="Anvil_FIG230.cs" />
+    <Compile Include="Anvil_FIG242A.cs" />
+    <Compile Include="Anvil_FIG243A.cs" />
+    <Compile Include="Anvil_FIG244A.cs" />
+    <Compile Include="Anvil_FIG246.cs" />
+    <Compile Include="Anvil_FIG248.cs" />
+    <Compile Include="Anvil_FIG248L.cs" />
+    <Compile Include="Anvil_FIG253.cs" />
+    <Compile Include="Anvil_FIG255.cs" />
+    <Compile Include="Anvil_FIG256.cs" />
+    <Compile Include="Anvil_FIG257.cs" />
+    <Compile Include="Anvil_FIG257A.cs" />
+    <Compile Include="Anvil_FIG260.cs" />
+    <Compile Include="Anvil_FIG261.cs" />
+    <Compile Include="Anvil_FIG262.cs" />
+    <Compile Include="Anvil_FIG271.cs" />
+    <Compile Include="Anvil_FIG290.cs" />
+    <Compile Include="Anvil_FIG290L.cs" />
+    <Compile Include="Anvil_FIG291.cs" />
+    <Compile Include="Anvil_FIG292.cs" />
+    <Compile Include="Anvil_FIG295.cs" />
+    <Compile Include="Anvil_FIG299.cs" />
+    <Compile Include="Anvil_FIG300.cs" />
+    <Compile Include="Anvil_FIG40.cs" />
+    <Compile Include="Anvil_FIG436.cs" />
+    <Compile Include="Anvil_FIG436A.cs" />
+    <Compile Include="Anvil_FIG55L.cs" />
+    <Compile Include="Anvil_FIG60.cs" />
+    <Compile Include="Anvil_FIG63A.cs" />
+    <Compile Include="Anvil_FIG63B.cs" />
+    <Compile Include="Anvil_FIG63C.cs" />
+    <Compile Include="Anvil_FIG66.cs" />
+    <Compile Include="Anvil_FIG69.cs" />
+    <Compile Include="Anvil_FIG80A.cs" />
+    <Compile Include="Anvil_FIG80B.cs" />
+    <Compile Include="Anvil_FIG80C.cs" />
+    <Compile Include="Anvil_FIG81A.cs" />
+    <Compile Include="Anvil_FIG81B.cs" />
+    <Compile Include="Anvil_FIG81C.cs" />
+    <Compile Include="Anvil_FIG81D.cs" />
+    <Compile Include="Anvil_FIG81F.cs" />
+    <Compile Include="Anvil_FIG82A.cs" />
+    <Compile Include="Anvil_FIG82B.cs" />
+    <Compile Include="Anvil_FIG82C.cs" />
+    <Compile Include="Anvil_FIG82D.cs" />
+    <Compile Include="Anvil_FIG82E.cs" />
+    <Compile Include="Anvil_FIG82F.cs" />
+    <Compile Include="Anvil_FIG82G.cs" />
+    <Compile Include="Anvil_FIG86.cs" />
+    <Compile Include="Anvil_FIG95.cs" />
+    <Compile Include="Anvil_FIG98F.cs" />
+    <Compile Include="Anvil_FIGB268F.cs" />
+    <Compile Include="Anvil_FIGB268G.cs" />
+    <Compile Include="Anvil_hex_nut.cs" />
+	<Compile Include="..\..\..\..\Modules\HgrCompareDoubleService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceIdentifiers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="X:\Tools\Developer\Key\key.snk">
+      <Link>key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Anvil.en-US.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfCustomBracketGUIEx409", "mfCustomBracketGUIEx409.vcxproj", "{EDA9A734-C3B8-46AF-B541-D2CA3B5ECFD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		resource|Win32 = resource|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDA9A734-C3B8-46AF-B541-D2CA3B5ECFD7}.resource|Win32.ActiveCfg = resource|Win32
+		{EDA9A734-C3B8-46AF-B541-D2CA3B5ECFD7}.resource|Win32.Build.0 = resource|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

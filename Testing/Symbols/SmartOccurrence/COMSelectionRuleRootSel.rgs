@@ -1,0 +1,26 @@
+HKCR
+{
+	ATPSO.COMSelectionRuleRootSel.1 = s 'COMSelectionRuleRootSel Class'
+	{
+		CLSID = s '{64D91A79-5CB7-441F-933D-9A0C2D564D09}'
+	}
+	ATPSO.COMSelectionRuleRootSel = s 'COMSelectionRuleRootSel Class'
+	{
+		CLSID = s '{64D91A79-5CB7-441F-933D-9A0C2D564D09}'
+		CurVer = s 'ATPSO.COMSelectionRuleRootSel.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {64D91A79-5CB7-441F-933D-9A0C2D564D09} = s 'COMSelectionRuleRootSel Class'
+		{
+			ProgID = s 'ATPSO.COMSelectionRuleRootSel.1'
+			VersionIndependentProgID = s 'ATPSO.COMSelectionRuleRootSel'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{A95C7667-40AF-4F87-86A1-542E074464A0}'
+		}
+	}
+}

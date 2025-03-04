@@ -1,0 +1,43 @@
+Attribute VB_Name = "StringConstants"
+Option Explicit
+
+Public Const sFILTER_IMPLEMENTS_IJCURVE = "IJCurve OR IJWireBody AND [GCCMNSTRDefinitions.Filters,ImplementsIJCurve]"
+Public Const sFILTER_IMPLEMENTS_IJLINE = "IJLine OR IJWireBody AND [GCCMNSTRDefinitions.Filters,ImplementsIJLine]"
+Public Const sFILTER_IMPLEMENTS_IJARC = "IJArc OR IJWireBody AND [GCCMNSTRDefinitions.Filters,ImplementsIJArc]"
+Public Const sFILTER_IMPLEMENTS_IJCIRCLE = "IJCircle OR IJWireBody AND [GCCMNSTRDefinitions.Filters,ImplementsIJCircle]"
+Public Const sFILTER_IMPLEMENTS_IJSURFACE = "IJSurface OR IJSurfaceBody AND [GCCMNSTRDefinitions.Filters,ImplementsIJSurface]"
+Public Const sFILTER_IMPLEMENTS_IJPLANE = "IJPlane OR IJSurfaceBody AND [GCCMNSTRDefinitions.Filters,ImplementsIJPlane]"
+Public Const sFILTER_HAS_VALUE_PARAMETER = "IJGeometricConstruction AND [GCCMNSTRDefinitions.Filters,HasValueParameter]"
+
+Public Const sFILTER_IS_COORDINATE_SYSTEM = "IJDCoordinateSystem"
+Public Const sFILTER_IS_POINT = "IJPoint"
+Public Const sFILTER_IS_CURVE = "IJCurve OR IJWireBody"
+Public Const sFILTER_IS_SURFACE = "IJSurface OR IJSurfaceBody"
+Public Const sFILTER_IS_LINE_OR_ARC = "IJLine OR IJArc"
+Public Const sFILTER_IS_CIRCLE_OR_ARC = "IJCircle OR IJArc"
+
+Public Const sROLE_SURFACE_TO_PROJECT_ON = "SurfaceToProjectOn"
+Public Const sROLE_SURFACE_TO_INTERSECT_WITH = "SurfaceToIntersectWith"
+
+Public Const sCOORDINATE_SYSTEM = "CoordinateSystem"
+Public Const sORIGIN = "Origin"
+Public Const sTRACK_POINT = "TrackPoint"
+Public Const sTRACK_FLAG = "TrackFlag"
+Public Const sDIRECTION = "Direction"
+Public Const sLOOKING_AXIS = "LookingAxis"
+Public Const sINTERSECTING_PLANE = "IntersectingPlane"
+Public Const sSWEEP_ANGLE = "SweepAngle"
+Public Const sAXES_ROLES = "AxesRoles"
+Public Const sAXIS_DIRECTION = "AxisDirection"
+Public Const sAXIS1_DIRECTION = "Axis1Direction"
+Public Const sAXIS2_DIRECTION = "Axis2Direction"
+Public Const sCS_ORIENTATION = "CSOrientation"
+Public Const sLINE_JUSTIFICATION = "LineJustification"
+Public Const sPOINT_LOCATION = "PointLocation"
+Public Const sCONTEXT1 = "Context1"
+Public Const sCONTEXT2 = "Context2"
+Public Const sGEOMETRY_SELECTOR = "GeometrySelector"
+Public Const sFACES_CONTEXT = "FacesContext"
+Public Const sSURFACE_TYPE = "SurfaceType"
+
+

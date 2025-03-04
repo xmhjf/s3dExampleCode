@@ -1,0 +1,141 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""ATPSO.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "InternalName", "ATPSO.dll"
+            VALUE "OriginalFilename", "ATPSO.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ATPSO               REGISTRY                "ATPSO.rgs"
+IDR_CADELETEMEMBEROUTPUTDEF REGISTRY                "CADeleteMemberOutputDef.rgs"
+IDR_CADELETEMEMBEROUTPUTSYM REGISTRY                "CADeleteMemberOutputSym.rgs"
+IDR_CAEVALUATEAFTERSYMBOLSYM REGISTRY                "CAEvaluateAfterSymbolSym.rgs"
+IDR_CAEVALUATEAFTERSYMBOLDEF REGISTRY                "CAEvaluateAfterSymbolDef.rgs"
+IDR_COMSELECTIONRULESEL REGISTRY                "COMSelectionRuleSel.rgs"
+IDR_COMSELECTIONRULEROOTSEL REGISTRY                "COMSelectionRuleRootSel.rgs"
+IDR_COM2NDSELECTIONRULESEL REGISTRY                "COM2ndSelectionRuleSel.rgs"
+IDR_TESTSELRULEWITHQS   REGISTRY                "TestSelRuleWithQs.rgs"
+IDR_COMTESTPARAMETERRULE REGISTRY                "TestParameterRule.rgs"
+IDR_CAFORPARAMETERRULEDEF REGISTRY                "CAForParameterRuleDef.rgs"
+IDR_CAFORPARAMETERRULESYM REGISTRY                "CAForParameterRuleSym.rgs"
+IDR_SONOGRAPHICS        REGISTRY                "SONoGraphics.rgs"
+IDR_SO1GRAPHICOUTPUT    REGISTRY                "SO1GraphicOutput.rgs"
+IDR_CANESTEDOUTPUTPARENTDEF REGISTRY            "CANestedOutputParentDef.rgs"
+IDR_CANESTEDOUTPUTPARENTSYM REGISTRY            "CANestedOutputParentSym.rgs"
+IDR_CABASICDEF REGISTRY							"CABasicDef.rgs"
+IDR_CABASICSYM REGISTRY							"CABasicSym.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "ATPSO"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "ATPSO.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
